@@ -1,34 +1,15 @@
-# Cactus Theme for Jekyll
+# [Keith Alpichi's] Portfolio Blog
 
-This is a port of [Cactus](https://github.com/koenbok/Cactus)'s default theme for Jekyll.
-Feel free to fork, change, modify and re-use it.
+## About me and my blog
+- I'm a self-taught Python software engineer (can I call myself that? LOL). I've been learning to code/program since November 2015 but only got seriosly into it in January 2016.
+- I created this blog to share my experience and what I have learned since the beginning. I encourage anyone who is just starting out by teaching themselves to follow my blog.
 
-## How to use it
+## Blog features
+- Built with Jekyll and Github
 
-Simply clone this repository, and then run `jekyll serve` inside the directory.
-This theme is fully compliant with GH Pages and their dependencies.
-For extra info: [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/#keeping-jekyll-up-to-date).
+## Blog Theme by
 
-Cactus theme includes:
-
-* Pagination
-* Rss feed
-* Google Analytics Tracking code
-* Code Syntax Highlight
-* Author's profile with picture header
-* Twitter/Facebook share buttons
-* Archive posts list under each post
-* Disqus comments
-
-## Screenshots
-
-![index page](https://raw.githubusercontent.com/nickbalestra/kactus/master/assets/images/Kactus-theme-index.png)
-![post page](https://raw.githubusercontent.com/nickbalestra/kactus/master/assets/images/Kactus-theme-post.png)
-
-
-## Thanks
-Most of the work has been already done by the [Cactus for mac authors](https://github.com/koenbok/Cactus/blob/master/AUTHORS), I've just ported their default theme to Jekyll.
-I've also added few things specific to Jekyll and some minor style changes.
+[Nick Balestra's Kactus](https://github.com/nickbalestra/kactus) rendition from [Cactus](https://github.com/koenbok/Cactus/blob/master/AUTHORS).
 
 ## Copyright & License
 
