@@ -1,4 +1,4 @@
-# [Keith Alpichi's] Portfolio Blog
+# Keith Alpichi's Portfolio Blog
 
 ## About me and my blog
 - I'm a self-taught Python software engineer (can I call myself that? LOL). I've been learning to code/program since November 2015 but only got seriosly into it in January 2016.
@@ -9,7 +9,7 @@
 
 ## Blog Theme by
 
-[Nick Balestra's Kactus](https://github.com/nickbalestra/kactus) rendition from [Cactus](https://github.com/koenbok/Cactus/blob/master/AUTHORS).
+[Nick Balestra's Kactus](https://github.com/nickbalestra/kactus) renditiof the [Cactus](https://github.com/koenbok/Cactus/blob/master/AUTHORS) theme. Thanks to both Nick and the Cactus team!
 
 ## Copyright & License
 
