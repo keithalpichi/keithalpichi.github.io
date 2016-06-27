@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: "Keith Alpich's Technical Blog & Portfolio"
+description: "Self-taught Python engineer sharing my experiences and work in Python, Flask and more!"
+meta_description: "Keith Alpichi's Blog & Portfolio | Python & Flask"
 
 aboutPage: true
 
@@ -16,9 +16,9 @@ disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
-author:         'Your Name'
-authorTwitter:  'YourTwitterUsername'
+url:            'keithalpichi.io'
+author:         'Keith Alpichi'
+authorTwitter:  'keithalpichi'
 
 permalink:       /:year/:title/
 

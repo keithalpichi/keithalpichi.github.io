@@ -7,6 +7,13 @@ archive: true
     <header>
         <h1>{{ page.title }}</h1>
         <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
+        {% if page.tags %}
+        <h6>
+          {% for tag in page.tags%}
+            <a href="#">{{tag}}</a>
+          {% endfor %}
+        </h6>
+        {% endif %}
     </header>
     <section id="post-body">
         {{content}}
