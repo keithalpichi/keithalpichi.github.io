@@ -9,7 +9,7 @@
 
 ## Blog Theme by
 
-[Nick Balestra's Kactus](https://github.com/nickbalestra/kactus) renditiof the [Cactus](https://github.com/koenbok/Cactus/blob/master/AUTHORS) theme. Thanks to both Nick and the Cactus team!
+[Nick Balestra's Kactus](https://github.com/nickbalestra/kactus) rendition of the [Cactus](https://github.com/koenbok/Cactus/blob/master/AUTHORS) theme. Thanks to both Nick and the Cactus team!
 
 ## Copyright & License
 
