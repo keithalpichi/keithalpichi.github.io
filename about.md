@@ -6,7 +6,7 @@ profile: true
 
 # Where it all started.
 
-I've always had a passion and curiosity for challenging myself to innovate. Just like any kid coming out of high school, I couldn't answer the challenging question of, "What do you want to be when you grow up?" I couldn't answer that easily because I always wanted to do many big things. 
+I've always had a passion and curiosity for challenging myself to innovate. As a kid coming out of high school, I couldn't answer the challenging question of, "What do you want to be when you grow up?" That was a tough one because I always wanted to do many big things. 
 
 In spring of 2014 I graduated at San Jose State University with a Bachelors Degree in Kinesiology. Kinesiology is the field of exercise science, the human body, fitness and health. Six months prior I worked as a personal trainer at a corporate gym. In less than a year I quit to start my own mobile personal training business.
 
