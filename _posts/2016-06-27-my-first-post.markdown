@@ -1,7 +1,7 @@
 ---
 title:  "[READ 1st] Blog Goals-- My First Post"
 date:   2016-06-27 02:07:00
-description: Jekyll is super easy to set up
+description: "My goals for this blog and plans for future projects/work"
 tags: python, jekyll
 ---
 

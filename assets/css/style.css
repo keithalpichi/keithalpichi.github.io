@@ -53,6 +53,7 @@ html, body { height: 100%; }
 
 body {
 	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4;
 	color: #666;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -66,8 +67,13 @@ h1 {
 }
 
 h2 {
+	margin: 10px 0;
 	font: italic 19px/1.3em Georgia,serif;
 	color: #9c9c9c;
+}
+
+h1.header, h2.header {
+	text-align: center;
 }
 
 .profile #wrapper {
@@ -110,6 +116,10 @@ h2 {
 
 .profile a i#twitter {
 	color: #4fafed;
+}
+
+.profile a#twitter-button {
+	margin: 10px;
 }
 
 .profile a i#github {
@@ -194,8 +204,12 @@ a,
 	transition: all 0.15s ease;
 }
 
-ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; }
+ul 	{ margin: 10px 0; padding:0; }
+li { 
+	list-style-type:circle; 
+	list-style-position:inside; 
+	margin: 10px;
+}
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
