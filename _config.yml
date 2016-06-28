@@ -3,7 +3,7 @@ description: "Self-taught Python engineer sharing my experiences and work in Pyt
 meta_description: "Keith Alpichi's Blog & Portfolio | Python & Flask"
 
 markdown: Kramdown
-highlighter: Rogue
+highlighter: rogue
 #gems: [jekyll-paginate]
 
 #paginate: 20
