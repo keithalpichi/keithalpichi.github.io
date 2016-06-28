@@ -66,7 +66,7 @@ h1 {
 
 h2 {
 	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
+	color: #9c9c9c;
 }
 
 .profile #wrapper {
@@ -85,9 +85,8 @@ h2 {
 
 .profile #avatar {
 	display: inline-block;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
+	width: 150px;
+	height: 150px;
 	margin-bottom: 20px;
 }
 
@@ -100,11 +99,11 @@ h2 {
 
 .profile h2 {
 	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
+	font-weight: 300;
+	color: #9c9c9c;
+	margin-top: 10px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: normal;
 
 }
 
@@ -125,7 +124,7 @@ nav.main-nav a {
 	top: 8px;
 	right: 6px;
 	padding: 8px 12px;
-	color: #5badf0;
+	color: #17D73E;
 	font-size: 13px;
 	/*font-weight: bold;*/
 	line-height: 1.35;
@@ -133,7 +132,7 @@ nav.main-nav a {
 
 }
 nav.main-nav a.cta {
-	background: #5badf0;
+	background: #17D73E /*#2ecc71 #5badf0*/;
 	color: #fff;
 	margin-left: 12px;
 }
@@ -165,11 +164,11 @@ a,
 #post-list li:hover .dates,
 #title:hover {
 	text-decoration: none;
-	color: #5badf0;
-	color: #5694f1;
+	color: #17D73E;
+	color: #17D73E /*#5694f1*/;
 }
 
-p a { color: #5694f1; }
+p a { color: #17D73E /*#5694f1*/; }
 
 /*Transitions*/
 a,
@@ -243,7 +242,7 @@ em, i { font-style: italic; }
 	/*font: italic 22px/1.3em Georgia,serif;*/
 	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
-	color: #b2b9be;
+	color: #9c9d9d;
 	  font-size: 13px;
 	  text-transform: uppercase;
 	  letter-spacing: 2px;
@@ -253,7 +252,7 @@ em, i { font-style: italic; }
 
 #post-list h2 {
 	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #aaa;
+	color: #9c9c9c;
 	max-width: 400px;
 	margin-top: 2px;
 }
@@ -272,7 +271,7 @@ h6 {
 }
 
 p.small {
-	color: #bbb;
+	color: #9c9c9c;
 	font-size: 14px;
 	line-height: 1.5;
 	display: block;
@@ -398,7 +397,7 @@ Post List
 	position: relative;
 	top: 1px;
 	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #bbb;
+	color: #9c9c9c;
 }
 
 #post-list-footer {
@@ -417,7 +416,7 @@ Post List
 }
 
 #archive-link:hover {
-	background: #5694f1;
+	background: #17D73E;
 	color: #fff;
 	box-shadow: 0 0 0 1px #5694f1;
 }
@@ -488,7 +487,6 @@ Post List
 }
 
 #sharing a:hover {
-	/*color: #444;*/
 	opacity: 0.8;
 }
 
@@ -574,16 +572,15 @@ h2.month {
 }
 
 #archive-list li a:hover,#archive-list li:hover .dates {
-	color: #5694f1;
+	color: #17D73E;
 }
 
 #post-meta img.avatar {
   height: 36px;
   width: 36px;
   float: left;
-  border-radius: 50%;
-  margin-top: 3px;
-  margin-right: 20px;
+  border-radius: 15%;
+  margin: 3px 20px 10px 0px;
   box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 
@@ -595,7 +592,7 @@ h2.month {
 
 #post-list.archive.readmore a{
 	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #5694f1;
+	color: #17D73E;
 }
 
 #post-list.archive.readmore a:hover{
