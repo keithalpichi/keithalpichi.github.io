@@ -44,6 +44,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* Spacing */
 .post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
+margin-top: 20px;
 margin-bottom: 20px;
 }
 
@@ -105,6 +106,18 @@ h2 {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 
+}
+
+.profile a i#twitter {
+	color: #4fafed;
+}
+
+.profile a i#github {
+	color: #ddd;
+}
+
+.profile a i#linkedin {
+	color: #007bb6;
 }
 
 nav.main-nav {
@@ -232,6 +245,7 @@ em, i { font-style: italic; }
 }
 
 .post h2 {
+	margin-top: 40px;
 	margin-bottom: 40px;
 	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
 	  color: #111;
