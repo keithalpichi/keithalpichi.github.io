@@ -34,6 +34,8 @@ View the languages community, documentation, and support. Download the language 
 
 More importantly, don't get tied up on a single language. As you learn, you'll find yourself having to learn other languages. That shouldn't scare you though as each language has it's strengths and weaknesses. You will hear often that a language itself is not the *silver bullet*, it's what you build with it that matters.
 
+However, I do suggest you give Python a try first. Hopefully you see what I see in Python. 
+
 ## If You Use Python, Why Do You Use It?
 
 For those who do use Python, why did you choose it and why do you continue to use it? I am sure your answers will add to my list of why Python is a great language. 
