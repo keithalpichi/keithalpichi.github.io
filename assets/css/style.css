@@ -90,7 +90,7 @@ h1.header, h2.header {
 	position: relative;
 }
 
-.profile #avatar {
+.profile #avatar, #avatar {
 	display: inline-block;
 	width: 150px;
 	height: 150px;
