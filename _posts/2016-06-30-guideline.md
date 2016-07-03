@@ -108,7 +108,7 @@ Since I only have experience in <a href="/resources#flask" target="_blank">web d
 
 ### Deployment
 
-You've built an application you want to deploy to the world, now what? Deployment is a whole other level, but there are <a href="/resources#deployment" target="_blank">deployment resources that make I've used that make it a little easier to learn and use</a>.
+You've built an application you want to deploy to the world, now what? Deployment is a whole other level, but there are <a href="/resources#deployment" target="_blank">deployment resources that I've used that make it a little easier to learn and use</a>.
 
 ## Summary
 
