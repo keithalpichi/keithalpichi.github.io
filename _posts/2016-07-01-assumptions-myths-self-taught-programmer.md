@@ -13,11 +13,13 @@ Here are some assumptions you may have about becoming a self-taught programming:
 
 ## Assumption: I need to be a math genius to be able to code
 
-When I tell people that I am teaching myself how to code most show a sour face and reply with something along the lines of, "you have to know a ton of math huh?" I giggle and respond with a no. Unless you're trying to become a software engineer who uses mathematics heavily you don't need to have the knowledge that mathematicians have. Don't get me wrong it helps to know math but basic high school mathematics will be enough.
+When I tell people that I am teaching myself how to code most show a sour face and reply with something along the lines of, "you have to know a ton of math huh?" I giggle and respond with a, "no not that much really."
 
-To make you feel better I took algebra and pre-calculus in high school and statistics in college for my kinesiology degree. I got low A's in high school math and barely passed college statistics.
+Yet it all depends on your career goals. If you trying to be a web developer you won't need to know as much math as a data scientist. Don't get me wrong it helps to know math, calculus, and linear algebra but basic high school mathematics will be enough to get in the right direction.
 
-**Truth**: If you can add, subtract, multiply, divide and use other basic mathematics you'll have the minimum skills to get started. Obviously if you're going to pursue a career that is math intensive you'll have to learn more. It depends on the path you're going to take and if you need to you can always learn more math. 
+To make you feel better I took algebra and pre-calculus in high school and statistics in college for my kinesiology degree. I got low A's in high school math and barely passed college statistics. To be honest, it was partly due to the fact I didn't try to excel at math. 
+
+**Truth**: If you can add, subtract, multiply, divide and use other basic mathematics you'll have the minimum skills to get started. It helps to know <a href="/resources/#computer-science" target="_blank">calculus, linear algebra, and statistics</a>. Obviously if you're going to pursue a career that is math intensive you'll have to learn more. It depends on the path you're going to take and if you need to you can always learn more math. 
 
 ## Assumption: I must have a computer science degree to get a career in the software industry
 
