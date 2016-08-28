@@ -1,6 +1,6 @@
 name: "Keith Alpich's Technical Blog & Portfolio"
-description: "Interested in teaching yourself how to code? I am a self-taught Python programmer sharing my experiences and work in Python, Flask, web development and more."
-meta_description: "Keith Alpichi's Blog & Portfolio | Python & Flask"
+description: "Interested in teaching yourself how to code? I am a self-taught programmer sharing my experiences and work in Python/Flask, Elixir/Phoenix, web development and more."
+meta_description: "Keith Alpichi's Blog & Portfolio"
 
 markdown: Kramdown
 highlighter: rouge

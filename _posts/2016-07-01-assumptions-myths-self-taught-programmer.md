@@ -17,9 +17,7 @@ When I tell people that I am teaching myself how to code most show a sour face a
 
 Yet it all depends on your career goals. If you trying to be a web developer you won't need to know as much math as a data scientist. Don't get me wrong it helps to know math, calculus, and linear algebra but basic high school mathematics will be enough to get in the right direction.
 
-To make you feel better I took algebra and pre-calculus in high school and statistics in college for my kinesiology degree. I got low A's in high school math and barely passed college statistics. To be honest, it was partly due to the fact I didn't try to excel at it. 
-
-**Truth**: If you know basic mathematics you'll have the minimum skills to get started. Although it helps to know <a href="/resources/#computer-science" target="_blank">calculus, linear algebra, and statistics</a>. Reading math textbooks and taking online math courses or those at community colleges will help. Obviously if you're going to pursue a career that is math-intensive you'll have to learn more. It depends on the path you're going to take.  
+**Truth**: If you know basic mathematics you'll have the minimum skills to learn a programming language. Although it helps to know <a href="/resources/#computer-science" target="_blank">calculus, linear algebra, and discrete mathematics</a>. Reading math textbooks and taking online math courses or those at community colleges will help. Obviously if you're going to pursue a career that is math-intensive you'll have to learn more. It depends on the path you're going to take.  
 
 ## Assumption: I must have a computer science degree to get a career in the software industry
 
@@ -27,7 +25,7 @@ Having a C.S. degree helps but with the large amount of free and paid courses, t
 
 If you don't have a degree you're going to have to expose your skills and experience by building and publishing applications and contributing to open-source projects. This will show that you know how to code and you have passion to contribute to the industry.
 
-I've found many employers will hire a person who has multiple years of practical experience but no C.S. degree over a person who has a degree with no practical experience. Experience trumps education.
+I've read and heard many employers will hire a person who has multiple years of practical experience but no C.S. degree over a person who has a degree with no practical experience.For these recruiters, experience trumps education.
 
 **Truth**: Formal education helps but practical experience is even more helpful. Build projects, contribute to other projects and attend conferences and meetings where you can network with other programmers and employers.
 
@@ -41,7 +39,7 @@ The real beauty of teaching yourself how to program is that you have the freedom
 
 ## The One Truth to Squash All Assumptions
 
-I am sure there are plenty other assumptions but these three are the most common. We live in a time where technology and information is easily accessible. If you need to access anything you open your *smartphone*. If you want to learn something you *Google* it. It's that simple. 
+I am sure there are plenty other assumptions but these three are the most common. We live in a time where technology and information is easily accessible. If you need to access anything you open your smartphone. If you want to learn something you Google it. It's that simple. 
 
 So what I think is more important than having the knowledge and formal education is *first* having the passion to learn and challenge yourself and the persistence to stick it out.
 

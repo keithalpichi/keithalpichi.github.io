@@ -1,5 +1,5 @@
 ---
-title: "Why I Chose Python"
+title: "Why I Chose Python as My First Language"
 date: 2016-06-28 12:30:00
 description: "It's powerful, easy-to-learn, and of course big companies use it too"
 tags: python
@@ -34,7 +34,7 @@ View the language's community, documentation, and support. Download the language
 
 More importantly, don't get tied up on a single language. As you learn, you'll find yourself having to learn other languages. That shouldn't scare you though as each language has it's strengths and weaknesses. You will hear often that a language itself is not the *silver bullet*, it's what you build with it that matters.
 
-However, I do suggest you give Python a try first. Hopefully you see what I see in Python. 
+However, If you're new to programming I do suggest you give Python a try first. Hopefully you see what I see in Python. 
 
 ## If You Use Python, Why Do You Use It?
 
