@@ -1,6 +1,7 @@
 name: "Keith Alpichi's Technical Blog & Portfolio"
 description: "Interested in teaching yourself how to code? I'm a self-taught programmer sharing my experiences and publications in Python/Flask, Elixir/Phoenix, web development and more."
 meta_description: "Keith Alpichi's Blog & Portfolio"
+logo: /assets/images/avatar-ka.png
 
 markdown: Kramdown
 highlighter: rouge
@@ -25,6 +26,9 @@ authorTwitter:  'keithalpichi'
 myLinkedin: 'https://linkedin.com/in/keithalpichi'
 myGithub: 'https://github.com/keithalpichi'
 myTwitter: 'https://twitter.com/keithalpichi'
+twitter:
+  usernme: keithalpichi
+
 
 permalink:       /:year/:title/
 
