@@ -15,15 +15,15 @@ Programming is a typed-language not a spoken one. Unlike other things you learn 
 
 For example, reading the code below seems simple to remember. However read it once and try implementing the same idea yourself without using what I used here.
 {% highlight python %}
-> my_favorite_tools = ["python", "flask", "react"]
+> my_favorite_tools = ["python", "elixir", "vim"]
 > for every_tool in my_favorite_tools:
       print(every_tool)
 > python
-> flask
-> react
+> elixir
+> vim
 {% endhighlight %}
 
-If you're new to programming this might seem hard. When you come across code type them into your computer, work through examples, and challenge yourself to build programs.
+When you come across code type them into your computer, work through examples, and challenge yourself to build programs.
 
 ## Learning to code will challenge you
 
@@ -120,7 +120,7 @@ It's important ask questions the right way. When you're asking for help present 
 
 You'll have a lot of questions about what's the best way, language or tool to implement something. You don't want to make mistakes so you ask for help. That's understandable. However, most of the time searching for the perfect solution turns out to be more like a search for infinite solutions.
 
-Instead choose the option that seems *most appealling to you and implement now*. In the programming world you can implement almost everything with any option. For example, you can do web development with either PHP, Javascript, Python or Ruby.
+Instead choose the option that seems *most appealling to you and implement that now*. In the programming world you can implement almost everything with any option. For example, you can do web development in either PHP, Javascript, Python or Ruby.
 
 Instead of wasting time finding the perfect solution, pick a language or tool that works *for you that you enjoy* and stick with it. Do one thing at a time and do it well. You can keep your eyes open of other options but you don't need to drop everything so fast if you decide to switch it up.
 

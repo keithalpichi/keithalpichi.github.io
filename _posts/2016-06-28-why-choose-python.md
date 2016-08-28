@@ -1,7 +1,8 @@
 ---
+author: keithalpichi
 title: "Why I Chose Python as My First Language"
 date: 2016-06-28 12:30:00
-description: "It's powerful, easy-to-learn, and of course big companies use it too"
+description: "Python is powerful, easy-to-learn, and of course big companies use it too"
 tags: python
 ---
 

@@ -1,10 +1,11 @@
-name: "Keith Alpich's Technical Blog & Portfolio"
-description: "Interested in teaching yourself how to code? I am a self-taught programmer sharing my experiences and work in Python/Flask, Elixir/Phoenix, web development and more."
+name: "Keith Alpichi's Technical Blog & Portfolio"
+description: "Interested in teaching yourself how to code? I am a self-taught programmer sharing my experiences and publications in Python/Flask, Elixir/Phoenix, web development and more."
 meta_description: "Keith Alpichi's Blog & Portfolio"
 
 markdown: Kramdown
 highlighter: rouge
-#gems: [jekyll-paginate]
+gems: 
+  - jekyll-seo-tag
 
 #paginate: 20
 #paginate_path: "/page:num/"
@@ -16,7 +17,7 @@ disqus_shortname: 'keithalpichi'
 
 # Details for the RSS feed generator
 url:            'keithalpichi.github.io'
-author:         'Keith Alpichi'
+author:         'keithalpichi'
 
 #Social URL links
 authorTwitter:  'keithalpichi'
