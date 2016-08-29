@@ -77,15 +77,15 @@ h1.header, h2.header {
 }
 
 .profile #wrapper {
-	padding: 100px 40px 0px;
+	padding: 40px 40px 0px;
 	max-width: 600px;
 	margin: 0 auto;
 }
 
 .profile #header {
 	border-bottom: 1px solid #eee;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
 	text-align: center;
 	position: relative;
 }
@@ -94,7 +94,7 @@ h1.header, h2.header {
 	display: inline-block;
 	width: 150px;
 	height: 150px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .profile h1 {
@@ -114,20 +114,24 @@ h1.header, h2.header {
 
 }
 
-.profile a i#twitter {
+.twitter {
 	color: #4fafed;
 }
 
-.profile a#twitter-button {
-	margin: 10px;
+.github {
+	color: #333;
 }
 
-.profile a i#github {
-	color: #ddd;
-}
-
-.profile a i#linkedin {
+.linkedin {
 	color: #007bb6;
+}
+
+.stackoverflow {
+  color: #fe7a15;
+}
+
+.main-color {
+  color: #17D73E;
 }
 
 nav.main-nav {

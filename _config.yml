@@ -18,16 +18,16 @@ disqus: true
 disqus_shortname: 'keithalpichi'
 
 # Details for the RSS feed generator
-url:            'keithalpichi.github.io'
-author:         'keithalpichi'
+url: 'keithalpichi.github.io'
+author: 'Keith Alpichi'
 
 #Social URL links
-authorTwitter:  'keithalpichi'
-myLinkedin: 'https://linkedin.com/in/keithalpichi'
-myGithub: 'https://github.com/keithalpichi'
-myTwitter: 'https://twitter.com/keithalpichi'
 twitter:
   usernme: keithalpichi
+linkedin_url: https://linkedin.com/in/keithalpichi
+twitter_url: https://twitter.com/keithalpichi
+github_url: https://github.com/keithalpichi
+stackoverflow_url: https://stackoverflow.com/users/5796559/keitha
 
 
 permalink:       /:year/:title/
