@@ -13,7 +13,7 @@ gems:
 #paginate_path: "/page:num/"
 baseurl: /
 domain_name: 'https://keithalpichi.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-49683420-3'
 disqus: true
 disqus_shortname: 'keithalpichi'
 
