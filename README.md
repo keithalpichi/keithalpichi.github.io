@@ -1,8 +1,8 @@
 # Keith Alpichi's Portfolio Blog
 
 ## About me and my blog
-- I'm a self-taught Python software engineer (can I call myself that? LOL). I've been learning to code/program since November 2015 but only got seriosly into it in January 2016.
-- I created this blog to share my experience and what I have learned since the beginning. I encourage anyone who is just starting out by teaching themselves to follow my blog.
+- I'm a self-taught Python & Elixir Web Developer. I've been learning to code/program since November 2015.
+- I created this blog to share my experience and what I have learned since the beginning. I encourage anyone who is just starting out to follow my blog.
 
 ## Blog features
 - Built with Jekyll and Github
