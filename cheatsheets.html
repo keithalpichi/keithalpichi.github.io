@@ -1,0 +1,47 @@
+---
+profile: true
+permalink: cheatsheets/
+---
+
+<h1 class="header">Cheatsheets</h1>
+
+<table>
+  <tbody>
+    <th>Syntax or Semantic</th>
+    <th>Javascript</th>
+    <th>Python</th>
+    <th>Ruby</th>
+    <th>Elixir</th>
+    <tr>
+      <td>Classes</td>
+      <td>{% highlight javascript %}class{% endhighlight %}</td>
+      <td>{% highlight python %}class{% endhighlight %}</td>
+      <td>{% highlight ruby %}class{% endhighlight %}</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <td>Modules</td>
+      <td>none</td>
+      <td>none</td>
+      <td>{% highlight ruby %}module{% endhighlight %}</td>
+      <td>{% highlight elixir %}defmodule{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <td>Functions</td>
+      <td>{% highlight javascript %}function funcName() {...}{% endhighlight %}</td>
+      <td>{% highlight python %}def func_name(): ...{% endhighlight %}</td>
+      <td>{% highlight ruby %}def func_name() ... end{% endhighlight %}</td>
+      <td>{% highlight elixir %}def func_name() do .. end{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <td>Anonymous Functions</td>
+      <td>{% highlight javascript %}(x) => x*2;{% endhighlight %}</td>
+      <td>{% highlight python %}lambda x: x*2{% endhighlight %}</td>
+      <td>{% highlight ruby %}lambda {|x| x*2}{% endhighlight %}</td>
+      <td>{% highlight elixir %}fn(x) -> x*2 end{% endhighlight %}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+{% include footer.html %}
