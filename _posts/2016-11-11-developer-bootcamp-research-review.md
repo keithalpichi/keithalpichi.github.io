@@ -19,7 +19,7 @@ I never even considered attending a developer bootcamp and I think this was larg
 
 Up until two months back I struggled to maintain a structured learning path. I bounced around a lot (as you can see in my [timeline](/timeline)) and I had been confronted with a lot of issues, bugs and frustration. I learned a lot but not at the rate I wanted to. So I looked at other options to help speed up my learning rate.
 
-## The bootcamps I researched
+## Bootcamp criteria
 
 Here are some criteria I set for possible bootcamps I would attend:
 
@@ -64,7 +64,7 @@ I applied to Appacademy sometime in September 2016.
 
 Here were some of the reasons why I applied to Appacademy:
 
-- It got great reviews, 98% of graduates get careers and their tuition plan is pretty neat- pay a $5k deposit up front and only pay the rest of tuition if you get a job after the program. If you get a job within a certain time period after graduation you pay ~18-22% of your first years salary. If not you don't pay any more fees. I am not sure if you get your deposit back.
+- It got great reviews, a high percentage of graduates get careers and their tuition plan is pretty neat- pay a $5k deposit up front and only pay the rest of tuition if you get a job after the program. If you get a job within a certain time period after graduation you pay ~18-22% of your first years salary. If not you don't pay any more fees. I am not sure if you get your deposit back.
 - I was currently learning Elixir and it's syntax looked very similar to Ruby. The program was in Ruby so I though it wouldn't be too hard to transition to. Plus a lot of companies who are incorporating Elixir into their stack were or are currently using Ruby. I felt experience in both would be valuable.
 - Their curriculum was up to date- they teach Ruby, Rails, React, Redux. They did use Backbone a few months back but now they've switched to React and Redux. I also had a basic understanding of the React and Redux model. 
 
@@ -109,9 +109,7 @@ Here are some reasons why I applied to Hackreactor:
 Applicants are first asked to complete an application that requires some beginner knowledge of Javascript syntax and simple data structures. Afterwards you're asked to schedule an interview. 
 #### Interview prep
 
-Hackreactor gives you [links to resources](http://www.hackreactor.com/free-resources) to prepare for the first interview. Although they're good resources I didn't use them. Since I have been teaching myself programming for less than a year I didn't need Javascript resources that were geared towards beginners. I felt the resources Hackreactor recommended were impractical for me. 
-
-Instead I quickly read through [Learning Javascript](http://amzn.to/2f0fG2E) and practiced at [exercism.io](http://www.exercism.io) and [codewars.com](https://codewars.com). I also practiced building small applications with React and Redux prior to applying. 
+Hackreactor gives you [links to resources](http://www.hackreactor.com/free-resources) to prepare for the first interview. Although they're good resources I didn't use them. Instead I quickly read through [Learning Javascript](http://amzn.to/2f0fG2E) and practiced at [exercism.io](http://www.exercism.io) and [codewars.com](https://codewars.com). I also practiced building small applications with React and Redux prior to applying. 
 
 I assumed there would be multiple interviews with each subsequent one harder than the previous one. Hackreactor makes it clear you don't have to know everything for the first interview so I didn't need to master Javascript just yet. At this point I felt prepared.
 
@@ -147,7 +145,7 @@ So at this point I had thought of a few things- do I continue the 30 ProjectEule
     <tr>
       <td>Tuition</td>
       <td>Due after graduating. 18-25% of first years salary. Basically the higher you earn the higher you pay. You pay a $5k deposit (at 18% repayment) but can lower it down in $1k increments where at $2k you have a 25% repayment.</td>
-      <td>Due during the program. Flat rate of $18-20k. $2k of this is due as an initial deposit to enroll.</td>
+      <td>Due before the start of the program. Flat rate of $18-20k. $2k of this is due as an initial deposit to enroll.</td>
     </tr>
     <tr>
       <td>Financing options</td>
@@ -183,7 +181,7 @@ I liked Appacademy's tuition model only because you didn't have to pay until you
 
 **Tuition- Hackreactor** (Hackreactor 1, Appacademy 0)
 
-I enjoy Elixir and want to continue using it. Some Ruby on Rails companies are starting to incorporate Elixir into their stack. In this case having Ruby and Elixir experience would be valuable. I also like React and Redux over other JS frameworks. So I favored Appacademy's tech stack over Hackreactor's. However it wasn't too much of a deal as programming fundamentals don't change between languages.
+I enjoy Elixir and want to continue using it. Some Ruby on Rails companies are starting to incorporate Elixir into their stack. In this case both Ruby and Elixir experience would be valuable. I also like React and Redux over other JS frameworks. So I favored Appacademy's tech stack over Hackreactor's. However it wasn't too much of a deal as programming fundamentals don't change between languages.
 
 **Tech stack- Both are really good** (Hackreactor 2, Appacademy 1)
 
@@ -221,7 +219,7 @@ Obviously I can't answer this question for you and everyone has unique situation
 - Practice, practice, practice. More specifically- code, code and code some more
   - Know and practice your data structures and algorithms (check out the [resource](/resources) page for resource recommendations)
   - Practice solving problems under time constraints. I got really anxious knowing I had 'x' amount of time left to solve a problem I had trouble solving. In the live interviews you have limited time so you must solve the problems fast. When you practice, time yourself. Come back later, delete your previous code and beat your time. 
-  - Practice solving problems while being watched. In coding interviews the interviewer is watching and listening to you. If you don't talk through your logic and code there's no way for the interviewer to know if you know what you're doing or if you're going in the right or wrong direction. If you're silent they can only assume you don't know what you're doing. Before you start coding talk about how you're going to approach the problem and explain each steps while you're doing it. If you get stuck or make a mistake explain the problem and what you think is causing it.
+  - Practice solving problems while being watched. In coding interviews the interviewer is watching and listening to you. If you don't talk through your logic and code there's no way for the interviewer to know if you know what you're doing or if you're going in the right or wrong direction. If you're silent they can only assume you don't know what you're doing. Before you start coding talk about how you're going to approach the problem and explain each step while you're doing it. If you get stuck or make a mistake explain the problem and what you think is causing it.
   - Check out Jeff Lee's articles on his research and experience with various [coding bootcamps](http://rebootjeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/). I found them to be extremely helpful when it came to choosing a developer bootcamp. Although they are a little outdated they are much more extensive than this article.
 
 ## Should I share my experience at Hackreactor?
