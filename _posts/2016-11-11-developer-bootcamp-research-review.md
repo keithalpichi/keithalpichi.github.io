@@ -9,7 +9,7 @@ date: 2016-11-11 12:00:00
 
 On Monday November 7th 2016 I received an email from Hackreactor informing me I got into their on-site immersive 12-week program. Two months prior I didn't even consider applying to any local bootcamps. 
 
-In this article I'd like to explain why I decided to apply to local bootcamps, an overview and criticism of two of them, how I prepared for their intensive interviews and my experience with the interviews itself.
+In this article I'd like to explain why I decided to apply to local bootcamps, an overview and criticism of two of them, how I prepared for their intensive interviews and my experience with the interviews themselves.
 
 At the end of the article I explain which one I chose as well as some advice about choosing one yourself.
 
@@ -54,10 +54,9 @@ Here are some criteria I set for possible bootcamps I would attend:
 </tbody>
 </table>
 
-I researched a ton of bootcamps and I narrowed it down to two; Appacademy and Hackreactor. I won't cover why I didn't choose any other bootcamps because they didn't meet my criteria above. I decided to only apply to Appacademy at the moment and the next section explains why.
+I researched a ton of bootcamps and I narrowed it down to two; Appacademy and Hackreactor. I won't cover other bootcamps; just know I didn't choose them because they didn't meet my criteria above. I decided to only apply to Appacademy at the moment and the next section explains why.
 
 ## [Appacademy](https://www.appacademy.io)
-
 
 I applied to Appacademy sometime in September 2016. 
 
@@ -71,11 +70,13 @@ Here were some of the reasons why I applied to Appacademy:
 
 #### Application process
 
-You fill out an application and are sent instructions to submit their solutions to a set of problems. You're also provided free resources to help prepare you for the problems. You have the freedom to solve the problems in the language of your choice and have 45 minutes to complete them.
+You fill out an application and are sent instructions to submit your solutions to a set of problems. You're also provided free resources to help prepare you for the problems. You have the freedom to solve the problems in the language of your choice and have 45 minutes to complete them.
 
-You submit your solutions and get an email a week later about the next steps. If you did well you schedule a live video interview where you solve problsm in front of a real person. If you didn't do well you move on to another yet more challenging problem set. I assume you repeat this process until you advance to the video interview.
+You submit your solutions and get an email a week later about the next steps. If you did well you schedule a live video interview where you solve problems in front of interviewer. If you didn't do well you move on to another yet more challenging problem set. I assume you repeat this process until you advance to the video interview.
 
 #### Interview prep
+
+> Along with the resources I share here find more detailed resources at my [resources](/resources) page
 
 Appacademy provides another link to resources to prepare for the live interview. The links to these resources are tagged with the applicants ID so unfortunately I can't share mine. Plus it has expired. You'll get your link when you apply. 
 
@@ -93,7 +94,7 @@ Me being an ambitious person I did not hesitate to accept their offer to apply a
 
 ## [Hackreactor](http://www.hackreactor.com)
 
-I hadn't applied to Hackreactor until after I got rejected from Appacademy because I originally favored Appacademy's tuition plan. Also I didn't really research Hackreactor too much as my mind was already set on Appacademy. Yet since I got rejected I had to open my options. By the end of this article you'll see why I changed my mind about both bootcamps.
+I hadn't applied to Hackreactor until after I got rejected from Appacademy because I originally favored Appacademy's tuition plan. Also I didn't research Hackreactor too much as my mind was already set on Appacademy. Yet since I got rejected I had to open my options. By the end of this article you'll see why I changed my mind about both bootcamps.
 
 #### Review
 
@@ -108,7 +109,7 @@ Here are some reasons why I applied to Hackreactor:
 Applicants are first asked to complete an application that requires some beginner knowledge of Javascript syntax and simple data structures. Afterwards you're asked to schedule an interview. 
 #### Interview prep
 
-Hackreactor gives you [links to resources](http://www.hackreactor.com/free-resources) to prepare for the first interview. Although they're good resources I didn't use them. Since I have been teaching myself programming for less than a year I didn't need Javascript resources that were geared towards beginnners. I felt the resources Hackreactor recommended were impractical for me. 
+Hackreactor gives you [links to resources](http://www.hackreactor.com/free-resources) to prepare for the first interview. Although they're good resources I didn't use them. Since I have been teaching myself programming for less than a year I didn't need Javascript resources that were geared towards beginners. I felt the resources Hackreactor recommended were impractical for me. 
 
 Instead I quickly read through [Learning Javascript](http://amzn.to/2f0fG2E) and practiced at [exercism.io](http://www.exercism.io) and [codewars.com](https://codewars.com). I also practiced building small applications with React and Redux prior to applying. 
 
@@ -116,13 +117,13 @@ I assumed there would be multiple interviews with each subsequent one harder tha
 
 #### Interview process
 
-In the live video interview you solve problems in front of a real person. After 7-10 days you'll get instructions on the next steps.
+In the live video interview you solve problems in front of an interviewer. After 7-10 days you'll get instructions on the next steps.
 
 The interview was not as hard as I thought. I was quite surprised especially since I heard their interviews are the hardest ones out there. I expected the interview to be extremely hard so I spent many hours preparing for it. I guess I prepared well. Or maybe I got lucky?
 
 I had a few minor mistakes but since I was explaining my logic and debugging out loud I was able to find my mistakes, fix them and solve the problem. I was confident I did well but not perfect. 
 
-I impatiently waited for two weeks for their response. On a monday morning a few weeks later I got an email stating I got accepted! Woohoo!
+I impatiently waited for two weeks for their response. On a Monday morning a few weeks later I got an email stating I got accepted! Woohoo!
 
 #### Post-interview
 
@@ -178,7 +179,7 @@ So at this point I had thought of a few things- do I continue the 30 ProjectEule
 
 ## The battle for my decision
 
-I liked Appacademy's tuition model only because you didn't have to pay until you get a job. However, you end up paying more the higher you earn. Obviously I wasn't attending a bootcamp to earn as little as possible. I liked Hackreactor's set tuition. No matter how much I earn I pay the set flat tuition fee. The drawback is that I have to basically pay it up-front.
+I liked Appacademy's tuition model only because you didn't have to pay until you get a job. However, you end up paying more the higher you earn. Obviously I wasn't attending a bootcamp to earn as little as possible. I liked Hackreactor's set tuition. No matter how much I earn I pay the set tuition fee. The drawback is that I have to basically pay it up-front.
 
 **Tuition- Hackreactor** (Hackreactor 1, Appacademy 0)
 
@@ -196,7 +197,7 @@ I am not too sure how Hackreactor's interview process works since I got accepted
 
 **Interview preparation and process- None, unfair comparison** (Hackreactor 3, Appacademy 1)
 
-I wanted a bootcamp to have high expectations of their students just like I'd want high expectations of a bootcamp. I wanted to be challenged. I didn't want my tuition going into a program that I can do on my own. I feel both do a very good job on this.
+I wanted a bootcamp to have high expectations of their students just like I'd want high expectations of a bootcamp. I wanted to be challenged. I didn't want my tuition going into a program that I can do on my own. I feel both do a very good job of this.
 
 **Expectations and value of curriculum- Both** (Hackreactor 4, Appacademy 2)
 
@@ -216,12 +217,12 @@ Obviously I can't answer this question for you and everyone has unique situation
 
 - Do your research and narrow your search based on your own criteria
 - Explore every section of the bootcamp's website, Yelp, Quora, Facebook, online forums and blog articles to get more information
-- Contact the bootcamps admissions office directly if you have any questions that you can't find on their website. Ask anything really. If they are open to all questions that means they take pride in their program. A good bootcamp program should be transparent.
+- Contact the bootcamp's office directly if you have any questions that you can't find on their website. If they are open to all questions that means they take pride in their program. A good bootcamp program should be transparent.
 - Practice, practice, practice. More specifically- code, code and code some more
   - Know and practice your data structures and algorithms (check out the [resource](/resources) page for resource recommendations)
-  - Practice solving problems under time constraints. I got really anxious knowing I had 'x' amount of time left to solve a problem I had trouble solving. Learn how to solve problems under pressure.
-  - Practice solving problems while being watched. In coding interviews you're being watched and listened to by a human being. If you don't talk through your logic and code there's no way for the moderator to know if you know what you're doing or if you're going in the right or wrong direction.
-- Check out Jeff Lee's articles on his research and experience with various [coding bootcamps](http://rebootjeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/). I found them to be extremely helpful when it came to choosing a developer bootcamp. Although they are a little outdated they are much more extensive than this article.
+  - Practice solving problems under time constraints. I got really anxious knowing I had 'x' amount of time left to solve a problem I had trouble solving. In the live interviews you have limited time so you must solve the problems fast. When you practice, time yourself. Come back later, delete your previous code and beat your time. 
+  - Practice solving problems while being watched. In coding interviews the interviewer is watching and listening to you. If you don't talk through your logic and code there's no way for the interviewer to know if you know what you're doing or if you're going in the right or wrong direction. If you're silent they can only assume you don't know what you're doing. Before you start coding talk about how you're going to approach the problem and explain each steps while you're doing it. If you get stuck or make a mistake explain the problem and what you think is causing it.
+  - Check out Jeff Lee's articles on his research and experience with various [coding bootcamps](http://rebootjeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/). I found them to be extremely helpful when it came to choosing a developer bootcamp. Although they are a little outdated they are much more extensive than this article.
 
 ## Should I share my experience at Hackreactor?
 
