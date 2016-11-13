@@ -7,7 +7,7 @@ tags: python, flask, html, css, git
 
 <h2>The Most Important Article on This Website</h2>
  
-<p>I made this guideline based on my personal experience of teaching myself software programming, Python and web development. Checkout my <a href="/timeline">timeline</a> if you haven't already. It covers the path I took since the beginning of my journey and what I learned from it.</p> 
+<p>I made this guideline based on my personal experience of teaching myself software programming and web development. Checkout my <a href="/timeline">timeline</a> if you haven't already. It covers the path I took since the beginning of my journey and what I learned from it.</p> 
 
 <p>This guideline was made to help you learn programming effectively and efficiently. From learning the basics of computer science to getting your applications deployed. Throughout this article I have linked to resources I recommend. Read and follow this guideline from top to bottom.</p>
 
@@ -22,8 +22,8 @@ tags: python, flask, html, css, git
 <ol>
   <li>First it's important you understand what your goals are. Answer the following questions: 
     <ol>
-      <li>What aspects of technology interest me? Science? Math? Web development? Mobile? Robotics? Data?</li>
-      <li>What do I want to specialize in? What do I want to be known for? Frontend? Backend? What language? User experience/design (UI/UX)?</li>
+      <li>What aspects of technology interest me? Science? Math? Web development? Mobile? Robotics? Data? Games? eCommerce? </li>
+      <li>What do I want to specialize in? What do I want to be known for? Frontend? Backend? Both? What language? User experience/design (UI/UX)?</li>
       <li>What problems have I faced that can be solved with software?</li>
       <li>What am I looking for in a language or software? Shallow learning curve? Support? Community? Speed and scalability? Accessibility to open-source libraries and packages that I can use?</li>
     </ol>
@@ -40,8 +40,7 @@ Pick your language and how you'd like to learn it.
   <li>How do you like to learn? Take a look the <a href="/resource" target="_blank">resource page</a> for resources I recommend.
     <ol>
       <li>With physical/online books? This is how I've done it. If you're teaching yourself and not pursuing a computer science degree I advise this route.</li> 
-      <li>Taking a course? I've never tried this route but I've read <a href="https://www.coursera.org" target="_blank">Coursera</a> was a good source. Does going back to school to a community college or university sound ideal?</li>
-      <li>Visually? There are a lot of Youtube videos where you can follow someone coding. Unless you can find a good comprehensive video source I don't think this is an efficient way to learn.</li>
+      <li>Taking a course? I've never tried this route but I've read <a href="https://www.coursera.org" target="_blank">Coursera</a> was a good source. Does going back to school to a community college or university sound ideal? How about a developer bootcamp?</li>
     </ol>
   </li>
 </ol>
@@ -49,12 +48,12 @@ Pick your language and how you'd like to learn it.
 
 ### Prepare With The Right Tools
 
-- Install your language of choice. If you chose Python follow these <a href="http://www.diveintopython3.net/installing-python.html" target="_blank">instructions to set up Python 3</a>.
-- There are many programs on the web and on your machine pre-installed that you can use to create and edit code. If you're just starting out I recommend [Sublime Text](http://www.sublimetext.com). 
+- Install your language of choice. If you chose Python follow these <a href="http://www.diveintopython3.net/installing-python.html" target="_blank">instructions to set up Python 3</a>. If you chose another language check out the language's documentation.
+- There are many programs on the web and on your machine pre-installed that you can use to create and edit code. If you're just starting out I recommend [Sublime Text](http://www.sublimetext.com) or [Atom](http://www.atom.io). 
 - You'll need to interact with the command line. On a Mac OSX the command line program is called Terminal. Search your applications and place this application in your dock. You'll be using it often. The [Command Line Crash Course](http://cli.learncodethehardway.org/book/) will get you on the right foot for using the command line. You'll learn all the basic filesystem commands and operations.
 - You'll want to learn <a href="/resources#git" target="_blank">Git and use a git repository hosting service (such as Github or Bitbucket)</a> to track the changes to your code, back it up and revert to old code if you make a mistake. You'll also use Github or Bitbucket to collaborate with your team. When you have issues with your code you can give the link to your code's repository so others can see it.
 - Create a <a href="https://stackoverflow.com" target="_blank">Stackoverflow</a> account. Stack Overflow is an online community for programmers to learn, share their knowledge and help others solve problems. Anytime you search online for a programming issue you'll most likely find results from Stack Overflow. Sometimes you won't find an answer. That's when you post your question to Stack Overflow.
-- Create a <a href="https://trello.com" target="_blank">Trello</a> account. This one is optional but I use it to create and track my notes about almost everything-- from my to-do lists to key notes about a programming language.
+- Create a <a href="https://trello.com" target="_blank">Trello</a> account. This one is optional but I use it to create and track my notes about almost everything-- from my to-do lists to key notes about a programming language. Or use Git and Github. Or use the Terminal and create and edit files.
 
 <h3>Learn the Fundamentals of the Language and OOP</h3>
 
