@@ -1,17 +1,17 @@
 name: "Keith Alpichi's Technical Blog & Portfolio"
-description: "Interested in teaching yourself how to code? I'm a self-taught web developer sharing my experiences and publications. I am currently looking for a full-time full-stack web developer position."
+description: "Want to learn to code? I'm a self-taught web developer sharing my experiences and publications of my work. I am currently looking for a full-time full-stack web developer position."
 meta_description: "Keith Alpichi's Blog & Portfolio"
 logo: /assets/images/avatar-ka.png
 
 markdown: kramdown
 
 highlighter: rouge
-gems: 
+gems:
   #- pygments
   - rouge
   - jekyll-seo-tag
   - jekyll-sitemap
-  
+
 #paginate: 20
 #paginate_path: "/page:num/"
 baseurl: /
