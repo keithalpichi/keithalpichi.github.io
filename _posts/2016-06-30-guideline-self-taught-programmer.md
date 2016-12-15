@@ -6,8 +6,8 @@ tags: python, flask, html, css, git
 ---
 
 <h2>The Most Important Article on This Website</h2>
- 
-<p>I made this guideline based on my personal experience of teaching myself software programming and web development. Checkout my <a href="/timeline">timeline</a> if you haven't already. It covers the path I took since the beginning of my journey and what I learned from it.</p> 
+
+<p>I made this guideline based on my personal experience of teaching myself software programming and web development. Checkout my <a href="/timeline">timeline</a> if you haven't already. It covers the path I took since the beginning of my journey and what I learned from it.</p>
 
 <p>This guideline was made to help you learn programming effectively and efficiently. From learning the basics of computer science to getting your applications deployed. Throughout this article I have linked to resources I recommend. Read and follow this guideline from top to bottom.</p>
 
@@ -20,7 +20,7 @@ tags: python, flask, html, css, git
 
 <p>
 <ol>
-  <li>First it's important you understand what your goals are. Answer the following questions: 
+  <li>First it's important you understand what your goals are. Answer the following questions:
     <ol>
       <li>What aspects of technology interest me? Science? Math? Web development? Mobile? Robotics? Data? Games? eCommerce? </li>
       <li>What do I want to specialize in? What do I want to be known for? Frontend? Backend? Both? What language? User experience/design (UI/UX)?</li>
@@ -37,10 +37,11 @@ tags: python, flask, html, css, git
 Pick your language and how you'd like to learn it.
 <ol>
   <li>I recommend Python. Not only because I use it but Python can answer all the questions in the previous section. If you want more options do a simple online search such as "programming language for [question-here]". You'll find a plethora of results. If you want a hands-on interactive introduction checkout <a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a>.</li>
-  <li>How do you like to learn? Take a look the <a href="/resource" target="_blank">resource page</a> for resources I recommend.
+  <li>How do you like to learn? Take a look at the <a href="/resource" target="_blank">resource page</a> for resources I recommend.
     <ol>
-      <li>With physical/online books? This is how I've done it. If you're teaching yourself and not pursuing a computer science degree I advise this route.</li> 
-      <li>Taking a course? I've never tried this route but I've read <a href="https://www.coursera.org" target="_blank">Coursera</a> was a good source. Does going back to school to a community college or university sound ideal? How about a developer bootcamp?</li>
+      <li>With physical/online books?</li>
+      <li>Taking a course? Try <a href="https://www.udacity.com/" target="_blank">Udacity's Nanodegree programs</a>, <a href="https://www.udemy.com/" target="_blank">Udemy.org</a> or <a href="https://www.coursera.org/" target="_blank">Coursera.org</a>.</li>
+      <li>Does going back to school to a community college or university sound ideal? How about a developer bootcamp?</li>
     </ol>
   </li>
 </ol>
@@ -49,7 +50,7 @@ Pick your language and how you'd like to learn it.
 ### Prepare With The Right Tools
 
 - Install your language of choice. If you chose Python follow these <a href="http://www.diveintopython3.net/installing-python.html" target="_blank">instructions to set up Python 3</a>. If you chose another language check out the language's documentation.
-- There are many programs on the web and on your machine pre-installed that you can use to create and edit code. If you're just starting out I recommend [Sublime Text](http://www.sublimetext.com) or [Atom](http://www.atom.io). 
+- There are many programs on the web and on your machine pre-installed that you can use to create and edit code. If you're just starting out I recommend [Sublime Text](http://www.sublimetext.com) or [Atom](http://www.atom.io).
 - You'll need to interact with the command line. On a Mac OSX the command line program is called Terminal. Search your applications and place this application in your dock. You'll be using it often. The [Command Line Crash Course](http://cli.learncodethehardway.org/book/) will get you on the right foot for using the command line. You'll learn all the basic filesystem commands and operations.
 - You'll want to learn <a href="/resources#git" target="_blank">Git and use a git repository hosting service (such as Github or Bitbucket)</a> to track the changes to your code, back it up and revert to old code if you make a mistake. You'll also use Github or Bitbucket to collaborate with your team. When you have issues with your code you can give the link to your code's repository so others can see it.
 - Create a <a href="https://stackoverflow.com" target="_blank">Stackoverflow</a> account. Stack Overflow is an online community for programmers to learn, share their knowledge and help others solve problems. Anytime you search online for a programming issue you'll most likely find results from Stack Overflow. Sometimes you won't find an answer. That's when you post your question to Stack Overflow.
@@ -57,7 +58,7 @@ Pick your language and how you'd like to learn it.
 
 <h3>Learn the Fundamentals of the Language and OOP</h3>
 
-<p>Start learning the language and keep the fundamentals below in mind. When you're confident you know everything start building your own programs or the examples in the next section. If you find that you don't understand something go back to your resource and clarify or search online. 
+<p>Start learning the language and keep the fundamentals below in mind. When you're confident you know everything start building your own programs or the examples in the next section. If you find that you don't understand something go back to your resource and clarify or search online.
 </p>
 
 <p> Understand and practice with the following components:
@@ -111,7 +112,7 @@ You've built an application you want to deploy to the world, now what? Deploymen
 
 ## Summary
 
-It's important you first understand the fundamentals of computer science, object-oriented programming, and the language itself before you start building applications. When I first started I tried doing it the other way around and that didn't work well. 
+It's important you first understand the fundamentals of computer science, object-oriented programming, and the language itself before you start building applications. When I first started I tried doing it the other way around and that didn't work well.
 
 Next practice your skills by using the recommended websites and building small programs on your own computer. Once you fill comfortable with the fundamentals it's time to take the next step on learning new languages and implementations. When you have tested your application and you're ready to publish it to the world it's time to deploy it.
 
