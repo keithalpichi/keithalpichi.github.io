@@ -73,6 +73,7 @@ h2 {
 }
 
 h1.header, h2.header {
+	margin-top: 20px;
 	text-align: center;
 }
 
@@ -92,8 +93,8 @@ h1.header, h2.header {
 
 .profile #avatar, #avatar {
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 35%;
+	height: 35%;
 	margin-bottom: 10px;
 }
 
@@ -114,6 +115,10 @@ h1.header, h2.header {
 
 }
 
+.icon {
+	margin: 4px;
+}
+
 .twitter {
 	color: #4fafed;
 }
@@ -129,6 +134,11 @@ h1.header, h2.header {
 .stackoverflow {
   color: #fe7a15;
 }
+
+.quora {
+  color: #aa2200;
+}
+
 
 .main-color {
   color: #17D73E;
@@ -209,9 +219,9 @@ a,
 }
 
 ul 	{ margin: 10px 0; padding:0; }
-li { 
-	list-style-type:circle; 
-	list-style-position:inside; 
+li {
+	list-style-type:circle;
+	list-style-position:inside;
 	margin: 10px;
 }
 
@@ -402,7 +412,7 @@ img {
 Post List
 =========================================== */
 #post-list,#archive-list {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 #post-list li,#archive-list li {
