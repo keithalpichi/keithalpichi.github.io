@@ -94,28 +94,32 @@ Pick your language and how you'd like to learn it.
 
 At this point you should feel confident with the language and OOP. If you want to build something bigger you're going to need to learn a few other things.
 
-- If you need to store data you'll need to learn <a href="/resources#db" target="_blank">SQL databases</a> and if you're using Python, <a href="/resources#db" target="_blank">SQLAlchemy</a>.
+<ul>
+  <li>If you need to store data you'll need to learn <a href="/resources#db" target="_blank">SQL databases</a> and if you're using Python, <a href="/resources#db" target="_blank">SQLAlchemy</a>.</li>
+  <li>If you need to build a user interface you'll need to learn a frontend language.</li>
+  <li>If you want to do mobile:
+    <ul>
+    <li>for iOS you'll want to learn Swift or Objective-C</li>
+    <li>for Android you'll want to learn Java (Java can be used on the frontend and backend)</li>
+    </ul>
+  </li>
+  <li>If you want to do web:
+    <ul>
+      <li>you'll want to learn the basics-- <a href="/resources#frontend" target="_blank">CSS, HTML and Javascript</a>.</li>
+    </ul>
+  </li>
 
-- If you need to build a user interface you'll need to learn a frontend language.
-
-- If you want to do mobile:
-  - for iOS you'll want to learn Swift or Objective-C
-  - for Android you'll want to learn Java (Java can be used on the frontend and backend)
-- If you want to do web:
-  - you'll want to learn the basics-- <a href="/resources#frontend" target="_blank">CSS and HTML</a>. Once you do you can go a little further and learn Javascript (Javascript can be used on the frontend and backend).
-
-Since I only have experience in <a href="/resources#flask" target="_blank">web development, Flask and PostgreSQL</a> I recommend learning those too.
-
-### Deployment
+<h3>Deployment</h3>
 
 You've built an application you want to deploy to the world, now what? Deployment is a whole other level, but there are <a href="/resources#deployment" target="_blank">deployment resources that I've used that make it a little easier to learn and use</a>.
 
-## Summary
+<h3>Summary</h3>
 
-It's important you first understand the fundamentals of computer science, object-oriented programming, and the language itself before you start building applications. When I first started I tried doing it the other way around and that didn't work well.
+<p>
+It's important you first understand the fundamentals of computer science, object-oriented programming, and the language itself before you start building applications. When I first started I tried doing it the other way around and that didn't work well.</p>
 
-Next practice your skills by using the recommended websites and building small programs on your own computer. Once you fill comfortable with the fundamentals it's time to take the next step on learning new languages and implementations. When you have tested your application and you're ready to publish it to the world it's time to deploy it.
+<p>Next practice your skills by using the recommended websites and building small programs on your own computer. Once you fill comfortable with the fundamentals it's time to take the next step on learning new languages and implementations. When you have tested your application and you're ready to publish it to the world it's time to deploy it.</p>
 
-That's it for now. I'll be adding to this guideline often so I encourage you to check back often. **If you have any advice, comments or find any issues in this guideline please let me know below**. Thank you!
+<p>That's it for now. I'll be adding to this guideline often so I encourage you to check back often. <b>If you have any advice, comments or find any issues in this guideline please let me know below</b>. Thank you!</p>
 
 {% include footer.html %}
