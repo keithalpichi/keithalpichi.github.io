@@ -7,7 +7,6 @@ markdown: kramdown
 
 highlighter: rouge
 gems:
-  #- pygments
   - rouge
   - jekyll-seo-tag
   - jekyll-sitemap
