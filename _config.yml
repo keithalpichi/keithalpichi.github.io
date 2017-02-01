@@ -1,4 +1,5 @@
 name: "Keith Alpichi"
+author: 'Keith Alpichi'
 description: "Want to learn to code? I'm a self-taught web developer sharing my experiences and publications of my work. I am currently looking for a full-time full-stack web developer position."
 meta_description: "Keith Alpichi's Blog & Portfolio"
 keywords: "software engineering, web development, code, programming"
@@ -20,10 +21,6 @@ domain_name: 'https://keithalpichi.github.io'
 google_analytics: 'UA-49683420-3'
 disqus: true
 disqus_shortname: 'keithalpichi'
-
-# Details for the RSS feed generator
-url: 'keithalpichi.github.io'
-author: 'Keith Alpichi'
 
 #Social URL links
 twitter:
