@@ -2,12 +2,12 @@
 title: "What to Expect When Teaching Yourself to Code"
 description: "Do yourself a favor and set yourself on the right path"
 date: 2016-08-29 12:00:00
-tags: python, elixir, tdd
+keywords: programming, software, python, code, web, html, css, git, test driven development
 ---
 
 There are plenty of things that I have learned when I first started to program. Below are the most common challenges to expect when you start learning. Knowing what to expect is critical as it will help you prepare and overcome  them. You'll write better code, make less mistakes and save yourself from pulling all your hair out.
 
-## You'll want to read or copy code 
+## You'll want to read or copy code
 
 > By all means stay away from `<CMD-C>`!
 
@@ -25,7 +25,7 @@ For example, read the code below *once* and try implementing the same idea yours
 
 You don't learn programming by copying code from a book or a screen. So when you come across code type it into your computer, work through examples, and challenge yourself to build programs with your newly acquired knowledge.
 
-## Learning to code will challenge you 
+## Learning to code will challenge you
 
 One of the first things I learned about programming was that it has challenged me on so many levels. I am pretty sure it will challenge you as well. So expect to be tested on the following:
 
@@ -50,7 +50,7 @@ So basically, can you use your brain? There are many ways to solve the same prob
 > z #the output of z is 3
 {% endhighlight %}
 
-You will face big problems that seem too big to handle. Break large components down into smaller ones. For example, to build a dresser you start with the structure, the sides, each drawer and the legs. You can take this even further and think about the screws and nuts in each piece. 
+You will face big problems that seem too big to handle. Break large components down into smaller ones. For example, to build a dresser you start with the structure, the sides, each drawer and the legs. You can take this even further and think about the screws and nuts in each piece.
 
 When you build a dresser you don't build from top down. There are logical steps that should be taken. When you code go from step one to step two and so on. Ask yourself what makes the most sense.
 
@@ -63,9 +63,9 @@ When you build a dresser you don't build from top down. There are logical steps 
 
 If I try the example above without considering logic or ignore any type of procedure it doesn't work.
 {% highlight python %}
-> build_one_drawer() 
-> attach_knob_to_the_drawer() 
-> build_sides_of_dresser() 
+> build_one_drawer()
+> attach_knob_to_the_drawer()
+> build_sides_of_dresser()
 > turn_on_the_stove()
 {% endhighlight %}
 It's not logical to build the drawer first. It's probably inefficient to attach the knob to the drawer so early in the build. Also, where in this code do I build the base and why am I turning the stove on?
@@ -78,7 +78,7 @@ Pushing the boundaries of how you think is powerful. Thinking logically will str
 
 I've found myself to skip over topics I didn't understand or ignore concepts I thought weren't important. Trust me when I say this, everything you learn is important and applicable even if it doesn't seem so at the moment. If you're taking a course or reading a textbook there is a reason why you're learning that material. It's not there to waste your time.
 
-If you don't understand something go back, take your time and *really* try to grasp it. Make sure you're actually typing the code and not just reading it. 
+If you don't understand something go back, take your time and *really* try to grasp it. Make sure you're actually typing the code and not just reading it.
 
 ## You'll immediately want to reach out for help when you can't solve a problem
 
@@ -86,7 +86,7 @@ Resist this urge to cry for help. Instead, try to understand the problem. Do you
 
 This is where Stackoverflow, Reddit, Quora, and other forums are for. The next section talks about how to ask for help effectively.
 
-## You'll likely ask for help the wrong way 
+## You'll likely ask for help the wrong way
 
 A lot of people tend to ask for the solution to their problem without first trying to understand where the problem came from. Don't ask, "I got this error, help me." That question doesn't help anyone.
 
@@ -95,7 +95,7 @@ When you're asking for help present the following:
 - the specific error you're getting along with the stack trace (the lines of code that led up to the error that usually gets printed to the console, terminal or browser)
 - what you're trying to accomplish
 - what you've tried
-- why you think you haven't solved it 
+- why you think you haven't solved it
 
 ## You'll want to write code then test, hoping it works
 
@@ -103,7 +103,7 @@ I have fell victim to this pretty early. I'd write some code, fire up the develo
 
 Doing it this way is very inefficient. Furthermore, if you're *hoping* for your code to run without errors you're probably not confident in it. This usually means you wrote bad code that you don't trust. So this goes back to really trying to understand your code and only write what you feel confident about.
 
-Write tests first that fail when they're run. Then write code that makes the tests pass. This is called TDD, Test-Driven Development. In this way you know your code is more reliable because you've tested it. 
+Write tests first that fail when they're run. Then write code that makes the tests pass. This is called TDD, Test-Driven Development. In this way you know your code is more reliable because you've tested it.
 
 - If you're using Python you'll probably be using the [unittest](https://docs.python.org/3/library/unittest.html) library
 - If you're using Elixir you'll probably be using the [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) library

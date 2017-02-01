@@ -2,7 +2,7 @@
 title: "The Assumptions and Myths of Becoming a Self-Taught Programmer"
 description: "Learning to code is challenging but it's not impossible"
 date: 2016-07-01 12:00:00
-tags: python
+keywords: programming, software, python, code, web, html, css, git
 ---
 
 When I first started to learn programming I had a lot of questions and assumptions about the software world. I was very intimidated by the idea of entering a world where I thought only geniuses lived. However, from what I learned my assumption was far from the truth.
@@ -35,14 +35,14 @@ Obviously anything that you learn takes time. I don't need to explain that any f
 
 **Truth**: the more time you put in to learning *and applying* programming skills the more you will get out as a result. It took me about seven months to be *intermediate* in programming. You may or may not learn faster than me. However, it's important to focus not on the time spent but on the quality of the knowledge you gain.
 
-The real beauty of teaching yourself how to program is that you have the freedom to learn at your own rate. Compare this to pursuing a degree. In college you're tied down to a semester length of time. If you feel competent in your knowledge in the course you can't take the final early and advance to the next course. You have to wait until the end of the semester. So you could spend two years teaching yourself, or take one of those 12 week bootcamps, or spend a minimum of four years at a university. 
+The real beauty of teaching yourself how to program is that you have the freedom to learn at your own rate. Compare this to pursuing a degree. In college you're tied down to a semester length of time. If you feel competent in your knowledge in the course you can't take the final early and advance to the next course. You have to wait until the end of the semester. So you could spend two years teaching yourself, or take one of those 12 week bootcamps, or spend a minimum of four years at a university.
 
 ## The One Truth to Squash All Assumptions
 
-I am sure there are plenty other assumptions but these three are the most common. We live in a time where technology and information is easily accessible. If you need to access anything you open your smartphone. If you want to learn something you Google it. It's that simple. 
+I am sure there are plenty other assumptions but these three are the most common. We live in a time where technology and information is easily accessible. If you need to access anything you open your smartphone. If you want to learn something you Google it. It's that simple.
 
 So what I think is more important than having the knowledge and formal education is *first* having the passion to learn and challenge yourself and the persistence to stick it out.
 
-If you're truly motivated to learn you will! As time passes you'll become better and better. You'll look back and laugh at your mistakes but feel proud in the present because you learned from them. 
+If you're truly motivated to learn you will! As time passes you'll become better and better. You'll look back and laugh at your mistakes but feel proud in the present because you learned from them.
 
 So start typing and become a self-taught programmer!

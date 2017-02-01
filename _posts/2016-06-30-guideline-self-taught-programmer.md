@@ -2,7 +2,7 @@
 title: "The Guideline To Being A Self-Taught Programmer"
 date: 2016-06-30 10:00:00
 description: "Step-by-step guide from choosing a language to deploying applications in the cloud."
-tags: python, flask, html, css, git
+keywords: programming, software, python, code, web, html, css, git
 ---
 
 <h2>The Most Important Article on This Website</h2>
