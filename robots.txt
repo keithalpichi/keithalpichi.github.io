@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://keithalpichi.github.io/sitemap.xml
