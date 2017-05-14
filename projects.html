@@ -6,48 +6,46 @@ keywords: projects, publications, programs, apps, applications
 
 <h1 class="header">Projects</h1>
 
+<a href="https://www.onpoint.me/" target="_blank"><h2>On Point</h2></a>
+
+<p>
+  On Point is a geolocation-based Q&amp;A where users ask and answer nearby questions in real-time. This full-stack application used React, Redux, Node, Express, WebSockets, and PostgreSQL.
+</p>
+
+<p>
+  The mission behind On Point was to provide users faster valuable responses to their questions about the environment around them. I found that users often have questions about their surroundings but struggle to find reliable answers fast enough. On Point was created to connect users with questions to users answers around them.
+</p>
+
+<p>
+I decided to pursue WebSockets using Socket.io and Redux to synchronize and maintain dynamic state. I was also able to consistently track a user's dynamic location at all times leveraging PostGIS so that I can provide the right users with the right information that were in a specific location.
+</p>
+
+<p>
+One major technical challenge I faced was cluttered map points at scale. I decided to pursue clustering algorithms to dynamically cluster and render map points at different zoom levels efficiently. I was able to achieve this clustering in O(n) time complexity.
+</p>
+
+<a href="https://github.com/keithalpichi/jarvis" target="_blank"><h2>Jarvis</h2></a>
+
+<p>A chat app with a friendly smart assistant. Tag 'Jarvis' with a question and he will answer. No need to leave the chat to search the web for answers.
+
+Jarvis is a full-stack web application built with Javascript (ES6), React, Node, Express, MongoDB, and Socket.io. The mission behind Jarvis was to provide users quick answers to their questions within a real-time environment without having to leave the chat room. I realized the typical chat room does not have a feature to use the internet within the chat room. Jarvis was created to combine the real-time web surfing in a chat room.</p>
+
+<a href="https://github.com/audaciousamphibians/audaciousamphibians" target="_blank"><h2>Roadchip</h2></a>
+
+<p>
+  Discover new places to visit and eat on a road trip. I found drivers struggled to effectively find places to stop along their path to their destination without first having to research and organize their stops before they actually start driving. I wanted to eliminate the need for a user to do this and research, organize, and plan their road trip and stops in one application.
+</p>
+
 <a href="http://keithalpichi.herokuapp.com" target="_blank"><h2>CRUD Blogging Application</h2></a>
 
 <p>
-  <ul>
-    <li>A fully functional CRUD blogging application</li>
-    <li>Frontend implemented with HTML, CSS, Responsive Web Design</li>
-    <li>Backend implemented with Python and Flask web framework</li>
-    <li>Site hosted on Heroku</li>
-    <li>No longer maintained</li>
-  </ul>
+  A CRUD blogging application implemented in Python, Flask, HTML, CSS, Responsive Web Design. Website is no longer maintained.
 </p>
 
 <a href="http://keithalpichi.github.io/calorie-macro-calculator" target="_blank"><h2>Calorie and Macronutrient Calculator</h2></a>
 
 <p>
-  <ul>
-    <li>A simple one page website allowing users to calculate their daily calorie and macronutrient intake based on their body measurements, age, and level of physical fitness.</li>
-    <li>All frontend implemented with HTML, CSS, Javascript and jQuery, Responsive Web Design</li>
-    <li>Calculator formula based on TDEE (metabolism) and Macronutrient formulas. Calculations are run in jQuery.</li>
-    <a href="https://github.com/keithalpichi/calorie-macro-calculator" target="_blank"><li>Source code on Github</li></a>
-  </ul>
-</p>
-
-<a href="http://github.com/keithalpichi/blackjack" target="_blank"><h2>Command Line Blackjack</h2></a>
-
-<p>
-<ul>
-  <li>A strategic blackjack program played entirely in the command line</li>
-  <li>Program implemented with Python 3</li>
-  <li>Shows use of OOP, unit testing, error handling, file I/O and more</li>
-</ul>
-</p>
-
-<a href="http://github.com/keithalpichi/pymail_sender" target="_blank"><h2>PyMail Sender</h2></a>
-
-<p>
-<ul>
-  <li>A Python script to send emails through the comfort of the command line</li>
-  <li>Goal of program: to automate email sending in custom intervals</li>
-  <li>Written in Python3 and utilizes Python's built-in smtplib and email modules</li>
-  <li>Program reads contact's information (name, email, etc) from a JSON file in order to send the email.</li>
-</ul>
+  A single page application where users calculate their daily calorie and macronutrient intake based on their body measurements, age, and level of physical fitness. Built in HTML, CSS, Javascript and jQuery, Responsive Web Design.
 </p>
 
 {% include footer.html %}
