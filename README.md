@@ -1,16 +1,5 @@
 # Keith Alpichi's Portfolio Blog
 
-## About me and my blog
-- I'm a self-taught Python & Elixir Web Developer. I've been learning to code/program since November 2015.
-- I created this blog to share my experience and what I have learned since the beginning. I encourage anyone who is just starting out to follow my blog.
-
-## Blog features
-- Built with Jekyll and Github
-
-## Blog Theme by
-
-[Nick Balestra's Kactus](https://github.com/nickbalestra/kactus) rendition of the [Cactus](https://github.com/koenbok/Cactus/blob/master/AUTHORS) theme. Thanks to both Nick and the Cactus team!
-
 ## Copyright & License
 
 Copyright (c) 2015 [Cactus Authors](https://github.com/koenbok/Cactus/blob/master/AUTHORS) -  Released under the MIT License.
