@@ -97,8 +97,8 @@ h1.header, h2.header {
 
 .profile #avatar, #avatar {
 	display: inline-block;
-	width: 35%;
-	height: 35%;
+	width: 30%;
+	height: 30%;
 	margin-bottom: 10px;
 	border-radius: 10%;
 }
