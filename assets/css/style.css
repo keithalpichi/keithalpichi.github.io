@@ -220,9 +220,10 @@ a,
 	transition: all 0.15s ease;
 }
 
-ul 	{ margin: 10px 0; padding:0; }
+ul 	{ margin: 10px 0; padding:0; list-style-type: circle; }
+ol { list-style-type: decimal; }
 li {
-	list-style-type:circle;
+	list-style-type: inherit;
 	list-style-position:inside;
 	margin: 10px;
 }
