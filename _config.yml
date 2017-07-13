@@ -11,7 +11,7 @@ kramdown:
   input: GFM
 
 highlighter: rouge
-plugins:
+plugins_dir:
   - rouge
   - jekyll-seo-tag
   - jekyll-sitemap
