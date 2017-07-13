@@ -18,8 +18,7 @@ That's what you want in your development workflow. Spend less time configuring a
 You'll of course need Webpack and NPM or Yarn (I'll be using Yarn in this tutorial), so
 
 {% highlight javascript %}
-yarn add webpack // or
-npm install webpack
+yarn add webpack
 {% endhighlight %}
 
 Install both of these:
@@ -39,7 +38,7 @@ yarn add less-loader
 {% endhighlight %}
 
 A quick overview of these packages:
-- '*-loader' packages are responsible for compiling
+- '*-loader' packages are responsible for compiling, injecting css scripts to the DOM, and resolving imports
 - 'extract-text-webpack-plugin' extracts multiple SASS or LESS files and builds them into a single file
 
 ## Configure Webpack
@@ -70,7 +69,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [new ExtractTextPlugin({ filename: 'index.css' }) ]] // Footnote 5
+  plugins: [new ExtractTextPlugin({ filename: 'index.css' })] // Footnote 5
 }
 {% endhighlight %}
 
