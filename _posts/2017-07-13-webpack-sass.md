@@ -3,7 +3,7 @@ layout: post
 title: "How to setup SASS or LESS with Webpack 2"
 description: "A straight-forward explanation to configuring preprocessors with Webpack 2 to get you styling your applications quickly"
 date: 2017-07-13 12:00:00
-keywords: webpack, sass, less, preprocessors, css, react, angular
+keywords: webpack, sass, less, preprocessor, css, react, angular
 permalink: how-to-setup-sass-less-with-webpack-2
 ---
 
