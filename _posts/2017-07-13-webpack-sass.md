@@ -7,9 +7,12 @@ keywords: webpack, sass, less, preprocessor, css, react, angular
 permalink: how-to-setup-sass-less-with-webpack-2
 ---
 
+#### Prerequisites
+- Basic understanding of SASS or LESS and Webpack
+
 ## LESS time, more SASS
 
-That's what you want in your development workflow. Spend less time configuring and setting up and more time showing off your bad-ass styled applications. Here's a straight-forward explanation to configuring a preprocessor like SASS or LESS with Webpack. I assume you already know how to use SASS or LESS. This is the minimal setup to get preprocessors to work with Webpack 2.
+That's what you want in your development workflow. Spend less time configuring and setting up and more time showing off your bad-ass styled applications. Here's a straight-forward explanation to configuring a preprocessor like SASS or LESS with Webpack.
 
 > I haven't tested it yet but the new version of Webpack (3) should still work with this setup
 
@@ -78,7 +81,7 @@ module.exports = {
  1. Specify the path to the main entry point of the SASS or LESS file. This is where Webpack will look to start.
  1. Adjust the 'path' key to the directory you want Webpack to put the final css
  1. Adjust the 'test' key according to the preprocessor you're using, 'sass', 'scss', or 'less'
- 1. Adjust the loader within the 'use' key to the preprocessor you're using, 'sass-loader' or 'less-loader'
+ 1. Adjust the loader within the 'use' key to the preprocessor you're using, 'sass-loader' or 'less-loader'. Note that 'css-loader' must be defined first in the array because Webpack evaluates loaders from *right* to *left*
  1. Adjust the 'filename' key to to the filename you want
 
 ## That's it!
