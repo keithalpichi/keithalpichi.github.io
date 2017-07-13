@@ -21,7 +21,7 @@ You'll of course need Webpack and NPM or Yarn (I'll be using Yarn in this tutori
 yarn add webpack
 {% endhighlight %}
 
-Install both of these:
+Install these:
 {% highlight javascript %}
 yarn add style-loader css-loader extract-text-webpack-plugin
 {% endhighlight %}
