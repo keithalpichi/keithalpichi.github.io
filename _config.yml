@@ -7,9 +7,11 @@ url: 'keithalpichi.com' #"https://keithalpichi.github.io/"
 logo: /assets/images/avatar-ka.png
 
 markdown: kramdown
+kramdown:
+  input: GFM
 
 highlighter: rouge
-gems:
+plugins:
   - rouge
   - jekyll-seo-tag
   - jekyll-sitemap
