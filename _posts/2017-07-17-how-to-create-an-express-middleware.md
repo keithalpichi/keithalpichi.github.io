@@ -16,24 +16,24 @@ From the documentation,
 
 > Middlewares are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
 
-To give you a relatable picture, Express middleware's are the workers in a manufacturing line where each individual has a specific and unique responsibility. On each product (request) that a worker receives, they can do **one** of the following:
+To give you a relatable picture, Express middleware's are the workers in a manufacturing line where each individual has a specific and unique responsibility. When a worker receives a product (request) from a previous worker they can do **one** of the following:
  - **reject** the product if it doesn't meet strict standards, thus the product ceases to continue down the production line
- - **add or manipulate** the product and/or **allow** the product to continue down the production line where the next worker (middleware) does their job
+ - **add to or manipulate** the product and/or **allow** the product to continue down the production line where the next worker (middleware) does their job
 
-Here are few [middlewares](https://expressjs.com/en/resources/middleware.html) you may have used in the past:
+If you've used Express before, you may have used some [middlewares](https://expressjs.com/en/resources/middleware.html):
   - 'body-parser'- parses the request body and places it into the 'req.body' key of the request object
   - 'express.static'- serves your static files
   - 'express.logger'- uses a logger
 
-All you had to do was add these to your Express application or route and BAM... you had more functionality! It seems like magic but it's actually quite simple.
+All you had to do was add these to your Express application or route and BAM... you had more functionality! It seemed like magic but it's actually quite simple.
 
 In this article I'll go over the details of middlewares and some useful examples showcasing the flexibility and power of middlewares.
 
 ## Req, Res, Next
 
 Middlewares have access to three things:
-  - the 'request' object
-  - the 'response' object
+  - the [request](https://expressjs.com/en/4x/api.html#req) object
+  - the [response](https://expressjs.com/en/4x/api.html#res) object
   - the 'next' function
 
 {% highlight javascript %}
@@ -42,11 +42,11 @@ function customMiddleware (req, res, next) {
 }
 {% endhighlight %}
 
-Since you have access to the [request](https://expressjs.com/en/4x/api.html#req) and [response](https://expressjs.com/en/4x/api.html#res), you can do almost anything you want. You can extract or add information to and from either one. You would call 'next()' if you want to continue the request and pass it on to the next middleware or end the request right there.
+Since you have access to the request and response you can do almost anything you want. You can extract or add information to and from either one. You would call 'next( )' if you want to continue the request and pass it on to the next middleware or end the request right there.
 
 ## Middleware Chain
 
-So you create the custom middleware, now what? You add it to the middleware chain. Middlewares are called in the order they're set.
+So you created the custom middleware, now what? You add it to the middleware chain. **Middlewares are called in the order they're declared**.
 
 {% highlight javascript %}
 const express = require('express')
@@ -96,7 +96,9 @@ After the 'console.log' function ran the 'next' function was called. At this poi
 
 ## Token Parser- Parse User ID from JWT Token
 
-In this example I parse the request object for the JWT token to get the user's id. If it doesn't exist I end the request and send back a status code of 401. At this point the request stops. If it does exist I place the user's id into 'req.user_id' then call 'next()'. Note that the key 'user_id' is arbitrary. I could have used 'req.users_identification_number'.
+In this example I parse the request object for the JWT token to get the user's id. If it doesn't exist or the token was invalid I end the request and send back an unauthorized status code of 401. At this point the request stops. If it does exist I place the user's id into 'req.user_id' then call 'next'.
+
+> Note that the key 'user_id' is arbitrary. I could have used 'req.users_identification_number'. However, there are reserved keys on the request and response object that you shouldn't modify. So consult the documentation to verify you're not modifying reserved keys.
 
 {% highlight javascript %}
 function tokenParser (req, res, next) {
@@ -138,9 +140,9 @@ const app = express()
 app.use(logger(process.env.NODE_ENV))
 {% endhighlight %}
 
-These may not be practical examples you'd actually use in production but the illustration should provide some clarity on the flexibility of middlewares.
+These may not be practical examples you'd actually use in production but the illustrations should provide some clarity on the flexibility of middlewares.
 
-## Harness the Elegance Of Middlewares
+## Beauty Of Middlewares
 
 I love how the flow in Express middleware's are very explicit. It makes code intuitive, super flexible, and easy to read. If you're not creating custom middlewares I highly encourage you take advantage of their simplicity and power.
 
