@@ -18,7 +18,8 @@ plugins_dir:
 
 #paginate: 20
 #paginate_path: "/page:num/"
-baseurl: ""
+# base-url: ""
+base-url: /
 domain_name: 'keithalpichi.com' #'https://keithalpichi.github.io'
 google_analytics: 'UA-49683420-3'
 disqus: true
