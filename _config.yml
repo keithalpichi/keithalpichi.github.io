@@ -3,7 +3,7 @@ author: 'Keith Alpichi'
 description: "Full-stack software engineer building performant and scalable applications with Javascript, React, Redux, Node, Express, and WebSockets"
 meta_description: "Keith Alpichi's Blog & Portfolio"
 keywords: "software engineering, web development, code, programming"
-url: 'http://keithalpichi.com' #"https://keithalpichi.github.io/"
+url: 'http://keithalpichi.com/' #"https://keithalpichi.github.io/"
 logo: /assets/images/avatar-ka.png
 
 markdown: kramdown
