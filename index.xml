@@ -6,10 +6,19 @@
     <description>Recent content on Keith Alpichi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2017 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 May 2018 11:01:07 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn React’s “Render” Prop Pattern By Building A Pop-Up Modal</title>
+      <link>/react-render-prop-pattern/</link>
+      <pubDate>Sun, 06 May 2018 11:01:07 -0700</pubDate>
+      
+      <guid>/react-render-prop-pattern/</guid>
+      <description>The first time I came across the pattern of the render prop was in v3 of the wonderful React-Router library. That was nearly 2 years ago. I’ve used it here and there but I didn’t realize all the beauty behind it until I recently learned it was being used as an alternative to HOC’s. It was also introduced into React 16. The render prop was clearly a pattern I needed to revisit!</description>
+    </item>
     
     <item>
       <title>Success Manifest — Episode 0</title>
