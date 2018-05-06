@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Keith Alpichi">
+    <meta name="description" content="Keith Alpichi&#39;s Portfolio &amp; Blog">
+    <meta name="keywords" content="blog,software engineer,software,developer,web development,code">
+
+    <base href="/">
+    <title>
+  What is an Express Middleware and How to Create One · Keith Alpichi
+</title>
+
+    <link rel="canonical" href="/what-is-express-middleware-and-how-to-create-one/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.2" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Keith Alpichi
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/projects/">Projects</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">What is an Express Middleware and How to Create One</h1>
+      <h2 class="date">July 17, 2017</h2>
+
+      
+    </header>
+
+    
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<ul>
+<li>Basic understanding of the HTTP protocol, Javascript, Node, and Express</li>
+</ul>
+
+<h2 id="what-are-middlewares">What are Middlewares?</h2>
+
+<p>From the documentation,</p>
+
+<blockquote>
+<p>Middlewares are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.</p>
+</blockquote>
+
+<p>To give you a relatable picture, Express middleware&rsquo;s are the workers in a manufacturing line where each individual has a specific and unique responsibility. When a worker receives a product (request) from a previous worker they can do <strong>one</strong> of the following:
+ - <strong>reject</strong> the product if it doesn&rsquo;t meet strict standards, thus the product ceases to continue down the production line
+ - <strong>add to or manipulate</strong> the product and/or <strong>allow</strong> the product to continue down the production line where the next worker (middleware) does their job</p>
+
+<p>If you&rsquo;ve used Express before, you may have used some <a href="https://expressjs.com/en/resources/middleware.html">middlewares</a>:
+  - &lsquo;body-parser&rsquo;- parses the request body and places it into the &lsquo;req.body&rsquo; key of the request object
+  - &lsquo;express.static&rsquo;- serves your static files
+  - &lsquo;express.logger&rsquo;- uses a logger</p>
+
+<p>All you had to do was add these to your Express application or route and BAM&hellip; you had more functionality! It seemed like magic but it&rsquo;s actually quite simple.</p>
+
+<p>In this article I&rsquo;ll go over the details of middlewares and some useful examples showcasing the flexibility and power of middlewares.</p>
+
+<h2 id="req-res-next">Req, Res, Next</h2>
+
+<p>Middlewares have access to three things:
+  - the <a href="https://expressjs.com/en/4x/api.html#req">request</a> object
+  - the <a href="https://expressjs.com/en/4x/api.html#res">response</a> object
+  - the &lsquo;next&rsquo; function</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> customMiddleware (req, res, next) {
+  <span style="color:#888">//...
+</span><span style="color:#888"></span>}
+</code></pre></div>
+
+<p>Since you have access to the request and response you can do almost anything you want. You can extract or add information to and from either one. You would call &lsquo;next( )&rsquo; if you want to continue the request and pass it on to the next middleware or end the request right there.</p>
+
+<h2 id="middleware-chain">Middleware Chain</h2>
+
+<p>So you created the custom middleware, now what? You add it to the middleware chain. <strong>Middlewares are called in the order they&rsquo;re declared</strong>.</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> express = require(<span style="color:#d20;background-color:#fff0f0">&#39;express&#39;</span>)
+<span style="color:#080;font-weight:bold">const</span> app = express()
+app.use(express.bodyParser)
+app.use(customMiddleware)
+</code></pre></div>
+
+<ul>
+<li>On every request these two middlewares will run- &lsquo;bodyParser&rsquo; will run first before the one below it</li>
+</ul>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> express = require(<span style="color:#d20;background-color:#fff0f0">&#39;express&#39;</span>)
+<span style="color:#080;font-weight:bold">const</span> app = express()
+app.get(<span style="color:#d20;background-color:#fff0f0">&#39;/some/path&#39;</span>, customMiddleware, customMiddleware2)
+
+<span style="color:#080;font-weight:bold">const</span> apiRouter = express.Router()
+apiRouter.use(customMiddleware2)
+app.use(<span style="color:#d20;background-color:#fff0f0">&#39;/api&#39;</span>, apiRouter)
+</code></pre></div>
+
+<p>You can have middlewares run on specific routes.
+- &lsquo;customMiddleware&rsquo; will run first followed by &lsquo;customMiddleware2&rsquo; for the &lsquo;GET&rsquo; method on the path &lsquo;/some/path&rsquo;
+- Only &lsquo;customMiddleware2&rsquo; will run for all requests to the &lsquo;apiRouter&rsquo;</p>
+
+<p>Cool huh? Let&rsquo;s see some other useful examples!</p>
+
+<h2 id="a-simple-logger-log-date-and-url-path">A Simple Logger- Log Date and URL Path</h2>
+
+<p>In this example I extract and log some data specific to the request, then pass the request to the next middleware by using the &lsquo;next&rsquo; function. The request or response is not altered in any way. I&rsquo;ll show an example of that next.</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> datePathLogger (req, res, next) {
+  <span style="color:#080;font-weight:bold">const</span> date = <span style="color:#080;font-weight:bold">new</span> <span style="color:#038">Date</span>().toUTCString()
+  console.log(<span style="color:#d20;background-color:#fff0f0">`Request to &#39;</span><span style="color:#33b;background-color:#fff0f0">${</span>req.path<span style="color:#33b;background-color:#fff0f0">}</span><span style="color:#d20;background-color:#fff0f0">&#39; on </span><span style="color:#33b;background-color:#fff0f0">${</span>date<span style="color:#33b;background-color:#fff0f0">}</span><span style="color:#d20;background-color:#fff0f0">`</span>)
+  next()
+}
+</code></pre></div>
+
+<p>A request to a url &lsquo;www.foo.com/bar&rsquo; would log</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Request to <span style="color:#d20;background-color:#fff0f0">&#39;/bar&#39;</span> on Mon, <span style="color:#00d;font-weight:bold">17</span> Jul <span style="color:#00d;font-weight:bold">2017</span> <span style="color:#00d;font-weight:bold">01</span>:01:38 GMT</code></pre></div>
+
+<p>After the &lsquo;console.log&rsquo; function ran the &lsquo;next&rsquo; function was called. At this point the request and response would be handed to the next middleware.</p>
+
+<h2 id="token-parser-parse-user-id-from-jwt-token">Token Parser- Parse User ID from JWT Token</h2>
+
+<p>In this example I parse the request object for the JWT token to get the user&rsquo;s id. If it doesn&rsquo;t exist or the token was invalid I end the request and send back an unauthorized status code of 401. At this point the request stops. If it does exist I place the user&rsquo;s id into &lsquo;req.user_id&rsquo; then call &lsquo;next&rsquo;.</p>
+
+<blockquote>
+<p>Note that the key &lsquo;user_id&rsquo; is arbitrary. I could have used &lsquo;req.users_identification_number&rsquo;. However, there are reserved keys on the request and response object that you shouldn&rsquo;t modify. So consult the documentation to verify you&rsquo;re not modifying reserved keys.</p>
+</blockquote>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> tokenParser (req, res, next) {
+  <span style="color:#080;font-weight:bold">const</span> user_id = parseTokenForUserID(req) <span style="color:#888">// This is a made-up function that parses the user&#39;s ID from the request object
+</span><span style="color:#888"></span>  <span style="color:#080;font-weight:bold">if</span> (!user_id) {
+    res.sendStatus(<span style="color:#00d;font-weight:bold">401</span>)
+  } <span style="color:#080;font-weight:bold">else</span> {
+    req.user_id = user_id
+    next()
+  }
+}
+</code></pre></div>
+
+<p>Now in every succeeding middleware or request handler I have access to the user&rsquo;s id at &lsquo;req.user_id&rsquo;.</p>
+
+<h2 id="environment-specific-middleware">Environment-specific Middleware</h2>
+
+<p>Since middleware&rsquo;s are just functions you can have functionality based on different environments or configuration. Say, for example, we wanted to perform descriptive logging for development environments.</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> logger (env) {
+  <span style="color:#080;font-weight:bold">if</span> (env === <span style="color:#d20;background-color:#fff0f0">&#39;development&#39;</span>) {
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span> (req, res, next) {
+      <span style="color:#888">// perform descriptive logs better suited for development environments
+</span><span style="color:#888"></span>    }
+  } <span style="color:#080;font-weight:bold">else</span> {
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span> (req, res, next) {
+      <span style="color:#888">// perform none or minimal logging
+</span><span style="color:#888"></span>    }
+  }
+}
+</code></pre></div>
+
+<p>Then add this middleware by <strong>calling</strong> it with the environment</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> express = require(<span style="color:#d20;background-color:#fff0f0">&#39;express&#39;</span>)
+<span style="color:#080;font-weight:bold">const</span> app = express()
+app.use(logger(process.env.NODE_ENV))
+</code></pre></div>
+
+<p>These may not be practical examples you&rsquo;d actually use in production but the illustrations should provide some clarity on the flexibility of middlewares.</p>
+
+<h2 id="beauty-of-middlewares">Beauty Of Middlewares</h2>
+
+<p>I love how the flow in Express middleware&rsquo;s are very explicit. It makes code intuitive, super flexible, and easy to read. If you&rsquo;re not creating custom middlewares I highly encourage you take advantage of their simplicity and power.</p>
+
+<p>If you have any comments or questions please leave a comment or tweet me! Mahalo!</p>
+
+  </article>
+
+  <br/>
+
+  
+      <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "keithalpichi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    © 2017 · Powered by <a href="http://keithalpichi.com/">Keith Alpichi</a>.
+  </section>
+</footer>
+
+    </main>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-49683420-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

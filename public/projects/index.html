@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Keith Alpichi">
+    <meta name="description" content="Keith Alpichi&#39;s Portfolio &amp; Blog">
+    <meta name="keywords" content="blog,software engineer,software,developer,web development,code">
+
+    <base href="/">
+    <title>
+   · Keith Alpichi
+</title>
+
+    <link rel="canonical" href="/projects/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.2" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Keith Alpichi
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/projects/">Projects</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1></h1>
+    </header>
+
+    
+
+<h1 id="projects">Projects</h1>
+
+<h2 id="on-point-https-www-onpoint-me"><a href="https://www.onpoint.me/">On Point</a></h2>
+
+<p>On Point is a geolocation-based Q&amp;A where users ask and answer nearby questions in real-time. This full-stack application used React, Redux, Node, Express, WebSockets, and PostgreSQL.</p>
+
+<p>The mission behind On Point was to provide users faster valuable responses to their questions about the environment around them. I found that users often have questions about their surroundings but struggle to find reliable answers fast enough. On Point was created to connect users with questions to users answers around them.</p>
+
+<p>I decided to pursue WebSockets using Socket.io and Redux to synchronize and maintain dynamic state. I was also able to consistently track a user&rsquo;s dynamic location at all times leveraging PostGIS so that I can provide the right users with the right information that were in a specific location.</p>
+
+<p>One major technical challenge I faced was cluttered map points at scale. I decided to pursue clustering algorithms to dynamically cluster and render map points at different zoom levels efficiently. I was able to achieve this clustering in O(n) time complexity.</p>
+
+<h2 id="lil-link-http-lill-ink"><a href="http://lill.ink">Lil&rsquo; Link</a></h2>
+
+<p>A url-shortening application similar to Bit.ly and Goo.gl. Create, store, and analyze shortened links. View trending links by following how many clicks each link receives. Easily sort and filter links by different criteria in the dashboard.</p>
+
+<p>Built with React, Redux, Node, Express and PostgreSQL, Lil&rsquo; Link was deployed to AWS in a short 3 days! Due to budget issues I transferred the application to Heroku.</p>
+
+<h2 id="jarvis-https-github-com-keithalpichi-jarvis"><a href="https://github.com/keithalpichi/jarvis">Jarvis</a></h2>
+
+<p>A chat app with a friendly smart assistant. Tag &lsquo;Jarvis&rsquo; with a question and he will answer. No need to leave the chat to search the web for answers.</p>
+
+<p>Jarvis is a full-stack web application built with Javascript (ES6), React, Node, Express, MongoDB, and Socket.io. The mission behind Jarvis was to provide users quick answers to their questions within a real-time environment without having to leave the chat room. I realized the typical chat room does not have a feature to use the internet within the chat room. Jarvis was created to combine the real-time web surfing in a chat room.</p></p>
+
+<h2 id="roadchip-https-github-com-audaciousamphibians-audaciousamphibians"><a href="https://github.com/audaciousamphibians/audaciousamphibians">Roadchip</a></h2>
+
+<p>Discover new places to visit and eat on a road trip. I found drivers struggled to effectively find places to stop along their path to their destination without first having to research and organize their stops before they actually start driving. I wanted to eliminate the need for a user to do this and research, organize, and plan their road trip and stops in one application.</p>
+
+  </article>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    © 2017 · Powered by <a href="http://keithalpichi.com/">Keith Alpichi</a>.
+  </section>
+</footer>
+
+    </main>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-49683420-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

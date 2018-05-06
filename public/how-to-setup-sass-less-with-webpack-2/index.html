@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Keith Alpichi">
+    <meta name="description" content="Keith Alpichi&#39;s Portfolio &amp; Blog">
+    <meta name="keywords" content="blog,software engineer,software,developer,web development,code">
+
+    <base href="/">
+    <title>
+  How to setup SASS or LESS with Webpack 2 · Keith Alpichi
+</title>
+
+    <link rel="canonical" href="/how-to-setup-sass-less-with-webpack-2/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.2" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Keith Alpichi
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/projects/">Projects</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">How to setup SASS or LESS with Webpack 2</h1>
+      <h2 class="date">July 13, 2017</h2>
+
+      
+    </header>
+
+    
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<ul>
+<li>Basic understanding of SASS or LESS and Webpack</li>
+</ul>
+
+<h2 id="less-time-more-sass">LESS time, more SASS</h2>
+
+<p>That&rsquo;s what you want in your development workflow. Spend less time configuring and setting up and more time showing off your bad-ass styled applications. Here&rsquo;s a straight-forward explanation to configuring a preprocessor like SASS or LESS with Webpack.</p>
+
+<blockquote>
+<p>I haven&rsquo;t tested it yet but the new version of Webpack (3) should still work with this setup</p>
+</blockquote>
+
+<h2 id="install-your-dependencies">Install your dependencies</h2>
+
+<p>You&rsquo;ll of course need Webpack and NPM or Yarn (I&rsquo;ll be using Yarn in this tutorial), so</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">yarn add webpack
+</code></pre></div>
+
+<p>Install these:
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">yarn add style-loader css-loader extract-text-webpack-plugin
+</code></pre></div></p>
+
+<p>If you&rsquo;re using SASS install:
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">yarn add sass-loader node-sass
+<span style="color:#888">// node-sass is a peer dependency of SASS
+</span><span style="color:#888"></span></code></pre></div></p>
+
+<p>If you&rsquo;re using LESS install:
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">yarn add less-loader
+</code></pre></div></p>
+
+<p>A quick overview of these packages:
+- &lsquo;*-loader&rsquo; packages are responsible for compiling, injecting css scripts to the DOM, and resolving imports
+- &lsquo;extract-text-webpack-plugin&rsquo; extracts multiple SASS or LESS files and builds them into a single file</p>
+
+<h2 id="configure-webpack">Configure Webpack</h2>
+
+<p>Create a &lsquo;webpack.config.js&rsquo; in the root of your project directory if you don&rsquo;t already have one. Add the following lines:</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> path = require(<span style="color:#d20;background-color:#fff0f0">&#39;path&#39;</span>)
+<span style="color:#080;font-weight:bold">var</span> webpack = require(<span style="color:#d20;background-color:#fff0f0">&#39;webpack&#39;</span>)
+<span style="color:#080;font-weight:bold">var</span> ExtractTextPlugin = require(<span style="color:#d20;background-color:#fff0f0">&#39;extract-text-webpack-plugin&#39;</span>)
+
+module.exports = {
+  entry: [
+    <span style="color:#d20;background-color:#fff0f0">&#39;./path/to/entry/sass/or/less&#39;</span> <span style="color:#888">// Footnote 1
+</span><span style="color:#888"></span>  ],
+  output: {
+    path: path.resolve(__dirname, <span style="color:#d20;background-color:#fff0f0">&#39;path/to/build&#39;</span>) <span style="color:#888">// Footnote 2
+</span><span style="color:#888"></span>  },
+  module: {
+    rules: [
+      {
+        test: <span style="color:#080;background-color:#fff0ff">/\.sass$/</span>, <span style="color:#888">// Footnote 3
+</span><span style="color:#888"></span>        exclude: <span style="color:#080;background-color:#fff0ff">/node_modules/</span>,
+        use: ExtractTextPlugin.extract({
+          fallback: <span style="color:#d20;background-color:#fff0f0">&#39;style-loader&#39;</span>,
+          use: [<span style="color:#d20;background-color:#fff0f0">&#39;css-loader&#39;</span>, <span style="color:#d20;background-color:#fff0f0">&#39;sass-loader&#39;</span>] <span style="color:#888">// Footnote 4
+</span><span style="color:#888"></span>        })
+      }
+    ]
+  },
+  plugins: [<span style="color:#080;font-weight:bold">new</span> ExtractTextPlugin({ filename: <span style="color:#d20;background-color:#fff0f0">&#39;index.css&#39;</span> })] <span style="color:#888">// Footnote 5
+</span><span style="color:#888"></span>}
+</code></pre></div>
+
+<h3 id="configuration-footnotes">Configuration footnotes</h3>
+
+<ol>
+<li>Specify the path to the main entry point of the SASS or LESS file. This is where Webpack will look to start.</li>
+<li>Adjust the &lsquo;path&rsquo; key to the directory you want Webpack to put the final css</li>
+<li>Adjust the &lsquo;test&rsquo; key according to the preprocessor you&rsquo;re using, &lsquo;sass&rsquo;, &lsquo;scss&rsquo;, or &lsquo;less&rsquo;</li>
+<li>Adjust the loader within the &lsquo;use&rsquo; key to the preprocessor you&rsquo;re using, &lsquo;sass-loader&rsquo; or &lsquo;less-loader&rsquo;. Note that &lsquo;css-loader&rsquo; must be defined first in the array because Webpack evaluates loaders from <em>right</em> to <em>left</em></li>
+<li>Adjust the &lsquo;filename&rsquo; key to to the filename you want</li>
+</ol>
+
+<h2 id="that-s-it">That&rsquo;s it!</h2>
+
+<p>Make sure to reference the compiled css file in your &lsquo;index.html&rsquo; file and you&rsquo;re good to go. With just a few lines of configuration you&rsquo;re Webpack is ready to compile your SASS or LESS. Now take the time you&rsquo;ve saved to get a jump on styling your application!</p>
+
+<p>If you have any questions feel free to comment below or send me a tweet.</p>
+
+<h4 id="references">References</h4>
+
+<ul>
+<li><a href="https://webpack.js.org/configuration/">webpack</a></li>
+<li><a href="https://github.com/webpack-contrib/extract-text-webpack-plugin">extract-text-webpack-plugin</a></li>
+<li><a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a></li>
+<li><a href="https://github.com/webpack-contrib/less-loader">less-loader</a></li>
+<li><a href="https://github.com/webpack-contrib/style-loader">style-loader</a></li>
+<li><a href="https://github.com/webpack-contrib/css-loader">css-loader</a></li>
+</ul>
+
+  </article>
+
+  <br/>
+
+  
+      <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "keithalpichi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    © 2017 · Powered by <a href="http://keithalpichi.com/">Keith Alpichi</a>.
+  </section>
+</footer>
+
+    </main>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-49683420-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>
