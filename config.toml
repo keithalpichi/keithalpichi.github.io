@@ -2,12 +2,20 @@ baseURL = "keithalpichi.com"
 languageCode = "en-us"
 title = "Keith Alpichi"
 theme = "coder"
+enableEmoji = true
+disqusShortname = "keithalpichi"
+enableRobotsTXT = true
+googleAnalytics = "UA-49683420-3"
+pygmentsStyle = "pastie"
 
 [params] # theme parameters
-    author = "Software Engineer" # author's name
-    info = "... Coffee Addict, Fit Fanatic, Cook, and California Beach Bum"
+    author = "Keith Alpichi" # author's name
+    info = "Software Engineer, Coffee Addict, Fit Fanatic, Cook, and California Beach Bum"
     description = "Keith Alpichi's Portfolio & Blog" # site description
-    keywords = "blog,software engineer,software,developer,web development" # site keywords
+    keywords = "blog,software engineer,software,developer,web development,code" # site keywords
+
+[permalinks]
+  post = ":slug"
 
 # Social links
 [[params.social]]
@@ -22,6 +30,10 @@ theme = "coder"
     name = "LinkedIn"
     weight = 3
     url = "https://www.linkedin.com/in/keithalpiochi/"
+[[params.social]]
+    name = "Stackoverflow"
+    weight = 4
+    url = "https://stackoverflow.com/users/5796559/keitha"
 
 # Menu links
 [[menu.main]]
@@ -32,6 +44,7 @@ theme = "coder"
     name = "About"
     weight = 2
     url = "/about/"
-
-# Disqus
-disqusShortname = "keithalpichi"
+[[menu.main]]
+    name = "Projects"
+    weight = 3
+    url = "/projects/"
