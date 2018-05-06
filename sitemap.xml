@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>keithalpichi.com/success-manifest/</loc>
+    <loc>/success-manifest/</loc>
     <lastmod>2017-08-09T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>keithalpichi.com/what-is-express-middleware-and-how-to-create-one/</loc>
+    <loc>/what-is-express-middleware-and-how-to-create-one/</loc>
     <lastmod>2017-07-17T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>keithalpichi.com/how-to-setup-sass-less-with-webpack-2/</loc>
+    <loc>/how-to-setup-sass-less-with-webpack-2/</loc>
     <lastmod>2017-07-13T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>keithalpichi.com/how-to-build-stackoverflow-reputation/</loc>
+    <loc>/how-to-build-stackoverflow-reputation/</loc>
     <lastmod>2017-05-13T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>keithalpichi.com/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>keithalpichi.com/projects/</loc>
+    <loc>/projects/</loc>
   </url>
   
   <url>
-    <loc>keithalpichi.com/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>keithalpichi.com/</loc>
+    <loc>/</loc>
     <lastmod>2017-08-09T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>keithalpichi.com/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2017-08-09T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>keithalpichi.com/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
