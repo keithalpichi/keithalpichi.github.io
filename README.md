@@ -4,6 +4,9 @@
 See [Hugo Docs](https://gohugo.io/documentation/) for complete instructions.
 - start dev server with `hugo server -D`
 
+## Deploy
+`./deploy '<commit-msg>'`
+
 ## Copyright & License
 
 Copyright (c) 2015 [Keith Alpichi](keithalpichi.com)-  Released under the MIT License.
