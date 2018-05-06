@@ -7,6 +7,7 @@ disqusShortname = "keithalpichi"
 enableRobotsTXT = true
 googleAnalytics = "UA-49683420-3"
 pygmentsStyle = "pastie"
+publishDir = "public"
 
 [params] # theme parameters
     author = "Keith Alpichi" # author's name
