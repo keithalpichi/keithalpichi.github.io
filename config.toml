@@ -1,4 +1,4 @@
-baseURL = "keithalpichi.com"
+baseURL = "/"
 languageCode = "en-us"
 title = "Keith Alpichi"
 theme = "coder"
