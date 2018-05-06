@@ -83,14 +83,20 @@
 <p>Middlewares are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.</p>
 </blockquote>
 
-<p>To give you a relatable picture, Express middleware&rsquo;s are the workers in a manufacturing line where each individual has a specific and unique responsibility. When a worker receives a product (request) from a previous worker they can do <strong>one</strong> of the following:
- - <strong>reject</strong> the product if it doesn&rsquo;t meet strict standards, thus the product ceases to continue down the production line
- - <strong>add to or manipulate</strong> the product and/or <strong>allow</strong> the product to continue down the production line where the next worker (middleware) does their job</p>
+<p>To give you a relatable picture, Express middleware&rsquo;s are the workers in a manufacturing line where each individual has a specific and unique responsibility. When a worker receives a product (request) from a previous worker they can do <strong>one</strong> of the following:</p>
 
-<p>If you&rsquo;ve used Express before, you may have used some <a href="https://expressjs.com/en/resources/middleware.html">middlewares</a>:
-  - &lsquo;body-parser&rsquo;- parses the request body and places it into the &lsquo;req.body&rsquo; key of the request object
-  - &lsquo;express.static&rsquo;- serves your static files
-  - &lsquo;express.logger&rsquo;- uses a logger</p>
+<ul>
+<li><strong>reject</strong> the product if it doesn&rsquo;t meet strict standards, thus the product ceases to continue down the production line</li>
+<li><strong>add to or manipulate</strong> the product and/or <strong>allow</strong> the product to continue down the production line where the next worker (middleware) does their job</li>
+</ul>
+
+<p>If you&rsquo;ve used Express before, you may have used some <a href="https://expressjs.com/en/resources/middleware.html">middlewares</a>:</p>
+
+<ul>
+<li>&lsquo;body-parser&rsquo;- parses the request body and places it into the &lsquo;req.body&rsquo; key of the request object</li>
+<li>&lsquo;express.static&rsquo;- serves your static files</li>
+<li>&lsquo;express.logger&rsquo;- uses a logger</li>
+</ul>
 
 <p>All you had to do was add these to your Express application or route and BAM&hellip; you had more functionality! It seemed like magic but it&rsquo;s actually quite simple.</p>
 
@@ -98,14 +104,17 @@
 
 <h2 id="req-res-next">Req, Res, Next</h2>
 
-<p>Middlewares have access to three things:
-  - the <a href="https://expressjs.com/en/4x/api.html#req">request</a> object
-  - the <a href="https://expressjs.com/en/4x/api.html#res">response</a> object
-  - the &lsquo;next&rsquo; function</p>
+<p>Middlewares have access to three things:</p>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> customMiddleware (req, res, next) {
-  <span style="color:#888">//...
-</span><span style="color:#888"></span>}
+<ul>
+<li>the <a href="https://expressjs.com/en/4x/api.html#req">request</a> object</li>
+<li>the <a href="https://expressjs.com/en/4x/api.html#res">response</a> object</li>
+<li>the &lsquo;next&rsquo; function</li>
+</ul>
+
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">customMiddleware</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//...
+</span><span class="c1"></span><span class="p">}</span>
 </code></pre></div>
 
 <p>Since you have access to the request and response you can do almost anything you want. You can extract or add information to and from either one. You would call &lsquo;next( )&rsquo; if you want to continue the request and pass it on to the next middleware or end the request right there.</p>
@@ -114,28 +123,29 @@
 
 <p>So you created the custom middleware, now what? You add it to the middleware chain. <strong>Middlewares are called in the order they&rsquo;re declared</strong>.</p>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> express = require(<span style="color:#d20;background-color:#fff0f0">&#39;express&#39;</span>)
-<span style="color:#080;font-weight:bold">const</span> app = express()
-app.use(express.bodyParser)
-app.use(customMiddleware)
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+<span class="k">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyParser</span><span class="p">)</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">customMiddleware</span><span class="p">)</span>
 </code></pre></div>
+
+<p>On every request these two middlewares will run- &lsquo;bodyParser&rsquo; will run first before the one below it</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+<span class="k">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/some/path&#39;</span><span class="p">,</span> <span class="nx">customMiddleware</span><span class="p">,</span> <span class="nx">customMiddleware2</span><span class="p">)</span>
+
+<span class="k">const</span> <span class="nx">apiRouter</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">()</span>
+<span class="nx">apiRouter</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">customMiddleware2</span><span class="p">)</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;/api&#39;</span><span class="p">,</span> <span class="nx">apiRouter</span><span class="p">)</span>
+</code></pre></div>
+
+<p>You can have middlewares run on specific routes.</p>
 
 <ul>
-<li>On every request these two middlewares will run- &lsquo;bodyParser&rsquo; will run first before the one below it</li>
+<li>&lsquo;customMiddleware&rsquo; will run first followed by &lsquo;customMiddleware2&rsquo; for the &lsquo;GET&rsquo; method on the path &lsquo;/some/path&rsquo;</li>
+<li>Only &lsquo;customMiddleware2&rsquo; will run for all requests to the &lsquo;apiRouter&rsquo;</li>
 </ul>
-
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> express = require(<span style="color:#d20;background-color:#fff0f0">&#39;express&#39;</span>)
-<span style="color:#080;font-weight:bold">const</span> app = express()
-app.get(<span style="color:#d20;background-color:#fff0f0">&#39;/some/path&#39;</span>, customMiddleware, customMiddleware2)
-
-<span style="color:#080;font-weight:bold">const</span> apiRouter = express.Router()
-apiRouter.use(customMiddleware2)
-app.use(<span style="color:#d20;background-color:#fff0f0">&#39;/api&#39;</span>, apiRouter)
-</code></pre></div>
-
-<p>You can have middlewares run on specific routes.
-- &lsquo;customMiddleware&rsquo; will run first followed by &lsquo;customMiddleware2&rsquo; for the &lsquo;GET&rsquo; method on the path &lsquo;/some/path&rsquo;
-- Only &lsquo;customMiddleware2&rsquo; will run for all requests to the &lsquo;apiRouter&rsquo;</p>
 
 <p>Cool huh? Let&rsquo;s see some other useful examples!</p>
 
@@ -143,16 +153,16 @@ app.use(<span style="color:#d20;background-color:#fff0f0">&#39;/api&#39;</span>,
 
 <p>In this example I extract and log some data specific to the request, then pass the request to the next middleware by using the &lsquo;next&rsquo; function. The request or response is not altered in any way. I&rsquo;ll show an example of that next.</p>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> datePathLogger (req, res, next) {
-  <span style="color:#080;font-weight:bold">const</span> date = <span style="color:#080;font-weight:bold">new</span> <span style="color:#038">Date</span>().toUTCString()
-  console.log(<span style="color:#d20;background-color:#fff0f0">`Request to &#39;</span><span style="color:#33b;background-color:#fff0f0">${</span>req.path<span style="color:#33b;background-color:#fff0f0">}</span><span style="color:#d20;background-color:#fff0f0">&#39; on </span><span style="color:#33b;background-color:#fff0f0">${</span>date<span style="color:#33b;background-color:#fff0f0">}</span><span style="color:#d20;background-color:#fff0f0">`</span>)
-  next()
-}
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">datePathLogger</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toUTCString</span><span class="p">()</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Request to &#39;</span><span class="si">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">path</span><span class="si">}</span><span class="sb">&#39; on </span><span class="si">${</span><span class="nx">date</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+  <span class="nx">next</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>A request to a url &lsquo;www.foo.com/bar&rsquo; would log</p>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Request to <span style="color:#d20;background-color:#fff0f0">&#39;/bar&#39;</span> on Mon, <span style="color:#00d;font-weight:bold">17</span> Jul <span style="color:#00d;font-weight:bold">2017</span> <span style="color:#00d;font-weight:bold">01</span>:01:38 GMT</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Request to <span class="s1">&#39;/bar&#39;</span> on Mon, <span class="m">17</span> Jul <span class="m">2017</span> <span class="m">01</span>:01:38 GMT</code></pre></div>
 
 <p>After the &lsquo;console.log&rsquo; function ran the &lsquo;next&rsquo; function was called. At this point the request and response would be handed to the next middleware.</p>
 
@@ -164,15 +174,15 @@ app.use(<span style="color:#d20;background-color:#fff0f0">&#39;/api&#39;</span>,
 <p>Note that the key &lsquo;user_id&rsquo; is arbitrary. I could have used &lsquo;req.users_identification_number&rsquo;. However, there are reserved keys on the request and response object that you shouldn&rsquo;t modify. So consult the documentation to verify you&rsquo;re not modifying reserved keys.</p>
 </blockquote>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> tokenParser (req, res, next) {
-  <span style="color:#080;font-weight:bold">const</span> user_id = parseTokenForUserID(req) <span style="color:#888">// This is a made-up function that parses the user&#39;s ID from the request object
-</span><span style="color:#888"></span>  <span style="color:#080;font-weight:bold">if</span> (!user_id) {
-    res.sendStatus(<span style="color:#00d;font-weight:bold">401</span>)
-  } <span style="color:#080;font-weight:bold">else</span> {
-    req.user_id = user_id
-    next()
-  }
-}
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">tokenParser</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="nx">user_id</span> <span class="o">=</span> <span class="nx">parseTokenForUserID</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span> <span class="c1">// This is a made-up function that parses the user&#39;s ID from the request object
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">user_id</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">user_id</span> <span class="o">=</span> <span class="nx">user_id</span>
+    <span class="nx">next</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>Now in every succeeding middleware or request handler I have access to the user&rsquo;s id at &lsquo;req.user_id&rsquo;.</p>
@@ -181,24 +191,24 @@ app.use(<span style="color:#d20;background-color:#fff0f0">&#39;/api&#39;</span>,
 
 <p>Since middleware&rsquo;s are just functions you can have functionality based on different environments or configuration. Say, for example, we wanted to perform descriptive logging for development environments.</p>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> logger (env) {
-  <span style="color:#080;font-weight:bold">if</span> (env === <span style="color:#d20;background-color:#fff0f0">&#39;development&#39;</span>) {
-    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span> (req, res, next) {
-      <span style="color:#888">// perform descriptive logs better suited for development environments
-</span><span style="color:#888"></span>    }
-  } <span style="color:#080;font-weight:bold">else</span> {
-    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span> (req, res, next) {
-      <span style="color:#888">// perform none or minimal logging
-</span><span style="color:#888"></span>    }
-  }
-}
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">logger</span> <span class="p">(</span><span class="nx">env</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">env</span> <span class="o">===</span> <span class="s1">&#39;development&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// perform descriptive logs better suited for development environments
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// perform none or minimal logging
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>Then add this middleware by <strong>calling</strong> it with the environment</p>
 
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> express = require(<span style="color:#d20;background-color:#fff0f0">&#39;express&#39;</span>)
-<span style="color:#080;font-weight:bold">const</span> app = express()
-app.use(logger(process.env.NODE_ENV))
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+<span class="k">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">logger</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span><span class="p">))</span>
 </code></pre></div>
 
 <p>These may not be practical examples you&rsquo;d actually use in production but the illustrations should provide some clarity on the flexibility of middlewares.</p>
