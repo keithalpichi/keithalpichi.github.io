@@ -1,0 +1,37 @@
+baseURL = "keithalpichi.com"
+languageCode = "en-us"
+title = "Keith Alpichi"
+theme = "coder"
+
+[params] # theme parameters
+    author = "Software Engineer" # author's name
+    info = "... Coffee Addict, Fit Fanatic, Cook, and California Beach Bum"
+    description = "Keith Alpichi's Portfolio & Blog" # site description
+    keywords = "blog,software engineer,software,developer,web development" # site keywords
+
+# Social links
+[[params.social]]
+    name = "Github"
+    weight = 1
+    url = "https://github.com/keithalpichi/"
+[[params.social]]
+    name = "Twitter"
+    weight = 2
+    url = "https://twitter.com/keithalpichi/"
+[[params.social]]
+    name = "LinkedIn"
+    weight = 3
+    url = "https://www.linkedin.com/in/keithalpiochi/"
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
+
+# Disqus
+disqusShortname = "keithalpichi"
