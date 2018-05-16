@@ -6,10 +6,20 @@
     <description>Recent content on Keith Alpichi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 11:01:07 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 16 May 2018 08:00:00 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Gotcha: Closing a Nil HTTP Response Body With Defer</title>
+      <link>/go-gotcha-nil-http-response-body-with-defer/</link>
+      <pubDate>Wed, 16 May 2018 08:00:00 -0700</pubDate>
+      
+      <guid>/go-gotcha-nil-http-response-body-with-defer/</guid>
+      <description>When handling HTTP responses it is important to check the errors first before handling the responses. Even if you defer to close the io.Closer, in this case a response body, you’ll be surprised what happens when it is nil. Avoiding this crucial step or assuming defer can deflect or handle errors will lead to a nasty panic; ultimately crashing your program. Let’s see an example of this.
+How To Do It Incorrectly res, err := http.</description>
+    </item>
     
     <item>
       <title>Learn React’s “Render” Prop Pattern By Building A Pop-Up Modal</title>
