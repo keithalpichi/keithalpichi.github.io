@@ -1,0 +1,1 @@
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Go Gotcha: Closing a Nil HTTP Response Body With Defer","path":"/go-gotcha-nil-http-response-body-with-defer","date":"2018-05-16T15:00:00.000Z","excerpt":"When handling HTTP responses it is important to check the errors first before handling the responses."}}}]}},"pageContext":{}}
