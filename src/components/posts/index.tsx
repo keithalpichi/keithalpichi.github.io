@@ -4,13 +4,12 @@ import { format } from 'date-fns'
 import { Link } from 'gatsby'
 import { colors } from '../../styles'
 import cxs from 'cxs'
-import { tag as TagButton } from "../buttons"
-import { navigate } from "@reach/router"
+import { tag as TagButton } from '../buttons'
+import { navigate } from '@reach/router'
 
 interface IndexProps {
   location: {
     search: string
-    pathname: string
   }
   posts: Array<{
     node: {
@@ -60,7 +59,7 @@ const Index: React.SFC<IndexProps> = (props) => {
     tags.forEach(t => tagsArray.push(t))
     let newRoute = '/'
     if (tagsArray.length > 0) {
-      newFilters.set('filter', tagsArray.join(","))
+      newFilters.set('filter', tagsArray.join(','))
       newRoute = `/?${newFilters.toString()}`
     }
     return navigate(newRoute)
@@ -71,9 +70,9 @@ const Index: React.SFC<IndexProps> = (props) => {
     const newObj: any = { ...obj }
     tags.forEach((t: string) => {
       if (filter && filterTags.has(t)) {
-        newObj[t] = "active"
+        newObj[t] = 'active'
       } else {
-        newObj[t] = "inactive"
+        newObj[t] = 'inactive'
       }
     })
     return newObj
@@ -88,9 +87,9 @@ const Index: React.SFC<IndexProps> = (props) => {
   // TODO: Sort tags alphabetically
   return (
     <React.Fragment>
-      {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === "active"}>{t.tag}</TagButton>)}
+      {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
       {posts
-        .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === "active") : true)
+        .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
         .map(({ node: post }) => (
           <Col key={post.frontmatter.path} span={24} className={postClass}>
             <h1 className={titleClass}>

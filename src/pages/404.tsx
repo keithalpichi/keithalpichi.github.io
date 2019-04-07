@@ -1,7 +1,11 @@
-import * as React from 'react';
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
 
 const About: React.SFC = () => (
-  <h1>Woops! Looks like this page doesn't exist</h1>
+  <React.Fragment>
+    <Helmet title='Keith Alpichi | Page Not Found' />
+    <h1>Oh brah! I cannot find da' kine page you're looking for</h1>
+  </React.Fragment>
 )
 
 export default About

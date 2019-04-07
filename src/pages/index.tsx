@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Helmet } from 'react-helmet'
 import { Row, Col } from 'antd'
 import { graphql } from 'gatsby'
 import cxs from 'cxs'
@@ -43,6 +44,7 @@ const Index: React.SFC<IndexProps> = ({
   location
 }) => (
     <React.Fragment>
+      <Helmet title='Keith Alpichi | Blog' />
       <Row type='flex'>
         <Col span={24}>
           <h1 className={headingClass}>Aloha 🤙</h1>
