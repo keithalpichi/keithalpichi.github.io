@@ -4,7 +4,7 @@ excerpt: Taking a single word and explaining how it relates to success
 keywords: success, self-improvement, entrepreneurship, business
 title: Success Manifest — Episode 0
 path: /blog/success-manifest
-tags: software
+tags: ["personal development"]
 ---
 
 # What is a Success Manifest

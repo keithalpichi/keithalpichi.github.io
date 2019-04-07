@@ -1,9 +1,9 @@
 ---
 title: "Go Gotcha: Closing a Nil HTTP Response Body With Defer"
 date: 2018-05-16T08:00:00-07:00
-path: "/blog/go-gotcha-nil-http-response-body-with-defer"
+path: /blog/go-gotcha-nil-http-response-body-with-defer
 excerpt: "When handling HTTP responses it is important to check the errors first before handling the responses."
-tags: software
+tags: ["golang"]
 ---
 
 When handling HTTP responses it is important to check the errors first before handling the responses. Even if you defer to close the `io.Closer`, in this case a response body, you’ll be surprised what happens when it is nil. Avoiding this crucial step or assuming defer can deflect or handle errors will lead to a nasty panic; ultimately crashing your program. Let’s see an example of this.

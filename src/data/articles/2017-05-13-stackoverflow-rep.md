@@ -4,7 +4,7 @@ excerpt: Set a filter and go to work, every...single...day
 keywords: stack overflow, react, redux
 title: How I went from a Stack Overflow reputation of 100 to 550 in under two months
 path: /blog/how-to-build-stackoverflow-reputation
-tags: software
+tags: ["stackoverflow"]
 ---
 
 ## Don't Underestimate Stack overflow

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Row, Col } from 'antd'
-import Main from '../layouts/Main'
 import { graphql } from 'gatsby'
 import cxs from 'cxs'
 import Posts from '../components/posts'
@@ -19,7 +18,7 @@ interface IndexProps {
             title: string
             date: string
             excerpt: string
-            tags: string
+            tags: string[]
           }
         }
       }>
@@ -29,20 +28,21 @@ interface IndexProps {
 
 const headingClass = cxs({
   color: colors.default.green,
+  margin: 0,
   fontSize: '6rem',
   fontWeight: 900,
   textAlign: 'center'
 })
 
 const postsClass = cxs({
-  marginTop: '84px'
+  marginTop: '48px'
 })
 
 const Index: React.SFC<IndexProps> = ({
   data: { allMarkdownRemark: { edges: posts } },
   location
 }) => (
-    <Main>
+    <React.Fragment>
       <Row type='flex'>
         <Col span={24}>
           <h1 className={headingClass}>Aloha 🤙</h1>
@@ -51,7 +51,7 @@ const Index: React.SFC<IndexProps> = ({
       <Row className={postsClass}>
         <Posts posts={posts} location={location} />
       </Row>
-    </Main>
+    </React.Fragment>
   )
 
 export default Index

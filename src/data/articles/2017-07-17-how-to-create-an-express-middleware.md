@@ -5,7 +5,7 @@ excerpt: Learn how to inspect, manipulate, and reject HTTP requests and response
 keywords: express, node, middleware
 title: What is an Express Middleware and How to Create One
 path: /blog/what-is-express-middleware-and-how-to-create-one
-tags: software
+tags: ["express", "nodejs"]
 ---
 
 #### Prerequisites

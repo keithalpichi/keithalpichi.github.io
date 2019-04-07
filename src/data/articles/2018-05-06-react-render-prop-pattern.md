@@ -1,9 +1,9 @@
 ---
 title: "Learn React’s “Render” Prop Pattern By Building A Pop-Up Modal"
 date: 2018-05-06T11:01:07-07:00
-path: "/blog/react-render-prop-pattern"
+path: /blog/react-render-prop-pattern
 excerpt: "A quick tutorial on what it is, how to use it, and why it’ll make your React code easier to work with."
-tags: software
+tags: ["react"]
 ---
 
 The first time I came across the pattern of the `render` prop was in v3 of the wonderful React-Router library. That was nearly 2 years ago. I’ve used it here and there but I didn’t realize all the beauty behind it until I recently learned it was being used as an [alternative to HOC’s](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce). It was also introduced into React 16. The `render` prop was clearly a pattern I needed to revisit!

@@ -8,7 +8,7 @@ import '../styles/base.less'
 
 const mainClassName = cxs({
   top: '4rem',
-  margin: '4rem 0'
+  margin: '2rem 0'
 })
 
 const mainContentClassName = cxs({

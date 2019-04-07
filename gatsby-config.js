@@ -15,6 +15,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-transformer-remark',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-layout',
     {
       resolve: `gatsby-plugin-less`,
       options: {

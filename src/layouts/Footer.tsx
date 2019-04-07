@@ -12,7 +12,7 @@ const textClassName = cxs({
 })
 
 const Footer: React.SFC = () => (
-  <Row type="flex" align="middle" justify="center" className={footerClassName}>
+  <Row type='flex' align="middle" justify="center" className={footerClassName}>
     <Col span={24}><p className={textClassName}>Built by Keith Alpichi 🤙</p></Col>
   </Row>
 );

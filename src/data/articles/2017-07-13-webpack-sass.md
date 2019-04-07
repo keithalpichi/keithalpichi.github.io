@@ -5,7 +5,7 @@ excerpt: A straight-forward explanation to configuring preprocessors with Webpac
 keywords: webpack, sass, less, preprocessor, css, react, angular
 title: How to setup SASS or LESS with Webpack 2
 path: /blog/how-to-setup-sass-less-with-webpack-2
-tags: software
+tags: ["sass", "less", "webpack"]
 ---
 
 #### Prerequisites

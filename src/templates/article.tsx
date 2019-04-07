@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Main from '../layouts/Main'
 import { format } from 'date-fns'
 import { colors } from '../styles'
 
@@ -19,8 +18,8 @@ interface ArticleProps {
 const Article: React.SFC<ArticleProps> = ({
   data: { markdownRemark: post }
 }) => (
-    <Main>
-      <h1 style={{ fontFamily: 'Cormorant Garamond' }}>{post.frontmatter.title}</h1>
+    <React.Fragment>
+      <h1 style={{ lineHeight: 1 }}>{post.frontmatter.title}</h1>
       <h3 style={{ color: colors.lightGreen, marginTop: 0 }}>{format(post.frontmatter.date, 'dddd, MMMM Do YYYY')}</h3>
       <div
         style={{
@@ -28,7 +27,7 @@ const Article: React.SFC<ArticleProps> = ({
         }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
-    </Main>
+    </React.Fragment>
   )
 
 export default Article
