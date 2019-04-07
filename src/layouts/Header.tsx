@@ -31,9 +31,11 @@ const headerLinkClassName = cxs({
 
 const HeaderLink: React.SFC<HeaderLinkProps> = ({ to, main, children }) => (
   <Col style={{
-    border: main ? 'unset' : `solid 1px ${colors.black}`,
-    borderRadius: main ? 'unset' : 4,
-    padding: main ? 'inherit' : '4px 10px'
+    // border: main ? 'unset' : `solid 1px ${colors.black}`,
+    // borderRadius: main ? 'unset' : 4,
+    // padding: main ? 'inherit' : '4px 10px'
+    display: 'flex',
+    alignItems: 'center'
   }}><Link to={to}>{children}</Link></Col>
 )
 
@@ -50,6 +52,13 @@ const headerClassName = cxs({
   textDecoration: 'none'
 })
 
+const iconLinkClassName = cxs({
+  cursor: 'pointer',
+  color: colors.black,
+  fontSize: '1.5rem',
+  marginRight: '10px'
+})
+
 const Header: React.SFC = () => (
   <Row type='flex' align='middle' className={headerClassName}>
     <Col span={8}>
@@ -59,6 +68,8 @@ const Header: React.SFC = () => (
     </Col>
     <Col span={16}>
       <Row type='flex' justify='end' gutter={16}>
+        <a href='https://www.linkedin.com/in/keithalpichi' className={iconLinkClassName}><i className='fab fa-linkedin'></i></a>
+        <a href='https://github.com/keithalpichi' className={iconLinkClassName}><i className='fab fa-github-square'></i></a>
         <HeaderLink to='/about'>
           <h3 className={headerLinkClassName}>About</h3>
         </HeaderLink>
