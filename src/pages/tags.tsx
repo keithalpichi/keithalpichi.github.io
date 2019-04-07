@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import { Row } from 'antd'
 
 const TagsPage = ({
   data: {
@@ -26,8 +27,8 @@ const TagsPage = ({
 }) => (
     <div>
       <Helmet title='Keith Alpichi | Tags' />
-      <div>
-        <h1>Tags</h1>
+      <Row type='flex' style={{ flexDirection: 'column' }}>
+        <h1 style={{ textAlign: 'center' }}>Tags</h1>
         <ul>
           {group.map(tag => (
             <li key={tag.fieldValue}>
@@ -37,7 +38,7 @@ const TagsPage = ({
             </li>
           ))}
         </ul>
-      </div>
+      </Row>
     </div>
   )
 
