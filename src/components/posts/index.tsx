@@ -24,6 +24,10 @@ interface IndexProps {
   }>
 }
 
+interface IndexState {
+  search?: URLSearchParams
+}
+
 const postClass = css`
   margin-bottom: 32px;
 `
@@ -41,69 +45,84 @@ const titleClass = css`
   line-height: 1;
 `
 
-const Index: React.SFC<IndexProps> = (props) => {
-  const {
-    posts,
-    location: { search }
-  } = props
-  const onTagClick = (t: string) => {
-    const currentFilters = new URLSearchParams(search).get('filter')
-    const tags = new Set(currentFilters ? currentFilters.split(',') : [])
-    if (tags.has(t)) {
-      tags.delete(t)
-    } else {
-      tags.add(t)
+class Index extends React.Component<IndexProps, IndexState> {
+  constructor (props: IndexProps) {
+    super(props)
+    this.state = {
+      search: undefined
     }
-    const newFilters = new URLSearchParams()
-    const tagsArray: string[] = []
-    tags.forEach(t => tagsArray.push(t))
-    let newRoute = '/'
-    if (tagsArray.length > 0) {
-      newFilters.set('filter', tagsArray.join(','))
-      newRoute = `/?${newFilters.toString()}`
-    }
-    return navigate(newRoute)
   }
-  const filter = new URLSearchParams(search).get('filter')
-  const filterTags = filter ? new Set(filter.split(',')) : new Set([])
-  const allTags: any = posts.reduce((obj, { node: { frontmatter: { tags } } }) => {
-    const newObj: any = { ...obj }
-    tags.forEach((t: string) => {
-      if (filter && filterTags.has(t)) {
-        newObj[t] = 'active'
+
+  componentDidMount () {
+    const { location: { search } } = this.props
+    if (search && !this.state.search) {
+      this.setState({ search: new URLSearchParams(search) })
+    }
+  }
+
+  render () {
+    const { posts } = this.props
+    const { search } = this.state
+    const onTagClick = (t: string) => {
+      const currentFilters = search ? search.get('filter') : undefined
+      const tags = new Set(currentFilters ? currentFilters.split(',') : [])
+      if (tags.has(t)) {
+        tags.delete(t)
       } else {
-        newObj[t] = 'inactive'
+        tags.add(t)
       }
-    })
-    return newObj
-  }, {})
-  let tagButtons: { status: string, tag: string }[] = []
-  for (const tag in allTags) {
-    if (!allTags.hasOwnProperty(tag)) {
-      continue
+      const newFilters = new URLSearchParams()
+      const tagsArray: string[] = []
+      tags.forEach(t => tagsArray.push(t))
+      let newRoute = '/'
+      if (tagsArray.length > 0) {
+        newFilters.set('filter', tagsArray.join(','))
+        newRoute = `/?${newFilters.toString()}`
+      }
+      this.setState({ search: newFilters })
+      return navigate(newRoute)
     }
-    tagButtons.push({ tag, status: allTags[tag] })
-  }
-  tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
-  return (
-    <FlexContainer direction='column'>
-      <FlexContainer direction='row'>
-        {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
-      </FlexContainer>
-      {posts
-        .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
-        .map(({ node: post }) => (
-          <FlexContainer noPadding direction='column' key={post.frontmatter.path} column={12} className={postClass}>
-            <h1 className={titleClass}>
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </h1>
-            <h3 className={dateClass}>{format(post.frontmatter.date, 'dddd, MMMM Do YYYY')}</h3>
-            <p className={excerptClass}>{post.frontmatter.excerpt}</p>
-          </FlexContainer>
-        ))
+    const filter = search ? search.get('filter') : undefined
+    const filterTags = filter ? new Set(filter.split(',')) : new Set([])
+    const allTags: any = posts.reduce((obj, { node: { frontmatter: { tags } } }) => {
+      const newObj: any = { ...obj }
+      tags.forEach((t: string) => {
+        if (filter && filterTags.has(t)) {
+          newObj[t] = 'active'
+        } else {
+          newObj[t] = 'inactive'
+        }
+      })
+      return newObj
+    }, {})
+    let tagButtons: { status: string, tag: string }[] = []
+    for (const tag in allTags) {
+      if (!allTags.hasOwnProperty(tag)) {
+        continue
       }
-    </FlexContainer>
-  )
+      tagButtons.push({ tag, status: allTags[tag] })
+    }
+    tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
+    return (
+      <FlexContainer direction='column'>
+        <FlexContainer direction='row'>
+          {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
+        </FlexContainer>
+        {posts
+          .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
+          .map(({ node: post }) => (
+            <FlexContainer noPadding direction='column' key={post.frontmatter.path} column={12} className={postClass}>
+              <h1 className={titleClass}>
+                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+              </h1>
+              <h3 className={dateClass}>{format(post.frontmatter.date, 'dddd, MMMM Do YYYY')}</h3>
+              <p className={excerptClass}>{post.frontmatter.excerpt}</p>
+            </FlexContainer>
+          ))
+        }
+      </FlexContainer>
+    )
+  }
 }
 
 export default Index
