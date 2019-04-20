@@ -3,6 +3,7 @@
     "./src/**/*"
   ],
   "compilerOptions": {
+    "moduleResolution": "node",
     "sourceMap": true,
     "target": "es6",
     "noImplicitAny": true,

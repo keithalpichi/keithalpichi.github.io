@@ -1,14 +1,15 @@
-import * as React from "react"
-import cxs from 'cxs'
-import { colors } from "../../styles"
+import * as React from 'react'
+import { css } from 'linaria'
+import { colors } from '../../styles'
 
-const tagButtonClassName = cxs({
-  border: `solid 1px ${colors.black}`,
-  borderRadius: '4px',
-  padding: '4px 10px',
-  margin: '5px',
-  display: 'inline-block'
-})
+const tagButtonClassName = css`
+  cursor: pointer;
+  border: solid 1px ${colors.black};
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 5px;
+  display: inline-block;
+`
 
 interface TagButton extends React.MouseEventHandler {
   active?: boolean
@@ -16,13 +17,13 @@ interface TagButton extends React.MouseEventHandler {
 }
 
 export default class Index extends React.Component<TagButton> {
-  render() {
-    const { active, children } = this.props;
+  render () {
+    const { active, children } = this.props
     return (
       <a
         style={{
-          background: active ? colors.green : "inherit",
-          color: active ? colors.white : "inherit"
+          background: active ? colors.green : 'inherit',
+          color: active ? colors.white : 'inherit'
         }}
         className={tagButtonClassName}
         {...this.props}

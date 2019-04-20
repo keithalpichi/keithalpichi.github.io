@@ -1,20 +1,20 @@
-import * as React from "react";
-import { Row, Col } from "antd";
-import cxs from "cxs";
+import * as React from 'react'
+import { Flex, FlexContainer } from '../components'
+import { css } from 'linaria'
 
-const footerClassName = cxs({
-  height: "4rem",
-  boxShadow: "0 -1px 3px rgba(0,0,0,0.05)",
-})
+const footerClassName = css`
+  height: 4rem;
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.05);
+`
 
-const textClassName = cxs({
-  textAlign: "center"
-})
+const textClassName = css`
+  text-align: center;
+`
 
 const Footer: React.SFC = () => (
-  <Row type='flex' align="middle" justify="center" className={footerClassName}>
-    <Col span={24}><p className={textClassName}>Built by Keith Alpichi 🤙</p></Col>
-  </Row>
-);
+  <FlexContainer alignContent='center' justifyContent='center' className={footerClassName}>
+    <Flex column={12}><p className={textClassName}>Mahalo 🤙</p></Flex>
+  </FlexContainer>
+)
 
-export default Footer;
+export default Footer

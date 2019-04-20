@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { Row, Col } from 'antd'
+import { Flex, FlexContainer } from '../components'
 import { graphql } from 'gatsby'
-import cxs from 'cxs'
+import { css } from 'linaria'
 import Posts from '../components/posts'
 import * as colors from '../styles/colors'
 
@@ -27,17 +27,17 @@ interface IndexProps {
   }
 }
 
-const headingClass = cxs({
-  color: colors.default.green,
-  margin: 0,
-  fontSize: '6rem',
-  fontWeight: 900,
-  textAlign: 'center'
-})
+const headingClass = css`
+  color: ${colors.default.green};
+  margin: 0px;
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+`
 
-const postsClass = cxs({
-  marginTop: '48px'
-})
+const postsClass = css`
+  margin-top: 48px;
+`
 
 const Index: React.SFC<IndexProps> = ({
   data: { allMarkdownRemark: { edges: posts } },
@@ -45,14 +45,14 @@ const Index: React.SFC<IndexProps> = ({
 }) => (
     <React.Fragment>
       <Helmet title='Keith Alpichi | Blog' />
-      <Row type='flex'>
-        <Col span={24}>
+      <FlexContainer>
+        <Flex column={12}>
           <h1 className={headingClass}>Aloha 🤙</h1>
-        </Col>
-      </Row>
-      <Row className={postsClass}>
+        </Flex>
+      </FlexContainer>
+      <FlexContainer className={postsClass}>
         <Posts posts={posts} location={location} />
-      </Row>
+      </FlexContainer>
     </React.Fragment>
   )
 

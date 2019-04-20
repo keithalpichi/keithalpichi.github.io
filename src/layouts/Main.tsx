@@ -1,37 +1,30 @@
 import * as React from 'react'
-import { Row, Col } from 'antd'
+import { FlexContainer, Flex } from '../components'
 import Header from './Header'
 import Footer from './Footer'
-import cxs from 'cxs'
+import { css } from 'linaria'
 
-import '../styles/base.less'
+import '../styles/base.css'
 
-const mainClassName = cxs({
-  top: '4rem',
-  margin: '2rem 0'
-})
+const mainClassName = css`
+  padding: 6rem 0px 2rem;
+`
 
-const mainContentClassName = cxs({
-  maxWidth: '80%',
-  width: '800px'
-})
+const mainContentClassName = css`
+  max-width: 80%;
+  width: 800px;
+`
 
 const Main: React.SFC = ({ children }) => (
-  <Row>
-    <Col span={24}>
-      <Header />
-    </Col>
-    <Col span={24} className={mainClassName}>
-      <Row type='flex' justify='center'>
-        <Col className={mainContentClassName}>
-          {children}
-        </Col>
-      </Row>
-    </Col>
-    <Col span={24}>
-      <Footer />
-    </Col>
-  </Row>
+  <FlexContainer direction='column'>
+    <Header />
+    <FlexContainer className={mainClassName} column={12} alignItems='center' direction='column'>
+      <Flex className={mainContentClassName}>
+        {children}
+      </Flex>
+    </FlexContainer>
+    <Footer />
+  </FlexContainer>
 )
 
 export default Main

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Row, Col } from 'antd'
+import { FlexContainer } from '../components'
 
 const Tags = ({ pageContext, data }: {
   pageContext: { tag: string }
@@ -25,7 +25,7 @@ const Tags = ({ pageContext, data }: {
     } tagged with "${tag}"`
 
   return (
-    <Row type='flex' style={{ flexDirection: 'column' }}>
+    <FlexContainer direction='column'>
       <h1 style={{ textAlign: 'center' }}>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
@@ -38,7 +38,7 @@ const Tags = ({ pageContext, data }: {
         })}
       </ul>
       <Link to='/tags'>All tags</Link>
-    </Row>
+    </FlexContainer>
   )
 }
 

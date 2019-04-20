@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Col } from 'antd'
+import { Flex, FlexContainer } from '../layout'
 import { format } from 'date-fns'
 import { Link } from 'gatsby'
 import { colors } from '../../styles'
-import cxs from 'cxs'
-import { tag as TagButton } from '../buttons'
+import { css } from 'linaria'
+import { tag as TagButton, tag } from '../buttons'
 import { navigate } from '@reach/router'
 
 interface IndexProps {
@@ -24,22 +24,22 @@ interface IndexProps {
   }>
 }
 
-const postClass = cxs({
-  marginBottom: '32px'
-})
+const postClass = css`
+  margin-bottom: 32px;
+`
 
-const excerptClass = cxs({
-  marginTop: '24px'
-})
+const excerptClass = css`
+  margin-top: 24px;
+`
 
-const dateClass = cxs({
-  color: colors.lightGreen,
-  marginTop: 0
-})
+const dateClass = css`
+  color: ${colors.lightGreen};
+  margin-top: 0px;
+`
 
-const titleClass = cxs({
-  lineHeight: 1
-})
+const titleClass = css`
+  line-height: 1;
+`
 
 const Index: React.SFC<IndexProps> = (props) => {
   const {
@@ -84,23 +84,25 @@ const Index: React.SFC<IndexProps> = (props) => {
     }
     tagButtons.push({ tag, status: allTags[tag] })
   }
-  // TODO: Sort tags alphabetically
+  tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
   return (
-    <React.Fragment>
-      {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
+    <FlexContainer direction='column'>
+      <FlexContainer direction='row'>
+        {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
+      </FlexContainer>
       {posts
         .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
         .map(({ node: post }) => (
-          <Col key={post.frontmatter.path} span={24} className={postClass}>
+          <FlexContainer noPadding direction='column' key={post.frontmatter.path} column={12} className={postClass}>
             <h1 className={titleClass}>
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </h1>
             <h3 className={dateClass}>{format(post.frontmatter.date, 'dddd, MMMM Do YYYY')}</h3>
             <p className={excerptClass}>{post.frontmatter.excerpt}</p>
-          </Col>
+          </FlexContainer>
         ))
       }
-    </React.Fragment>
+    </FlexContainer>
   )
 }
 

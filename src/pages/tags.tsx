@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import { Row } from 'antd'
+import { FlexContainer } from '../components'
 
 const TagsPage = ({
   data: {
@@ -27,7 +27,7 @@ const TagsPage = ({
 }) => (
     <div>
       <Helmet title='Keith Alpichi | Tags' />
-      <Row type='flex' style={{ flexDirection: 'column' }}>
+      <FlexContainer direction='column'>
         <h1 style={{ textAlign: 'center' }}>Tags</h1>
         <ul>
           {group.map(tag => (
@@ -38,7 +38,7 @@ const TagsPage = ({
             </li>
           ))}
         </ul>
-      </Row>
+      </FlexContainer>
     </div>
   )
 
