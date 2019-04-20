@@ -56,12 +56,12 @@ const iconLinkClassName = css`
 
 const Header: React.SFC = () => (
   <FlexContainer className={headerClassName}>
-    <FlexContainer alignItems='center' column={4}>
+    <FlexContainer alignItems='center' column={6}>
       <HeaderLink to='/'>
         <h2 className={mainHeaderLinkClassName}>Keith Alpichi</h2>
       </HeaderLink>
     </FlexContainer>
-    <FlexContainer justifyContent='flex-end' column={8}>
+    <FlexContainer justifyContent='flex-end' column={6}>
       <a href='https://www.linkedin.com/in/keithalpichi' className={iconLinkClassName}><i className='fab fa-linkedin'></i></a>
       <a href='https://github.com/keithalpichi' className={iconLinkClassName}><i className='fab fa-github-square'></i></a>
       <HeaderLink to='/about'>
