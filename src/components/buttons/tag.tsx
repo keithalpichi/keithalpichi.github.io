@@ -11,12 +11,12 @@ const tagButtonClassName = css`
   display: inline-block;
 `
 
-interface TagButton extends React.MouseEventHandler {
+interface TagButtonProps extends React.MouseEventHandler {
   active?: boolean
   onClick?: () => void
 }
 
-export default class Index extends React.Component<TagButton> {
+export default class Index extends React.Component<TagButtonProps> {
   render () {
     const { active, children } = this.props
     return (

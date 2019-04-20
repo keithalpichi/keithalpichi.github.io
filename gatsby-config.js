@@ -1,5 +1,4 @@
 require('ts-node').register()
-const colors = require("./src/styles/colors")
 
 module.exports = {
   siteMetadata: {

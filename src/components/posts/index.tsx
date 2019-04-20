@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Flex, FlexContainer } from '../layout'
+import { FlexContainer } from '../layout'
 import { format } from 'date-fns'
 import { Link } from 'gatsby'
 import { colors } from '../../styles'
 import { css } from 'linaria'
-import { tag as TagButton, tag } from '../buttons'
+import { TagButton } from '../buttons'
 import { navigate } from '@reach/router'
 
 interface IndexProps {
