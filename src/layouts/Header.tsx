@@ -40,7 +40,7 @@ const headerClassName = css`
   height: 2rem;
   position: fixed;
   top: 0px;
-  background: ${colors.white};
+  background: ${colors.cream};
   z-index: 999;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   padding: 16px 0;

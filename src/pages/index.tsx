@@ -33,6 +33,7 @@ const headingClass = css`
   font-size: 6rem;
   font-weight: 900;
   text-align: center;
+  text-transform: uppercase;
 `
 
 const postsClass = css`
