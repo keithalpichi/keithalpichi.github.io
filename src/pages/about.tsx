@@ -7,19 +7,16 @@ const About: React.SFC = () => (
     <div>
       <ul>
         <li>
-          Highly skilled in Go, Javascript, React, Redux, and NodeJS
+          Highly skilled in AWS, Go (Golang), NodeJS, Javascript, React, and Redux
         </li>
         <li>
           A leader who pursues his work with a growth-mindset, pride, and grit
         </li>
         <li>
-          Deeply passionate about health, productivity, entrepreneurship, fitness, and the ocean.
+          Deeply passionate about health, productivity, entrepreneurship, fitness, and the ocean
         </li>
         <li>
-          Polyglot programmer enthusiastic about challenging himself
-        </li>
-        <li>
-          Interested in intuitive UI's, Kubernetes, serverless computing, event-driven architectures & real-time distributed systems
+          Interested in simple intuitive UI's, server-less cloud computing, event-driven architectures and real-time distributed systems
         </li>
       </ul>
       <h1>Aloha!</h1>
