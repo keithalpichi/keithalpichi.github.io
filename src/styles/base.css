@@ -81,6 +81,11 @@ code {
   padding: 2px 4px;
 }
 
+blockquote {
+  border-left: solid 6px rgba(179, 195, 180, .5);
+  padding-left: 32px;
+}
+
 li {
   margin-bottom: 8px;
 }
