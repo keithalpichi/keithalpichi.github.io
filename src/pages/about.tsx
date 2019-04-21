@@ -18,6 +18,9 @@ const About: React.SFC = () => (
         <li>
           Interested in simple intuitive UI's, server-less cloud computing, event-driven architectures and real-time distributed systems
         </li>
+        <li>
+          Dreams of starting his own software company
+        </li>
       </ul>
       <h1>Aloha!</h1>
       <p>
