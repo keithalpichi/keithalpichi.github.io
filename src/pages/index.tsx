@@ -34,6 +34,9 @@ const headingClass = css`
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+  @media screen and (max-width: 40em) {
+    font-size: 4rem;
+  }
 `
 
 const postsClass = css`
