@@ -9,6 +9,7 @@ interface HeaderLinkProps {
 }
 
 const mainHeaderLinkClassName = css`
+  color: ${colors.black};
   letter-spacing: 2px;
   margin: 0px;
   @media screen and (max-width: 40em) {
@@ -20,6 +21,7 @@ const mainHeaderLinkClassName = css`
 `
 
 const headerLinkClassName = css`
+  color: ${colors.black};
   letter-spacing: 2px;
   margin: 0px;
   @media screen and (max-width: 40em) {

@@ -49,11 +49,11 @@ p {
 
 a {
   text-decoration: none;
+  color: #519657;
 }
 
 a:visited, a:link {
   text-decoration: none;
-  color: #152717;
 }
 
 a:hover, a:active {
