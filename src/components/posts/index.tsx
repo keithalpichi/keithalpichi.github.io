@@ -28,17 +28,13 @@ interface IndexState {
   search?: URLSearchParams
 }
 
-const postClass = css`
-  margin-bottom: 32px;
-`
-
 const excerptClass = css`
-  margin-top: 24px;
+  margin-top: 12px;
 `
 
 const dateClass = css`
   color: ${colors.lightGreen};
-  margin-top: 0px;
+  margin: 0px;
 `
 
 const titleClass = css`
@@ -111,7 +107,7 @@ class Index extends React.Component<IndexProps, IndexState> {
         {posts
           .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
           .map(({ node: post }) => (
-            <FlexContainer noPadding direction='column' key={post.frontmatter.path} column={12} className={postClass}>
+            <FlexContainer noPadding direction='column' key={post.frontmatter.path} column={12}>
               <h1 className={titleClass}>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>

@@ -20,6 +20,8 @@ body {
   padding: 0;
   font-family: Lato;
   background: #f5f4e9;
+  color: #2b1d0e;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,20 +29,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin-top: 48px;
+  margin-top: 4rem;
 }
 
 h2 {
-  margin-top: 40px;
+  margin-top: 4rem;
   font-weight: 600;
 }
 
 h3 {
-  margin-top: 32px;
+  margin-top: 3rem;
 }
 
 h4 {
-  margin-top: 24px;
+  margin-top: 2rem;
 }
 
 p {
@@ -84,6 +86,7 @@ code {
 blockquote {
   border-left: solid 6px rgba(179, 195, 180, .5);
   padding-left: 32px;
+  margin: 32px 0;
 }
 
 li {
