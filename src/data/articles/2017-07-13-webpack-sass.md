@@ -90,7 +90,7 @@ module.exports = {
 
 Make sure to reference the compiled css file in your 'index.html' file and you're good to go. With just a few lines of configuration you're Webpack is ready to compile your SASS or LESS. Now take the time you've saved to get a jump on styling your application!
 
-If you have any questions feel free to comment below or send me a tweet.
+If you have any questions feel free to send me a tweet.
 
 #### References
 

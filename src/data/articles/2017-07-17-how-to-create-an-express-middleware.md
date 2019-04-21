@@ -151,4 +151,4 @@ These may not be practical examples you'd actually use in production but the ill
 
 I love how the flow in Express middleware's are very explicit. It makes code intuitive, super flexible, and easy to read. If you're not creating custom middlewares I highly encourage you take advantage of their simplicity and power.
 
-If you have any comments or questions please leave a comment or tweet me! Mahalo!
+If you have any comments or questions please tweet me!
