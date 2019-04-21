@@ -74,6 +74,9 @@ pre code {
   border: none;
   background: #444;
   color: #63E463;
+  padding: 0px;
+  border-radius: 0px;
+  margin: 0px;
 }
 
 code {
@@ -81,6 +84,7 @@ code {
   background: rgba(99, 228, 99, .10);
   border-radius: 4px;
   padding: 2px 4px;
+  margin: 0px 4px;
 }
 
 blockquote {
