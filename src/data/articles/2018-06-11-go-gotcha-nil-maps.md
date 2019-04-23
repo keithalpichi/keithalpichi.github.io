@@ -92,5 +92,3 @@ What if you don't know the number of elements, what do you provide as the initia
 
 ## Conclusion
 Forgetting to initialize maps is often overlooked. Just remember to always initialize maps when you can and check for nil maps (ie, compare the map to nil) to initialize maps before using them. Utilize the make function when you know the size.
-
-🤙 Mahalo for reading!

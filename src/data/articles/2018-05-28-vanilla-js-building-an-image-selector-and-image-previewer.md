@@ -90,5 +90,3 @@ You can find the final working demo and code [here](https://jsfiddle.net/keithal
 
 ### What About File Uploads?
 Okay, selecting an image and seeing it render in the browser is nice but it's not very practical. Usually you want to perform some other steps afterwards; such as upload it somewhere, save it to S3, or send it to our server to do some image manipulation or machine learning. How to upload a file to a server will be for a future article. So stay tuned.
-
-🤙 Mahalo for reading!

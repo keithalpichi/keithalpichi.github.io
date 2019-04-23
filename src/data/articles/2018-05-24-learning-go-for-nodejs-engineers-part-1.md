@@ -505,5 +505,3 @@ We've covered a lot in this article. If you're unsure about a concept go back to
 We aren't finished yet. We actually just touched the basics. In Part 2 we will discuss more advanced topics such as error handling, interfaces, pointers and references, and concurrency.
 
 Stay tuned for this article! In the meantime, head over to the official [golang.org](https://golang.org) site and the golang wiki to learn more.
-
-🤙 Mahalo for reading!

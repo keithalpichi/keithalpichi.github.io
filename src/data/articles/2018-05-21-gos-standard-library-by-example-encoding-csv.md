@@ -139,5 +139,3 @@ This package has to be the most simplest package to learn and use. It's main foc
 - use the "strings" package to perform string manipulations like trimming spaces and splitting on comma delimiters
 - use concurrency primitives such as channels and goroutines to process each row concurrently instead of sequentially
 - use the "math" package to perform math calculations
-
-🤙 Mahalo for reading!
