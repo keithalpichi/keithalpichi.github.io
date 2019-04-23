@@ -37,7 +37,7 @@ const Article: React.SFC<ArticleProps> = ({
         }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
-      <p>🤙 Mahalo for reading! make sure to check out some related posts by following one of the tags below.</p>
+      <p>🤙 Mahalo for reading! Make sure to check out some related posts by following one of the tags below.</p>
       <TagButtons tags={post.frontmatter.tags} />
     </React.Fragment>
   )
