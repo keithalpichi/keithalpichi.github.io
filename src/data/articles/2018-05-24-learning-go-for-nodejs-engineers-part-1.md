@@ -26,7 +26,7 @@ They both:
 - contain similar types (like arrays, maps/objects) and flow control statements, but with small differences
 - share the same syntax for comments (ie, `//` and `/* ... */`)
 - have immediately invoked functions and closures
-- share functionality of ES6's spread and rest operations (ie, ...args)
+- share functionality of ES6's spread and rest operations (ie, `...args`)
 - share the concepts of functions as first-class citizens
 
 ## Where They're Different
