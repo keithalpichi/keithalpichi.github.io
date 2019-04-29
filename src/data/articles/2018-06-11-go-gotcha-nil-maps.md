@@ -40,10 +40,10 @@ Whoops! No. The oversight here is not explicitly allocating and initializing the
 
 ## How To Use Maps Correctly
 Maps, under the covers, reference data structures that must be initialized before use. There are two options we can pursue:
-- use the built-in make function
+- use the built-in `make` function
 - use a map literal
 
-### The Built-In Make Function
+### The Built-In `Make` Function
 The definition of `make` is:
 > Allocates and initializes an object of type slice, map, or chan (only). An empty map is allocated with enough space to hold the specified number of elements. The size may be omitted, in which case a small starting size is allocated.
 
@@ -88,7 +88,7 @@ p.BankAccounts = bankAccts
 ## Make vs Map Literal?
 Most of the time you'll use `make`; especially if you know the number of elements you'll be adding to the map. Remember, the second argument to `make` is the initial size, not the max number of elements a map can hold. A map will grow as it's capacity gets fuller.
 
-What if you don't know the number of elements, what do you provide as the initial size to make? You could use a small number, zero, or omit it entirely. Note that using zero or omitting the size (ie,`make(map[string]float64)`) is fundamentally the same as using map literals (ie, `map[string]float64{}`).
+What if you don't know the number of elements, what do you provide as the initial size to `make? You could use a small number, zero, or omit it entirely. Note that using zero or omitting the size (ie,`make(map[string]float64)`) is fundamentally the same as using map literals (ie, `map[string]float64{}`).
 
 ## Conclusion
 Forgetting to initialize maps is often overlooked. Just remember to always initialize maps when you can and check for nil maps (ie, compare the map to nil) to initialize maps before using them. Utilize the make function when you know the size.
