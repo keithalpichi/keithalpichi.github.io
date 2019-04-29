@@ -1,2 +1,5 @@
 export * from './layout'
 export * from './buttons'
+export * from './inputs'
+export { default as Modal } from './modal'
+export { default as NewsletterSignUp } from './newsletter'

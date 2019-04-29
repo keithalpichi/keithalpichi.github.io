@@ -11,7 +11,7 @@ const mainClassName = css`
 `
 
 const mainContentClassName = css`
-  max-width: 80%;
+  max-width: 95%;
   width: 800px;
 `
 

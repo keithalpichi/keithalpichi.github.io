@@ -1,15 +1,5 @@
 import * as React from 'react'
-import { css } from 'linaria'
-import { colors } from '../../styles'
-
-const tagButtonClassName = css`
-  cursor: pointer;
-  border: solid 1px ${colors.black};
-  border-radius: 4px;
-  padding: 4px 10px;
-  margin: 5px;
-  display: inline-block;
-`
+import Button from './button'
 
 interface TagButtonProps extends React.MouseEventHandler {
   active?: boolean
@@ -18,16 +8,12 @@ interface TagButtonProps extends React.MouseEventHandler {
 
 export default class Index extends React.Component<TagButtonProps> {
   render () {
-    const { active, children } = this.props
+    const { active, children, ...rest } = this.props
     return (
-      <a
-        style={{
-          background: active ? colors.green : 'inherit',
-          color: active ? colors.white : 'inherit'
-        }}
-        className={tagButtonClassName}
-        {...this.props}
-      >{children}</a>
+      <Button
+        color={active ? 'success' : undefined}
+        {...rest}
+      >{children}</Button>
     )
   }
 }

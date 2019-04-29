@@ -12,9 +12,7 @@ const textClassName = css`
 `
 
 const Footer: React.SFC = () => (
-  <FlexContainer alignContent='center' justifyContent='center' className={footerClassName}>
-    <Flex column={12}><p className={textClassName}>Mahalo 🤙</p></Flex>
-  </FlexContainer>
+  <Flex column={12} className={footerClassName}><p className={textClassName}>Aloha, World 🤙</p></Flex>
 )
 
 export default Footer

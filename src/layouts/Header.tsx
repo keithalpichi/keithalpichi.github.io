@@ -39,14 +39,15 @@ const HeaderLink: React.SFC<HeaderLinkProps> = ({ to, children }) => (
 )
 
 const headerClassName = css`
-  height: 2rem;
+  height: 4rem;
   position: fixed;
   top: 0px;
   background: ${colors.cream};
-  z-index: 999;
+  z-index: 1;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   padding: 16px 0;
   text-decoration: none;
+  width: 100%;
 `
 
 const iconLinkClassName = css`
@@ -57,7 +58,7 @@ const iconLinkClassName = css`
 `
 
 const Header: React.SFC = () => (
-  <FlexContainer className={headerClassName}>
+  <Flex container column={12} className={headerClassName}>
     <FlexContainer alignItems='center' column={6}>
       <HeaderLink to='/'>
         <h2 className={mainHeaderLinkClassName}>Keith Alpichi</h2>
@@ -70,7 +71,7 @@ const Header: React.SFC = () => (
         <h3 className={headerLinkClassName}>About</h3>
       </HeaderLink>
     </FlexContainer>
-  </FlexContainer>
+  </Flex>
 )
 
 export default Header

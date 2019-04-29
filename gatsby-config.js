@@ -25,5 +25,11 @@ module.exports = {
         name: 'blog',
       }
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://keithalpichi.us3.list-manage.com/subscribe/post?u=86a92de350dc376ce41d81a70&amp;id=a69f50ee6c',
+      },
+    },
   ]
 }

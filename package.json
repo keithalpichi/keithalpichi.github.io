@@ -33,6 +33,7 @@
     "@types/react-helmet": "^5.0.8",
     "babel-preset-gatsby": "^0.1.11",
     "gatsby-plugin-linaria": "^1.1.1",
+    "gatsby-plugin-mailchimp": "^5.0.0",
     "gatsby-plugin-twitter": "^2.0.13",
     "gh-pages": "^2.0.1",
     "ts-node": "^8.0.3",
