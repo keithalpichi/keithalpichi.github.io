@@ -4,6 +4,7 @@ import { format } from 'date-fns'
 import { colors } from '../styles'
 import { TagButton, FlexContainer, NewsletterSignUp } from '../components'
 import { navigate } from '@reach/router'
+import { Helmet } from 'react-helmet'
 
 interface ArticleProps {
   data: {
@@ -28,6 +29,7 @@ const Article: React.SFC<ArticleProps> = ({
   data: { markdownRemark: post }
 }) => (
     <React.Fragment>
+      <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <h1 style={{ lineHeight: 1 }}>{post.frontmatter.title}</h1>
       <h3 style={{ color: colors.lightGreen, marginTop: 0 }}>{format(post.frontmatter.date, 'dddd, MMMM Do YYYY')}</h3>
       <TagButtons tags={post.frontmatter.tags} />
