@@ -67,6 +67,7 @@ const Header: React.SFC = () => (
     <FlexContainer justifyContent='flex-end' column={6}>
       <a href='https://www.linkedin.com/in/keithalpichi' className={iconLinkClassName}><i className='fab fa-linkedin'></i></a>
       <a href='https://github.com/keithalpichi' className={iconLinkClassName}><i className='fab fa-github-square'></i></a>
+      <a href='https://twitter.com/keithalpichi' className={iconLinkClassName}><i className='fab fa-twitter-square'></i></a>
       <HeaderLink to='/about'>
         <h3 className={headerLinkClassName}>About</h3>
       </HeaderLink>
