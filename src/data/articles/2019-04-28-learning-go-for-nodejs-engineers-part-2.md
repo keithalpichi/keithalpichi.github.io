@@ -1,6 +1,6 @@
 ---
 title: "Learning Go - For NodeJS Engineers (Part 2)"
-date: 2019-05-05T01:00:00-07:00
+date: 2019-05-06T01:00:00-07:00
 path: /blog/learning-go-for-nodejs-engineers-part-2
 excerpt: A comprehensive tutorial on learning Go from the perspective of Javascript.
 tags: ["golang", "javascript", "nodejs"]
