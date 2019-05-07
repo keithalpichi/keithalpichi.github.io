@@ -103,7 +103,7 @@ The method `func (d *Dude) changeHobby` is a pointer receiver method and uses a 
 
 ## Interfaces
 
-Javascript doesn't have interfaces (except for Typescript) but I think it's an important concept to introduce in an introduction to the language. Consider this struct:
+Javascript doesn't have interfaces (except for Typescript) but I think it's an important concept to introduce in an introduction to the Go language. Consider this struct:
 
 ```
 type Human struct {}
@@ -148,7 +148,7 @@ func Shout(t Talker) string {
 }
 ```
 
-We can now provide the function any types that satisfy this interface.
+We can now provide the function any type that satisfies this interface.
 
 ```
 Shout(Human) // returns "Hello!"
@@ -184,7 +184,7 @@ function divide(a, b) {
 
 Golang handles errors quite differently from Javascript. It does have a construct called `panic`, that is loosely analogous to `throw`, but it is rarely used. Actually, how you use `throw` in Javascript is different than how you use `panic` in Go. The only cases I see `panic` being used is when it's not possible for your code or others integrating your code to continue. We'll soon revisit how programs can recover from `panic`'s.
 
-So if `panic` and `throw` aren't synonymous how should you handle errors? The Go convention for notifying callers that an error was encountered is for functions to return a tuple. That tuple contains one or more values for the success and a single value for the failure. The right-most value represents the failure and it is always an `error` type. Let's see an example:
+So if `panic` and `throw` aren't synonymous how should you handle errors? The Go convention for notifying callers that an error was encountered is for functions to return a tuple. That tuple contains one or more values for the success and a single value for the failure. The right-most value represents the failure and it is always an `error` type. Let's see an example.
 
 ```
 func divide(a int, b int) (int, error) {
@@ -249,7 +249,7 @@ It now returns an integer and panics if `b` is zero. Now, if you did invoke this
 > Pro Tip: Only use a `panic` if it's best the program should crash immediately. Furthermore, when using a `panic` never assume a caller can resolve the error.
 
 ### Defer
-Javascript does not have a similar feature to `defer` so I'll just have to explain how it works. `defer` is a keyword that is prepended to a function allowing it to be executed after the surrounding function returns. `defer` is commonly used to simplify functions that perform various clean-up actions or to recover from panics. Let's see an example:
+Javascript does not have a similar feature to `defer` so I'll just have to explain how it works. `defer` is a keyword that is prepended to a function allowing it to be executed after the surrounding function returns. `defer` is commonly used to simplify functions that perform various clean-up actions or to recover from panics. Let's see an example.
 
 ```
 func createFile(filename string) error {
