@@ -68,9 +68,7 @@ const Header: React.SFC = () => (
       <a href='https://www.linkedin.com/in/keithalpichi' className={iconLinkClassName}><i className='fab fa-linkedin'></i></a>
       <a href='https://github.com/keithalpichi' className={iconLinkClassName}><i className='fab fa-github-square'></i></a>
       <a href='https://twitter.com/keithalpichi' className={iconLinkClassName}><i className='fab fa-twitter-square'></i></a>
-      <HeaderLink to='/about'>
-        <h3 className={headerLinkClassName}>About</h3>
-      </HeaderLink>
+      <Link className={iconLinkClassName} to='/about'><i className='fas fa-info-circle'></i></Link>
     </FlexContainer>
   </Flex>
 )
