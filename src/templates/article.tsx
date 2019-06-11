@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { format } from 'date-fns'
 import { colors } from '../styles'
-import { TagButton, FlexContainer, NewsletterSignUp } from '../components'
+import { TagButton, FlexContainer } from '../components'
 import { navigate } from '@reach/router'
 import { Helmet } from 'react-helmet'
 
@@ -39,9 +39,6 @@ const Article: React.SFC<ArticleProps> = ({
         }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
-      <h2>Join the "Aloha, World" Club</h2>
-      <p>🤙 Mahalo for reading! If you enjoyed this article and would like to get notified when new ones are released, be sure to join the "Aloha, World" Club below:</p>
-      <NewsletterSignUp />
       <p>Make sure to check out some related posts by following one of the tags below.</p>
       <TagButtons tags={post.frontmatter.tags} />
     </React.Fragment>

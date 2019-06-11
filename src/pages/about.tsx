@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { NewsletterSignUp } from '../components'
 
 const About: React.SFC = () => (
   <React.Fragment>
@@ -25,7 +24,7 @@ const About: React.SFC = () => (
       </p>
       <ul>
         <li>
-          I'm skilled in cloud-computing. I've architected AWS cloud infrastructures including managing servers and networks, creating server-less API's, utilizing both SQL and NoSQL databases, and more.
+          I'm skilled in cloud-computing. I've architected AWS cloud infrastructures including managing servers and networks, creating server-less API's and Docker services, utilizing both SQL and NoSQL databases, and more.
         </li>
         <li>
           I'm skilled in back-end development using languages such as NodeJS and Go (Golang).
@@ -37,12 +36,9 @@ const About: React.SFC = () => (
           I'm deeply passionate about health, productivity, entrepreneurship, fitness, and nearly everything to do with the ocean.
         </li>
       </ul>
-      <h2>Join the "Aloha, World" Club</h2>
-      <p>Sign up below to get notified when new articles are released. Don't worry, I won't spam you and you can unsubscribe at any time.</p>
-      <NewsletterSignUp />
       <h2>When I'm Not Coding</h2>
       <p>
-        Outside of work I like to exercise, cook, enjoy new cuisines, make my own espresso, listen to reggae music, play some chords on my ukulele, go to the beach, and read. I like to think of myself as a California beach bum. If I could code with my feet in the sand on a beach in San Diego, I would!
+        Outside of work I like to exercise, cook, enjoy new cuisines, make my own espresso, listen to reggae music, play some chords on my ukulele, go to the beach and body surf, and read. I like to think of myself as a California beach bum. If I could code with my feet in the sand on a beach in San Diego, I would!
       </p>
       <p>
         If you feel my vibe, let's connect!
