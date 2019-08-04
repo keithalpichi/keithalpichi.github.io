@@ -10,7 +10,7 @@ const About: React.SFC = () => (
         <li>Does AWS, Google Cloud, server-less computing, Docker, or distributed systems interests you?</li>
         <li>Are you currently a front-end engineer interested in transitioning to back-end?</li>
         <li>Are you overwhelmed with the diverse back-end tools, frameworks, and technologies?</li>
-        <li>Do you have interest in becoming a cloud computing architect?</li>
+        <li>Do you have interest in architecting cloud computing systems?</li>
         <li>Do you dream to one day start your own software company but don't think you're ready?</li>
       </ul>
       <p>
