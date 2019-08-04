@@ -20,9 +20,9 @@ interface ArticleProps {
 }
 
 const TagButtons: React.SFC<{ tags: string[] }> = ({ tags }) => (
-  <FlexContainer direction='row'>
-    {tags.map(t => <TagButton onClick={() => navigate(`/tags/${t}`)} active>{t}</TagButton>)}
-  </FlexContainer>
+  <React.Fragment>
+    {tags.map(t => <TagButton key={t} onClick={() => navigate(`/tags/${t}`)} active>{t}</TagButton>)}
+  </React.Fragment>
 )
 
 const Article: React.SFC<ArticleProps> = ({
@@ -32,15 +32,20 @@ const Article: React.SFC<ArticleProps> = ({
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <h1 style={{ lineHeight: 1 }}>{post.frontmatter.title}</h1>
       <h3 style={{ color: colors.lightGreen, marginTop: 0 }}>{format(post.frontmatter.date, 'dddd, MMMM Do YYYY')}</h3>
-      <TagButtons tags={post.frontmatter.tags} />
+      <FlexContainer direction='row'>
+        <TagButtons tags={post.frontmatter.tags} />
+      </FlexContainer>
       <div
         style={{
           marginTop: 64
         }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
-      <p>Make sure to check out some related posts by following one of the tags below.</p>
-      <TagButtons tags={post.frontmatter.tags} />
+      <p>Thank you for reading my article. Make sure to check out some related articles by following one of the tags below.</p>
+      <FlexContainer direction='row'>
+        <TagButton onClick={() => navigate(`/tags`)} active>{`all tags`}</TagButton>
+        <TagButtons tags={post.frontmatter.tags} />
+      </FlexContainer>
     </React.Fragment>
   )
 
