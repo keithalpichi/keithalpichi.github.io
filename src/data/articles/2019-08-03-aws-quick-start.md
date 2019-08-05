@@ -14,10 +14,10 @@ AWS's endlessly growing amount of services and behemoth documentation can make g
 - Should I use this or that service for my application?
 
 This guide helps to point you in the right direction to answer some of those questions. It will help:
-- introduce you to the AWS ecosystem and common services
+- introduce you to common AWS services
 - build a starting foundation for you to build upon using best practices
-- suggest important operations with a nudge towards documentation to get you familiar with common AWS services (links are provided)
-- suggest resources vital to your development and operations of your applications
+- provide links to documentation and guides for common AWS services
+- suggest resources and tasks vital to your development and operations of your applications
 
 This guide will *not*:
 - provide a step-by-step guide to building applications
@@ -29,11 +29,11 @@ Let's get to it.
 
 > Services involved: IAM
 
-Start by creating an AWS account with a very strong password. This will create an account and a root user. The root user, by default, is granted full administrative privileges. Later on you'll create yourself another IAM user with less privileges to secure your account.
+Start by creating an AWS account with a very strong password. This will create an account and a root user. The root user, by default, is granted full administrative privileges. Later on, you'll create yourself another IAM user with fewer privileges to secure your account.
 
 ### Enable MFA for the Root User
 
-Immediately [enable MFA for the root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) to lock it down. After this you'll rarely be using this user to perform anything other than [managing the root user, billing information, and other priviledged administrative tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html).
+Immediately [enable MFA for the root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) to lock it down. After this you'll rarely be using this user to perform anything other than [managing the root user, billing information, and other privileged administrative tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html).
 
 ## Create a Billing Alarm
 
@@ -58,7 +58,7 @@ AWS recommends a list of best practices to help secure your resources.
 
 ### Create a Non-Root User
 
-Now that you know the basics of IAM, create another IAM user for yourself to use. Provide this user the minimum necessary IAM permissions to perform the tasks you need to perform. If you'd like, grant this user the [AdministratorAccess](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_administrator) policy to receive administrative privileges. If for some reason this user gets compromised, use the root user to manage this users permissions or delete the user and start fresh.
+Now that you know the basics of IAM, create another IAM user for yourself to use. Provide this user the minimum necessary IAM permissions to perform the tasks you need to perform. If you'd like, grant this user the [AdministratorAccess](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_administrator) policy to receive administrative privileges. If for some reason this user gets compromised you can always use the root user to take action.
 
 ## Take Advantage of the [Free-Tier](https://aws.amazon.com/free/) Offering
 AWS offers some services for free forever, for a free-trial, and for the first 12-months of signing up. As a new user make sure to take advantage of all of these offerings, especially those that expire within 12 months.
@@ -75,8 +75,8 @@ You can interact with AWS in three ways:
 ### AWS Console Usage Suggestions
 - great for beginners to get a feel for how AWS looks and feels
 - great for visually interacting with AWS
-- great for testing out services through a step-by-step user interace
-- great for performing administrative tasks like those you can only perform within the Console
+- great for testing out services through a step-by-step user interface
+- great for performing administrative tasks such as those you can only perform within the Console
 - not so great for automating tasks since operations are performed manually
 
 ### AWS CLI Usage Suggestions
@@ -89,28 +89,30 @@ You can interact with AWS in three ways:
 
 ### Use [CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) Extensively
 
-Creating applications on AWS most often requires using many resources together. Manually provisioning and configuring these resources is tedious and error prone. What if you could provide AWS a configuration file that declares the details of the resources you're trying to build including how they interact with each other? With CloudFormation, you can do this.
+Creating applications on AWS most often requires using many resources together. Manually provisioning and configuring these resources is tedious and error-prone. What if you could provide AWS a configuration file that declares the details of the resources you're trying to build including how they interact with each other? With CloudFormation, you can do this.
 
 AWS CloudFormation takes care of provisioning and configuring resources for you. You don't need to individually create and configure AWS resources and figure out what's dependent on what. You provide a JSON or YML template and AWS CloudFormation handles all of that for you.
 
 This concept of declaring infrastructure within declarative configuration files is called "[Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code)" and it's worth investing time to pick up and use. Once you've got a feel for the AWS Console try switching over to using only CloudFormation. You'll no longer use the Console other than to use the GUI to *view* something or perform administrative tasks.
 
 ## Bookmark Essential AWS Documentation Reference
-As an AWS user it's impossible to remember all the APIs, SDK functions, IAM policies, and CloudFormation resources and property types. Below are the essential documentation I suggest you bookmark for quick reference.
-- [AWS Services Documentation](https://docs.aws.amazon.com/)- central hub for documentation on all AWS services
+As an AWS user, it's impossible to remember all the APIs, SDK functions, IAM policies, and CloudFormation resources and property types. Below is essential documentation I suggest you bookmark for quick reference.
+- [AWS Services Documentation](https://docs.aws.amazon.com/)- the central hub for documentation on all AWS services
 - [AWS CLI Reference](https://docs.aws.amazon.com/cli/latest/reference/)- documentation on the AWS CLI
 - [AWS SDK Reference](https://aws.amazon.com/tools/)- documentation on the various AWS SDK's
 - [AWS Service ARNs and Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)- documentation on the Amazon Resource Names that uniquely identify AWS resources
-- [IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)- documentation on all IAM policies
-- [Resource and Property Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)- documentation for all resource and property types supported by CloudFormation
+- [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)- documentation on all IAM policies
+- [AWS Resource and Property Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)- documentation for all resource and property types supported by CloudFormation
 
 ## Where to Next?
-Follow the documentation depending on what you're trying to learn or achieve. Take what you've learned and start building. Refer back to your documentation bookmarks when you need clarification on a service. Here are some common AWS services you may be interested in investigating next:
+Follow the documentation depending on what you're trying to achieve. Take what you learn, start building, and refer to your documentation bookmarks when you need clarification on a service.
 
-- [AWS EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) is a compute service that offers virtual servers. Look into EC2 if you want work directly with a virtual server.
-- [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html) is an object storage service. You can use it to store nearly anthing from text files, to binary files, to pictures, to videos, and more.
+Here are some common AWS services you may be interested in investigating next:
+
+- [AWS EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) is a compute service that offers virtual servers. Look into EC2 if you want to work directly with a virtual server.
+- [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html) is an object storage service. You can use it to store nearly anything from text files, to binary files, to pictures, to videos, and more.
 - [AWS DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) is a NoSQL database service.
 - [AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) is a SQL database service.
-- [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) is a compute service that lets you run code without provisioning or managing servers (AKA server-less). Lambda's work well with RESTful API's and the Serverless framework.
+- [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) is a compute service that lets you run code without provisioning or managing servers (AKA server-less). Lambda's work well with RESTful API's and the [Serverless framework](https://serverless.com/framework/docs/providers/aws/).
 - [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html) is a compute service that lets you deploy and manage applications without having to manage infrastructure. You simply upload your application, and the service handles the details of capacity provisioning, load balancing, scaling, and application health monitoring. This service is often compared to Heroku.
 - [AWS ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html) is a container management service that makes it easy to run, stop, and manage Docker containers on a cluster. If you're interested in distributed Docker systems ECS may be of interest to you. Look into Fargate too!
