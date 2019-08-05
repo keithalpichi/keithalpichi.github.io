@@ -29,11 +29,11 @@ Let's get to it.
 
 > Services involved: IAM
 
-Start by creating an AWS account with a very strong password. This will create an account and a root user. The root user, by default, is granted full administrative privileges. Later on you'll create yourself another IAM user with less privileges and use the root user to manage that user's privileges.
+Start by creating an AWS account with a very strong password. This will create an account and a root user. The root user, by default, is granted full administrative privileges. Later on you'll create yourself another IAM user with less privileges to secure your account.
 
 ### Enable MFA for the Root User
 
-Immediately [enable MFA for the root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) to lock it down. You won't be using this user to perform anything other than managing your non-root user, account settings, [billing information](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html), and billing notifications
+Immediately [enable MFA for the root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) to lock it down. After this you'll rarely be using this user to perform anything other than [managing the root user, billing information, and other priviledged administrative tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html).
 
 ## Create a Billing Alarm
 
@@ -58,7 +58,7 @@ AWS recommends a list of best practices to help secure your resources.
 
 ### Create a Non-Root User
 
-Now that you know the basics of IAM, create another IAM user for yourself to use. Provide this user the minimum necessary IAM permissions to perform the tasks you need to perform. You can, however, provide this user the [AdministratorAccess](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_administrator) policy that grants administrative privileges but that essentially makes this user the root user.
+Now that you know the basics of IAM, create another IAM user for yourself to use. Provide this user the minimum necessary IAM permissions to perform the tasks you need to perform. If you'd like, grant this user the [AdministratorAccess](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_administrator) policy to receive administrative privileges. If for some reason this user gets compromised, use the root user to manage this users permissions or delete the user and start fresh.
 
 ## Take Advantage of the [Free-Tier](https://aws.amazon.com/free/) Offering
 AWS offers some services for free forever, for a free-trial, and for the first 12-months of signing up. As a new user make sure to take advantage of all of these offerings, especially those that expire within 12 months.
