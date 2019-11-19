@@ -36,6 +36,8 @@ const About: React.SFC = () => (
           I'm deeply passionate about health, productivity, entrepreneurship, fitness, and nearly everything to do with the ocean.
         </li>
       </ul>
+      <h2>Career Opportunities</h2>
+      <p>If you're a recruiter or hiring manager and would like to discuss a career opportunity, please don't hesitate to contact me on my <a href='https://www.linkedin.com/in/keithalpichi' target='_blank'>LinkedIn</a>.</p>
       <h2>When I'm Not Coding</h2>
       <p>
         Outside of work I like to exercise, cook, enjoy new cuisines, make my own espresso, listen to reggae music, play some chords on my ukulele, go to the beach and body surf, and read. I like to think of myself as a California beach bum. If I could code with my feet in the sand on a beach in San Diego, I would!
