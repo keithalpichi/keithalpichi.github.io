@@ -10,7 +10,7 @@ tags: ["nodejs"]
 
 There is one application every software engineer should build. That application is a web scraper. A web scraper is a service that programmatically requests and parses HTML content served from a remote server. Once you have the HTML content of a website you can parse it for specific data.
 
-In this article I'm going to show you how to build a web scraper to collect an ecommerce site's product inventory. It will give you a good grasp of the hypertext part of HTTP and how browsers use HTML to construct and parse the web pages you view and manipulate everyday.
+In this article I'm going to show you how to build a web scraper to collect product inventory of an e-commerce site. It will give you a good grasp of the hypertext part of HTTP and how browsers use HTML to construct and parse the web pages you view and manipulate everyday.
 
 ## Tools
 
@@ -30,7 +30,7 @@ We'll also make the parsing work easier on ourselves by using [jsdom](https://gi
 
 ## Workflow
 
-We'll first need an understanding of the HTML content of the webpage we'd like to request. Since our goal is to collect product inventory we should know the URL of the product we're interested in and some HTML and CSS elements that determine the inventory status of the product. Ecommerce sites share common HTML user interfaces:
+We'll first need an understanding of the HTML content of the webpage we'd like to request. Since our goal is to collect product inventory we should know the URL of the product we're interested in and some HTML and CSS elements that determine the inventory status of the product. E-commerce sites share common HTML user interfaces:
 
 - input fields that accept a quantity may mean that an item is in-stock
 - missing or disabled quantity input fields may mean that the item is out-of-stock
@@ -72,7 +72,7 @@ This was a very simple example of web scraping. However, to make it more interes
 ## Limitations
 
 Web scraping has it's limitations. It is very common for websites to prevent clients from abusing the website content and services by:
-- hiding product information behind a log-in. A user has to authenticate to access product information. With web scraping you'd have to leverage cookies to ensure you're proving your identity to the website.
+- hiding product information behind a log-in. A user has to authenticate itself to access product information. With web scraping you'd have to leverage cookies to ensure you're proving your identity to the website.
 - blocking IP addresses that make many simultaneous requests. To work around this you'd have to use a proxy to shuffle the IP addresses your web scraper uses.
 
 ## Conclusion
