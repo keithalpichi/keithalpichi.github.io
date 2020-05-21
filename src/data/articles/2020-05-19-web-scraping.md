@@ -8,7 +8,7 @@ tags: ["nodejs"]
 
 ## What is Web Scraping
 
-There is one application every software engineer should build. That application is a web scraper. A web scraper is a service that programmatically requests and parses HTML content served from a remote server. Once you have the HTML content of a website you can parse it for specific data.
+There is one application every software engineer should build. That application is a web scraper. A web scraper is a service that programmatically requests and parses HTML content served from a website. Once you have the HTML content of a website you can parse it for specific data.
 
 In this article I'm going to show you how to build a web scraper to collect product inventory of an e-commerce site. It will give you a good grasp of the hypertext part of HTTP and how browsers use HTML to construct and parse the web pages you view and manipulate everyday.
 
