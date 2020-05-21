@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{181:function(e,n,t){"use strict";var a=t(6);t(1),Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var o=a(t(0)),l=t(198),i=function(){return o.createElement(o.Fragment,null,o.createElement(l.Helmet,{title:"Keith Alpichi | Page Not Found"}),o.createElement("h1",null,"Oh brah! I cannot find da' kine page you're looking for"))};n.default=i}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-695abf52f70b8b59c1c3.js.map
