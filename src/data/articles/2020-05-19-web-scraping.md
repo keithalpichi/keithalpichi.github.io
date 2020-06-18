@@ -63,8 +63,9 @@ That's web scraping for you. Pretty easy, right?
 
 ## Improving Our Solution
 
-This was a very simple example of web scraping. However, to make it more interesting we could have:
+This was a very simple example of web scraping. However, to make it more interesting or effective we could have:
 
+- used a headless browser like Puppeteer or Selenium to load the initial HTML and execute the Javascript to present the real interface a user would be interacting with. This becomes even more important for sites that are implemented as [SPA](https://en.wikipedia.org/wiki/Single-page_application)'s.
 - used [cron](https://en.wikipedia.org/wiki/Cron) or [launchd](https://www.launchd.info/) to run the scraping task on a time-based schedule
 - scraped for multiple products across multiples sites simultaneously
 - scraped across multiple sites to find the one that had the cheapest product in-stock
