@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         cream: '#FDF7EC',
         nude: '#FAEFDC',
-        navy: '#2F4A72',
+        navy: '#19445C',
         teal: '#88C4C8',
         mustard: '#F7C257',
         dijon: '#E5BD64',
