@@ -3,7 +3,7 @@ import { colors } from '../../styles'
 import { colorTypes, colorMap } from '../../styles/colors'
 import { classNames } from '../../util'
 
-interface ButtonProps extends React.HTMLProps<HTMLAnchorElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: colorTypes
 }
 
@@ -23,12 +23,12 @@ export default class Index extends React.Component<ButtonProps> {
   render() {
     const { children } = this.props
     return (
-      <a
+      <button
         className={classNames(
           'inline-block cursor-pointer rounded-md px-4 py-2',
         )}
         {...this.props}
-      >{children}</a>
+      >{children}</button>
     )
   }
 }
