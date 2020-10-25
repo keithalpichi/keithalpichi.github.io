@@ -34,7 +34,7 @@ export default class HTML extends React.Component<HTMLProps> {
           <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet" />
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes}>
+        <body className='bg-cream' {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <ErrorBoundary FallbackComponent={ErrorFallback}>
             <div
