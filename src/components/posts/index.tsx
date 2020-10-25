@@ -87,7 +87,7 @@ class Index extends React.Component<IndexProps, IndexState> {
     tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
     return (
       <>
-        <div className='flex flex-row my-16'>
+        <div className='flex flex-row flex-wrap my-16'>
           {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
         </div>
         <div className='flex flex-col'>
