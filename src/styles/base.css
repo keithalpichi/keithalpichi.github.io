@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url('./Lato.woff2'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cormorant Garamond Regular'), local('CormorantGaramond-Regular'), url('./CormorantGaramond.woff2'), url(https://fonts.gstatic.com/s/cormorantgaramond/v6/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  background: #f5f4e9;
+  color: #2b1d0e;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond';
+}
+
+h1 {
+  margin-top: 4rem;
+}
+
+h2 {
+  margin-top: 4rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 3rem;
+}
+
+h4 {
+  margin-top: 2rem;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: #519657;
+}
+
+a:visited, a:link {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #38693c;
+}
+
+pre {
+  overflow: scroll;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background: #444;
+  color: #63E463;
+  font-size: .8rem;
+}
+
+pre code {
+  border: none;
+  background: #444;
+  color: #63E463;
+  padding: 0px;
+  border-radius: 0px;
+  margin: 0px;
+}
+
+code {
+  color: #3eab3e;
+  background: rgba(99, 228, 99, .10);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: 0px 4px;
+  font-size: .9rem;
+}
+
+blockquote {
+  border-left: solid 6px rgba(179, 195, 180, .5);
+  padding-left: 32px;
+  margin: 32px 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
