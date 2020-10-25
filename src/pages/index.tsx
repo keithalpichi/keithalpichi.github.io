@@ -123,7 +123,7 @@ function Index(props: Props): ReactElement {
         </svg>
       </div>
       <div id="main">
-        <h1 className='text-6xl text-mustard font-bebas'>Articles</h1>
+        <h1 className='text-6xl text-mustard font-bebas mt-16 mb-8'>Articles</h1>
         <Posts posts={posts} location={location} />
       </div>
     </>

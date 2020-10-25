@@ -87,21 +87,23 @@ class Index extends React.Component<IndexProps, IndexState> {
     tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
     return (
       <>
-        <div className='grid flex-row'>
+        <div className='flex flex-row my-16'>
           {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
         </div>
+        <div className='flex flex-col'>
         {posts
           .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
           .map(({ node: post }) => (
-            <div className="grid flex-column p-0 col-span-12" key={post.frontmatter.path}>
-              <h1>
+            <div className="flex flex-col p-0 col-span-12 mb-16" key={post.frontmatter.path}>
+              <h1 className='font-bebas text-4xl text-teal'>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
-              <h3>{format(new Date(post.frontmatter.date), 'dddd, MMMM Do yyyy')}</h3>
-              <p>{post.frontmatter.excerpt}</p>
+              <h3 className='text-gray-600'>{format(new Date(post.frontmatter.date), 'EEEE, MMMM Do, yyyy')}</h3>
+              <p className='my-8'>{post.frontmatter.excerpt}</p>
             </div>
           ))
         }
+        </div>
       </>
     )
   }
