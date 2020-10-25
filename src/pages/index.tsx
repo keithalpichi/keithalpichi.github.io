@@ -32,7 +32,7 @@ function Index(props: Props): ReactElement {
   } = props
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap p-6">
+      <nav className="fixed top-0 left-0 right-0 flex bg-burnt lg:bg-transparent items-center justify-between flex-wrap p-4">
         <div className="flex items-center flex-shrink-0 text-navy mr-6">
           <svg width="25" height="25" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current text-navy">
             <path d="M16.6667 0H0L8.33333 16.6667L16.6667 0Z" />
@@ -46,7 +46,7 @@ function Index(props: Props): ReactElement {
             <path d="M50 33.3333H33.3334L41.6667 50L50 33.3333Z" />
           </svg>
         </div>
-        <div className="block lg:hidden">
+        {/* <div className="block lg:hidden">
           <button
             onClick={() => {
               setMenuOpen(isMenuOpen => !isMenuOpen)
@@ -69,28 +69,63 @@ function Index(props: Props): ReactElement {
           <div className="text-sm lg:flex-grow flex items-center flex-col lg:flex-row lg:justify-end">
             <a
               href="#"
-              className="block lg:inline-block lg:mt-0 text-navy hover:text-white mr-4"
+              className="block lg:inline-block lg:mt-0 text-navy hover:text-white mr-4 py-3 lg:py-0"
             >
               Blog
             </a>
             <a
               href="#"
-              className="block lg:inline-block lg:mt-0 text-navy hover:text-white mr-4"
+              className="block lg:inline-block lg:mt-0 text-navy hover:text-white mr-4 py-3 lg:py-0"
             >
               About
             </a>
           </div>
-        </div>
+        </div> */}
       </nav>
-      <svg viewBox="0 0 1440 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0)">
-          <path fillRule="evenodd" clipRule="evenodd" d="M895.611 453.842C895.615 453.331 895.617 452.82 895.617 452.309C895.617 355.488 817.129 277 720.309 277C623.488 277 545 355.488 545 452.309C545 453.344 545.009 454.376 545.027 455.407C573.178 456.624 612.112 457.092 643.132 453.842C696.797 448.22 757.108 454.353 764.774 456.909C769.345 458.432 791.717 457.049 813.806 455.684C828.769 454.759 843.602 453.842 852.684 453.842H895.611Z" fill="#F7C257"/>
-          <path d="M249.5 444.5C183.1 443.3 56.1667 459.333 1 467.5V514C10.8333 512.5 101.2 510.7 124 507.5C146.8 504.3 215.5 501.333 279.5 507.5C360.667 508.5 527.4 509.9 545 507.5C567 504.5 787 514 839.5 514C892 514 1004 502 1028 502C1052 502 1244.04 497 1266.5 497H1370.5C1382.1 497 1419.83 490 1440 490C1451.33 474.833 1467.2 444.5 1440 444.5C1406 444.5 1154.5 467.5 1118 467.5C1081.5 467.5 955 463 903.5 463C852 463 844 471 787 472C730 473 733.5 467.5 716.5 467.5H617.5C590 467.5 504.5 461.5 444.5 458C384.5 454.5 332.5 446 249.5 444.5Z" fill="#88C4C8"/>
-          <path d="M240 664C173.6 665.2 56.6667 672.167 1.5 664L-4 620C5.83333 621.5 96.2 611.3 119 614.5C141.8 617.7 210.5 620.667 274.5 614.5C355.667 613.5 522.4 612.1 540 614.5C562 617.5 782 608 834.5 608C887 608 999 620 1023 620C1047 620 1239.04 625 1261.5 625H1365.5C1377.1 625 1426.83 614.5 1447 614.5C1458.33 629.667 1462.2 664 1435 664C1401 664 1148 659 1111.5 659H898.5C847 659 835.5 655.5 778.5 654.5C721.5 653.5 728.5 654.5 711.5 654.5C694.5 654.5 625.5 659 598 659C570.5 659 499.5 660.5 439.5 664C379.5 667.5 323 662.5 240 664Z" fill="#88C4C8"/>
-          <path d="M1205.52 601.5C1271.92 602.7 1398.85 586.667 1454.02 578.5V532C1444.19 533.5 1353.82 535.3 1331.02 538.5C1308.22 541.7 1239.52 544.667 1175.52 538.5C1094.35 537.5 927.62 536.1 910.02 538.5C888.02 541.5 668.02 532 615.52 532C563.02 532 451.02 544 427.02 544C403.02 544 210.975 549 188.52 549H84.5195C72.9196 549 20.1666 554 0 554C-11.3334 569.167 -12.1804 601.5 15.0195 601.5C49.0195 601.5 300.52 578.5 337.02 578.5C373.52 578.5 500.02 583 551.52 583C603.02 583 611.02 575 668.02 574C725.02 573 721.52 578.5 738.52 578.5H837.52C865.02 578.5 950.52 584.5 1010.52 588C1070.52 591.5 1122.52 600 1205.52 601.5Z" fill="#88C4C8"/>
-        </g>
+      <div className="flex flex-column">
+        <svg id="aloha" viewBox="0 0 287 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M57 56H37.5L34.5 53H36.1132L13 3C19 3 32.4 5.9 38 17.5C43.6 29.1 53 48.1667 57 56Z" fill="#DC885D"/>
+          <path d="M10 56H3L0 53H4.55844L23 17.5H30L10 56Z" fill="#DC885D"/>
+          <path d="M35 46.5H13L16 41.5H32.5L35 46.5Z" fill="#DC885D"/>
+          <path d="M34.5 53H54C50 45.1667 40.6 26.1 35 14.5C29.4 2.9 16 0 10 0L34.5 53Z" fill="#F7C257"/>
+          <path d="M0 53L20 14.5H27L7 53H0Z" fill="#F7C257"/>
+          <path d="M32 43.5H10L13 38.5H29.5L32 43.5Z" fill="#F7C257"/>
+          <path d="M287 57H267.5L264.5 54H266.113L243 4C249 4 262.4 6.9 268 18.5C273.6 30.1 283 49.1667 287 57Z" fill="#DC885D"/>
+          <path d="M240 57H233L230 54H234.558L253 18.5H260L240 57Z" fill="#DC885D"/>
+          <path d="M265 47.5H243L246 42.5H262.5L265 47.5Z" fill="#DC885D"/>
+          <path d="M264.5 54H284C280 46.1667 270.6 27.1 265 15.5C259.4 3.9 246 1 240 1L264.5 54Z" fill="#F7C257"/>
+          <path d="M230 54L250 15.5H257L237 54H230Z" fill="#F7C257"/>
+          <path d="M262 44.5H240L243 39.5H259.5L262 44.5Z" fill="#F7C257"/>
+          <path d="M82 6V51H97.5V48L100.5 51V56H65L62 53H65V6H79V3L82 6Z" fill="#DC885D"/>
+          <path d="M79 3H62V53H97.5V48H79V3Z" fill="#F7C257"/>
+          <path d="M188 6V56H171L168 53H171V6H185V3L188 6Z" fill="#DC885D"/>
+          <path d="M208 53H205L208 56V53Z" fill="#DC885D"/>
+          <path d="M225 6L222 3V6H225Z" fill="#DC885D"/>
+          <path d="M225 6H208V56H225V6Z" fill="#DC885D"/>
+          <path d="M208 29H188V34H208V29Z" fill="#DC885D"/>
+          <path d="M185 3H168V53H185V3Z" fill="#F7C257"/>
+          <path d="M222 3H205V53H222V3Z" fill="#F7C257"/>
+          <path d="M205 26H185V31H205V26Z" fill="#F7C257"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M136 56C153 56 163 47 163 31C163 15 153 6 136 6C119 6 109 15 109 31C109 47 119 56 136 56ZM136 51C143 51 145 42.0457 145 31C145 19.9543 143 11 136 11C129 11 127 19.9543 127 31C127 42.0457 129 51 136 51Z" fill="#DC885D"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M133 53C150 53 160 44 160 28C160 12 150 3 133 3C116 3 106 12 106 28C106 44 116 53 133 53ZM133 48C140 48 142 39.0457 142 28C142 16.9543 140 8 133 8C126 8 124 16.9543 124 28C124 39.0457 126 48 133 48Z" fill="#F7C257"/>
+        </svg>
+      </div>
+
+      <svg className="mt-32" viewBox="0 0 1441 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" clipRule="evenodd" d="M892.054 176.842C892.058 176.331 892.061 175.82 892.061 175.309C892.061 78.4883 813.572 0 716.752 0C619.932 0 541.443 78.4883 541.443 175.309C541.443 176.344 541.452 177.376 541.47 178.407C569.621 179.624 608.556 180.092 639.575 176.842C693.241 171.22 753.551 177.353 761.218 179.909C765.788 181.432 788.16 180.049 810.25 178.684C825.213 177.759 840.046 176.842 849.127 176.842H892.054Z" fill="#F7C257"/>
+        <path className='wave' d="M245.943 167.5C179.543 166.3 55.6667 182.333 0.5 190.5V237C10.3333 235.5 97.6435 233.7 120.443 230.5C143.243 227.3 211.943 224.333 275.943 230.5C357.11 231.5 523.844 232.9 541.443 230.5C563.443 227.5 783.443 237 835.943 237C888.443 237 1000.44 225 1024.44 225C1048.44 225 1240.49 220 1262.94 220C1287.94 220 1349 223.5 1366.94 220C1384.89 216.5 1440.5 211.5 1440.5 211.5V167.5C1440.5 167.5 1150.94 190.5 1114.44 190.5C1077.94 190.5 951.443 186 899.943 186C848.443 186 840.443 194 783.443 195C726.443 196 729.943 190.5 712.943 190.5H613.943C586.443 190.5 500.943 184.5 440.943 181C380.943 177.5 328.943 169 245.943 167.5Z" fill="#88C4C8">
+          <animate repeatCount="indefinite" fill="#88C4C8" attributeName="d" dur="12s" attributeType="XML" values=" M0 77  C 473,283 822,-40 1920,116  V 359  H 0  V 67  Z;  M0 77  C 473,-40 1222,283 1920,136  V 359  H 0  V 67  Z;  M0 77  C 973,260 1722,-53 1920,120  V 359  H 0  V 67  Z;  M0 77  C 473,283 822,-40 1920,116  V 359  H 0  V 67  Z "></animate>
+        </path>
       </svg>
-      <Posts posts={posts} location={location} />
+      <div className="flex flex-column justify-center">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 0H0L12.5 25L25 0Z" fill="#19445C"/>
+        </svg>
+      </div>
+      <div id="main">
+        <h1 className='text-6xl text-mustard font-bebas'>Articles</h1>
+        <Posts posts={posts} location={location} />
+      </div>
     </>
   )
 }

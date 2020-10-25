@@ -3,3 +3,34 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  .flex-basis-0 {
+    flex-basis: 0;
+  }
+
+  #main {
+    @apply flex flex-col m-auto;
+    max-width: 95%;
+    width: 1000px;
+  }
+
+  #aloha {
+    @apply m-auto mt-64;
+    width: 40rem;
+  }
+
+  .wave {
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
