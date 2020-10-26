@@ -6,10 +6,10 @@
 
 @layer components {
   h1 {
-    @apply leading-none text-6xl text-mustard font-bebas mt-10 mb-8;
+    @apply leading-none text-6xl text-mustard font-bebas mt-12 mb-8;
   }
   h2 {
-    @apply leading-none text-4xl text-teal font-bebas mt-0 mb-4;
+    @apply leading-none text-4xl text-teal font-bebas mt-8 mb-4;
   }
 
   .flex-basis-0 {
@@ -30,6 +30,10 @@
   .wave {
     animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
     transform: translate3d(0, 0, 0);
+  }
+
+  .tags {
+    @apply flex flex-row flex-wrap my-10;
   }
 }
 
