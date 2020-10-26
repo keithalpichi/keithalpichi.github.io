@@ -2,7 +2,7 @@ import * as React from 'react'
 import { format } from 'date-fns'
 import { Link } from 'gatsby'
 import { colors } from '../../styles'
-import { TagButton } from '../buttons'
+import { TagBadge } from '../badges'
 import { navigate } from '@reach/router'
 
 interface IndexProps {
@@ -88,7 +88,7 @@ class Index extends React.Component<IndexProps, IndexState> {
     return (
       <>
         <div className='flex flex-row flex-wrap my-16'>
-          {tagButtons.map(t => <TagButton onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagButton>)}
+          {tagButtons.map(t => <TagBadge className="mx-2" key={t.tag} onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagBadge>)}
         </div>
         <div className='flex flex-col'>
         {posts
