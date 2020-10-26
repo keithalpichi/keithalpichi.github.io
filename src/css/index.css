@@ -9,7 +9,7 @@
     @apply leading-none text-6xl text-mustard font-bebas mt-10 mb-8;
   }
   h2 {
-    @apply leading-none text-4xl text-teal font-bebas mt-0 mb-8;
+    @apply leading-none text-4xl text-teal font-bebas mt-0 mb-4;
   }
 
   .flex-basis-0 {

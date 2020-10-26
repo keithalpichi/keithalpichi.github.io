@@ -99,7 +99,7 @@ class Index extends React.Component<IndexProps, IndexState> {
               <h2>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h2>
-              <p className='mt-4'>{post.frontmatter.excerpt}</p>
+              <p>{post.frontmatter.excerpt}</p>
             </div>
           ))
         }
