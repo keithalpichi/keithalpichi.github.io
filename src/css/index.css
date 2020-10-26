@@ -12,7 +12,7 @@
   #main {
     @apply flex flex-col m-auto;
     max-width: 95%;
-    width: 1000px;
+    width: 75rem;
   }
 
   #aloha {
