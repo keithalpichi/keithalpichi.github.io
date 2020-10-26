@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { colors } from '../../styles'
 import { TagBadge } from '../badges'
 import { navigate } from '@reach/router'
+import Main from '../../layouts'
 
 interface IndexProps {
   location: {
@@ -86,7 +87,7 @@ class Index extends React.Component<IndexProps, IndexState> {
     }
     tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
     return (
-      <>
+      <Main>
         <div className='flex flex-row flex-wrap mb-12'>
           {tagButtons.map(t => <TagBadge className="mx-2" key={t.tag} onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagBadge>)}
         </div>
@@ -104,7 +105,7 @@ class Index extends React.Component<IndexProps, IndexState> {
           ))
         }
         </div>
-      </>
+      </Main>
     )
   }
 }
