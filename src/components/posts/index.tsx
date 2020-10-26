@@ -87,7 +87,7 @@ class Index extends React.Component<IndexProps, IndexState> {
     tagButtons.sort((a, b) => a.tag < b.tag ? -1 : 1)
     return (
       <>
-        <div className='flex flex-row flex-wrap my-16'>
+        <div className='flex flex-row flex-wrap mb-12'>
           {tagButtons.map(t => <TagBadge className="mx-2" key={t.tag} onClick={() => onTagClick(t.tag)} active={t.status === 'active'}>{t.tag}</TagBadge>)}
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-12 gap-y-16'>
@@ -96,9 +96,9 @@ class Index extends React.Component<IndexProps, IndexState> {
           .map(({ node: post }) => (
             <div className="p-0 col-span-2 lg:col-span-1" key={post.frontmatter.path}>
               <h3 className='text-gray-600'>{format(new Date(post.frontmatter.date), 'EEEE, MMMM do, yyyy')}</h3>
-              <h1 className='leading-none font-bebas text-4xl text-teal'>
+              <h2>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h1>
+              </h2>
               <p className='mt-4'>{post.frontmatter.excerpt}</p>
             </div>
           ))

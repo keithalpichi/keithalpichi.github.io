@@ -123,8 +123,12 @@ function Index(props: Props): ReactElement {
         </svg>
       </div>
       <div id="main">
-        <h1 className='text-6xl text-mustard font-bebas mt-16 mb-8'>Articles</h1>
+        <h1>About</h1>
+        <p>My name is Keith Alpichi. I'm a full-stack software engineer deeply passionate about productivity, health, fitness, and nearly everything to do with the ocean.</p>
+        <h1>Articles</h1>
         <Posts posts={posts} location={location} />
+        <h1>Hire Me</h1>
+        <p>If you're a recruiter or hiring manager and would like to discuss a career opportunity, please don't hesitate to contact me on my <a href="https://www.linkedin.com/in/keithalpichi/" target="_blank">LinkedIn</a>.</p>
       </div>
     </>
   )
