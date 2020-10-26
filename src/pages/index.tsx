@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { classNames } from '../util'
 import Posts from '../components/posts'
 import Main from '../layouts'
+import { TextButton } from '../components/buttons'
 
 interface Props {
   location: {
@@ -75,12 +76,18 @@ function Index(props: Props): ReactElement {
           </svg>
         </div>
         <div id="main">
-          <h1>About</h1>
-          <p>My name is Keith Alpichi. I'm a full-stack software engineer deeply passionate about productivity, health, fitness, and nearly everything to do with the ocean.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-12">
+            <div>
+              <h1>About</h1>
+              <p>My name is Keith Alpichi. I'm a full-stack software engineer deeply passionate about productivity, health, fitness, and nearly everything to do with the ocean.</p>
+            </div>
+            <div>
+              <h1>Hire Me</h1>
+              <p>If you're a recruiter or hiring manager and would like to discuss a career opportunity, please don't hesitate to contact me on my <TextButton href="https://www.linkedin.com/in/keithalpichi/" target="_blank">LinkedIn</TextButton>.</p>
+            </div>
+          </div>
           <h1>Articles</h1>
           <Posts posts={posts} location={location} />
-          <h1>Hire Me</h1>
-          <p>If you're a recruiter or hiring manager and would like to discuss a career opportunity, please don't hesitate to contact me on my <a href="https://www.linkedin.com/in/keithalpichi/" target="_blank">LinkedIn</a>.</p>
         </div>
       </Main> 
     </>
