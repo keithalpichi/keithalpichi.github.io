@@ -9,11 +9,35 @@
     @apply leading-none text-6xl text-mustard font-bebas mt-12 mb-8;
   }
   h2 {
-    @apply leading-none text-4xl text-teal font-bebas mt-8 mb-4;
+    @apply leading-none text-4xl text-navy font-bebas mt-8 mb-4;
+  }
+  h3 {
+    @apply leading-none text-2xl text-navy font-bebas mt-6 mb-4;
+  }
+  p {
+    @apply my-4 text-midnightBlue;
+  }
+  li {
+    @apply ml-8;
+    list-style-type: circle;
+  }
+  code {
+    overflow: hidden;
+    background: theme('colors.navy');
+    color: #FFFFFF;
+    border-radius: theme('borderRadius.sm');
+    padding-top: theme('padding.0');
+    padding-bottom: theme('padding.0');
+    padding-left: theme('padding.1');
+    padding-right: theme('padding.1');
+    margin-top: theme('margin.0');
+    margin-bottom: theme('margin.0');
+    margin-left: theme('margin.0');
+    margin-right: theme('margin.0');
   }
   pre {
     overflow: hidden;
-    background: theme('colors.wasabi');
+    background: theme('colors.navy');
     color: #FFFFFF;
     border-radius: theme('borderRadius.sm');
     padding: theme('padding.2');
@@ -21,6 +45,10 @@
     margin-bottom: theme('margin.2');
     margin-left: theme('margin.0');
     margin-right: theme('margin.0');
+  }
+
+  .text-active {
+    color: theme('colors.primary');
   }
 
   .flex-basis-0 {

@@ -96,9 +96,9 @@ class Index extends React.Component<IndexProps, IndexState> {
           .filter(({ node: { frontmatter: { tags } } }) => filter ? tags.some(t => allTags[t] === 'active') : true)
           .map(({ node: post }) => (
             <div className="p-0 col-span-2 lg:col-span-1" key={post.frontmatter.path}>
-              <h3 className='text-gray-600'>{format(new Date(post.frontmatter.date), 'EEEE, MMMM do, yyyy')}</h3>
+              <h3 className='text-ocean'>{format(new Date(post.frontmatter.date), 'EEEE, MMMM do, yyyy')}</h3>
               <h2 className='mt-0'>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                <Link className='text-active' to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h2>
               <p>{post.frontmatter.excerpt}</p>
             </div>
