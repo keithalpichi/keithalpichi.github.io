@@ -2,7 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = {
   cream: '#FDF7EC',
   nude: '#FAEFDC',
+  midnightBlue: '#123346',
   navy: '#19445C',
+  ocean: '#246183',
   teal: '#88C4C8',
   mustard: '#F7C257',
   dijon: '#E5BD64',
