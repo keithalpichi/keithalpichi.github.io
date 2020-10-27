@@ -26,6 +26,7 @@ export function Badge(props: PropsWithChildren<Props>): ReactElement {
         "px-2 inline-flex text-sm leading-5 font-semibold rounded-full"
       )
     }
+    onClick={onClick}
     {...rest}
     >
       {props.children}

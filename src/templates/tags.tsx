@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-// import { FlexContainer } from '../components'
+import Main from '../layouts'
 
 const Tags = ({ pageContext, data }: {
   pageContext: { tag: string }
@@ -23,13 +23,14 @@ const Tags = ({ pageContext, data }: {
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
     } tagged with "${tag}"`
+  
+  const posts = edges.map(({ node }) => node.frontmatter)
 
   return (
-    <>
+    <Main>
       <h1 style={{ textAlign: 'center' }}>{tagHeader}</h1>
       <ul>
-        {edges.map(({ node }) => {
-          const { title, path } = node.frontmatter
+        {posts.map(({ title, path }) => {
           return (
             <li key={path}>
               <Link to={path}>{title}</Link>
@@ -37,8 +38,8 @@ const Tags = ({ pageContext, data }: {
           )
         })}
       </ul>
-      <Link to='/tags'>All tags</Link>
-    </>
+      <p>Click <Link to='/tags'>here</Link> to view all tags instead.</p>
+    </Main>
   )
 }
 
