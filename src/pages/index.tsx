@@ -81,11 +81,24 @@ function Index(props: Props): ReactElement {
           <div>
             <h1>About</h1>
             <p>My name is Keith Alpichi. I'm a full-stack software engineer deeply passionate about productivity, health, fitness, and nearly everything to do with the ocean.</p>
+            <p>Outside of work I like to exercise, cook, enjoy new cuisines, make my own espresso, listen to reggae music, play some chords on my ukulele, go to the beach and body surf, and read.</p>
+            <p>I like to think of myself as a beach bum. If I could code with my feet in the sand on a beach, I would!</p>
           </div>
           <div>
-            <h1>Hire Me</h1>
-            <p>If you're a recruiter or hiring manager and would like to discuss a career opportunity, please don't hesitate to contact me on my <TextButton href="https://www.linkedin.com/in/keithalpichi/" target="_blank">LinkedIn</TextButton>.</p>
+            <h1>Software</h1>
+            <p>Here are some things I've worked on:</p>
+            <ul>
+              <li><strong>Start-ups</strong>. I've worked with small and agile remote teams.</li>
+              <li><strong>AWS cloud-computing</strong>. I've architected AWS cloud infrastructures, creating server-less applications, API's, and Docker services, using both SQL and NoSQL databases.</li>
+              <li><strong>Back-end development</strong>. I've used languages such as NodeJS, Go (Golang), and Python.</li>
+              <li><strong>Front-end development</strong>. I've used Javascript tools such as React and Redux. In 2017, I held lectures to teach these tools to over 30 software engineers.</li>
+              <li><strong>Dev-Ops</strong>. I've used tools like Terraform, Cloudformation, and Jenkins to test code and provision infrastructure.</li>
+            </ul>
           </div>
+        </div>
+        <div>
+          <h1>Hire Me</h1>
+          <p>If you're a recruiter or hiring manager and would like to discuss a career opportunity, please don't hesitate to contact me on my <TextButton href="https://www.linkedin.com/in/keithalpichi/" target="_blank">LinkedIn</TextButton>.</p>
         </div>
         <h1>Articles</h1>
         <Posts posts={posts} location={location} />
