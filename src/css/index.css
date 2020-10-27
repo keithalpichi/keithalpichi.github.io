@@ -41,8 +41,8 @@
     color: #FFFFFF;
     border-radius: theme('borderRadius.sm');
     padding: theme('padding.2');
-    margin-top: theme('margin.2');
-    margin-bottom: theme('margin.2');
+    margin-top: theme('margin.8');
+    margin-bottom: theme('margin.8');
     margin-left: theme('margin.0');
     margin-right: theme('margin.0');
   }
@@ -55,8 +55,9 @@
     flex-basis: 0;
   }
 
-  #main {
+  .main {
     @apply flex flex-col m-auto;
+    margin-top: 3rem;
     max-width: 95%;
     width: 75rem;
   }
