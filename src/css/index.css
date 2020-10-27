@@ -22,7 +22,8 @@
     list-style-type: circle;
   }
   code {
-    overflow: hidden;
+    white-space: pre-wrap;
+    overflow: scroll;
     background: theme('colors.navy');
     color: #FFFFFF;
     border-radius: theme('borderRadius.sm');
@@ -36,7 +37,8 @@
     margin-right: theme('margin.0');
   }
   pre {
-    overflow: hidden;
+    white-space: pre-wrap;
+    overflow: scroll;
     background: theme('colors.navy');
     color: #FFFFFF;
     border-radius: theme('borderRadius.sm');
