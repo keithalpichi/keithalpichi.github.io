@@ -72,7 +72,7 @@ function Index(props: Props): ReactElement {
         </path>
       </svg>
       <div className="flex flex-column justify-center">
-        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="h-4 w-4 lg:h-8 lg:w-8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M25 0H0L12.5 25L25 0Z" fill="#19445C"/>
         </svg>
       </div>
