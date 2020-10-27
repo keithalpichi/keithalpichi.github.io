@@ -6,7 +6,7 @@ function Index(): ReactElement {
   return (
     <nav className="fixed top-0 left-0 right-0 flex bg-burnt lg:bg-transparent items-center justify-between flex-wrap p-4">
       <div className="flex items-center flex-shrink-0 text-navy mr-6">
-        <svg className="cursor-pointer" onClick={() => navigate('/')} width="25" height="25" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current text-navy">
+        <svg className="cursor-pointer fill-current text-navy" onClick={() => navigate('/')} width="25" height="25" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.6667 0H0L8.33333 16.6667L16.6667 0Z" />
           <path d="M33.3333 0H16.6666L25 16.6667L33.3333 0Z" />
           <path d="M50 0H33.3334L41.6667 16.6667L50 0Z" />
