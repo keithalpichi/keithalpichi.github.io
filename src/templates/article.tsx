@@ -5,6 +5,7 @@ import { format } from 'date-fns'
 import { TagBadge } from '../components/badges'
 import { navigate } from '@reach/router'
 import { Helmet } from 'react-helmet'
+import Main from '../layouts'
 
 interface ArticleProps {
   data: {
@@ -32,7 +33,7 @@ const TagButtons: React.FunctionComponent<{ tags: string[] }> = ({ tags }) => (
 const Article: React.FunctionComponent<ArticleProps> = ({
   data: { markdownRemark: post }
 }) => (
-    <div id="main">
+    <Main>
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <h1 className='mb-0'>{post.frontmatter.title}</h1>
       <p>{format(new Date(post.frontmatter.date), 'EEEE, MMMM do, yyyy')}</p>
@@ -42,7 +43,7 @@ const Article: React.FunctionComponent<ArticleProps> = ({
       />
       <p>Thank you for reading my article. Make sure to check out some related articles by following one of the tags below.</p>
       <TagButtons tags={['', ...post.frontmatter.tags]} />
-    </div>
+    </Main>
   )
 
 export default Article
