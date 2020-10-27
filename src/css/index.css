@@ -25,8 +25,11 @@
       @apply text-2xl;
     }
   }
+  p, li {
+    @apply text-midnightBlue;
+  }
   p {
-    @apply my-4 text-midnightBlue;
+    @apply my-4;
   }
   li {
     @apply ml-8;
